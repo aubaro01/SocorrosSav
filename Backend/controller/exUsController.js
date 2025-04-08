@@ -1,4 +1,4 @@
-const UserExerc = require('../models/ExercUser');
+const UserExerc = require('../models/ExerUs');
 const User = require('../models/user');  
 
 const createUserExerc = async (req, res) => {
