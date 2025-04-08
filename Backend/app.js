@@ -1,9 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config(); 
-const userRoutes = require('../routes/userRote'); 
-const exerRoutes = require('../routes/exercRote'); 
-const exUsRoutes = require('../routes/ExerUsRote'); 
+const userRoutes = require('./routes/userRote'); 
+const exerRoutes = require('./routes/exercRote'); 
+const exUsRoutes = require('./routes/ExerUsRote'); 
 
 const app = express();
 app.use(express.json()); 
