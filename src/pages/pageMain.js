@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from 'react-bootstrap';
- 
+
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
@@ -23,12 +23,15 @@ export default function LandingPage() {
     setLoading(true); 
   
     try {
-      const response = await fetch(`${process.env.USER_CREATE}/endpoint`, {
+      const url = `${process.env.USER_URL}${process.env.USER_ENDPOINT}`;
+      console.log("URL da requisição:", url); 
+  
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), 
+        body: JSON.stringify(formData),
       });
   
       if (response.ok) {
@@ -44,6 +47,7 @@ export default function LandingPage() {
       setLoading(false);  
     }
   };
+  
   
     
   return (
