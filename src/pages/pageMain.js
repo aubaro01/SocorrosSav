@@ -22,14 +22,13 @@ export default function LandingPage() {
   
     setLoading(true); 
   
-    try {
-      const response = await fetch(("https://savserver.vercel.app/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData), 
-      });
+     const response = await fetch("https://socorrosav.vercel.app/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
   
       if (response.ok) {
         alert("Inscrição enviada com sucesso!");
