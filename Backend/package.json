@@ -1,0 +1,27 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/aubaro01/Backend.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/aubaro01/Backend/issues"
+    },
+    "homepage": "https://github.com/aubaro01/Backend#readme",
+    "description": "",
+    "dependencies": {
+      "dotenv": "^16.4.7",
+      "express": "^5.1.0",
+      "mongoose": "^8.13.2",
+      "vercel": "^41.5.0"
+    }
+  }
