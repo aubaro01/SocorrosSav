@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Modal, Button } from 'react-bootstrap'; // Importando os componentes Modal e Button do Bootstrap
+import { Modal, Button } from 'react-bootstrap';
+ 
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
@@ -8,40 +9,43 @@ const modal = "/assets/form1.png";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false); // Estado para controlar a exibição do modal
+  const [showModal, setShowModal] = useState(false); 
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setLoading(true);
-
+    event.preventDefault(); 
+  
     const formData = {
-      nome: event.target.nome.value,
-      circuito: event.target.circuito.value,
-      password: event.target.password.value,
+      nome: event.target.nome.value, 
+      circuito: event.target.circuito.value, 
+      password: event.target.password.value, 
     };
-
+  
+    setLoading(true); 
+  
     try {
-      const response = await fetch("https://testedashpro.rf.gd/backend/createUser.php", {
+      const response = await fetch(`${process.env.USER_CREATE}/endpoint`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData), 
       });
-
+  
       if (response.ok) {
         alert("Inscrição enviada com sucesso!");
       } else {
-        alert("Erro ao enviar inscrição.");
+        const errorData = await response.json();
+        alert(`Erro ao enviar inscrição: ${errorData.message || 'Erro desconhecido.'}`);
       }
     } catch (error) {
       console.error("Erro:", error);
       alert("Erro ao enviar inscrição.");
     } finally {
-      setLoading(false);
+      setLoading(false);  
     }
   };
-
+  
+    
   return (
     <div className="d-flex flex-column min-vh-100">
       {/* Header */}
