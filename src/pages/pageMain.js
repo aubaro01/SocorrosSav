@@ -23,7 +23,7 @@ export default function LandingPage() {
     setLoading(true); 
   
     try {
-      const response = await fetch(`${process.env.USER_CREATE}/endpoint`, {
+      const response = await fetch(("https://savserver.vercel.app/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
