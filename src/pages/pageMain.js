@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from 'react-bootstrap';
- 
+import axios from "axios";
+
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
@@ -10,39 +11,39 @@ const modal = "/assets/form1.png";
 export default function LandingPage() {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false); 
-
+  const [errorMessage, setErrorMessage] = useState("");  
+  
   const handleSubmit = async (event) => {
-    event.preventDefault(); 
-  
+    event.preventDefault();
+    
     const formData = {
-      nome: event.target.nome.value, 
-      circuito: event.target.circuito.value, 
-      password: event.target.password.value, 
+      nome: event.target.nome.value,
+      circuito: event.target.circuito.value,
+      password: event.target.password.value,
     };
-  
-    setLoading(true); 
-  
-     const response = await fetch("${process.env.USER_CREATE}/users"){
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-  
-      if (response.ok) {
+
+    
+    setLoading(true);
+    setErrorMessage(""); 
+    
+    try {
+      const response = await axios.post(`${process.env.USER_CREATE}/users`, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      if (response.status === 200)     
         alert("Inscrição enviada com sucesso!");
       } else {
-        const errorData = await response.json();
-        alert(`Erro ao enviar inscrição: ${errorData.message || 'Erro desconhecido.'}`);
+        alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
       }
     } catch (error) {
-      console.error("Erro:", error);
-      alert("Erro ao enviar inscrição.");
+      console.error("Erro ao enviar inscrição:", error);
+      setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
+      alert(errorMessage); 
     } finally {
-      setLoading(false);  
+      setLoading(false);
     }
   };
+  
   
     
   return (
