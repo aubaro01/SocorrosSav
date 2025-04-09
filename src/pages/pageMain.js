@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from 'react-bootstrap';
 import axios from "axios";
 
+axios.defaults.baseURL = process.env.USER_CREATE;
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
@@ -27,7 +28,7 @@ export default function LandingPage() {
     setErrorMessage(""); 
     
 try {
-    const response = await axios.post(`${process.env.USER_CREATE}/users`, formData, {
+    const response = await axios.post("/users", formData, {
       headers: { "Content-Type": "application/json" },
     });
 
