@@ -5,8 +5,12 @@ const userRoutes = require('./routes/userRote');
 const exerRoutes = require('./routes/exercRote'); 
 const exUsRoutes = require('./routes/exerUsRote'); 
 
+const cors = require('cors');
+
+
 const app = express();
 app.use(express.json()); 
+app.use(cors());
 
 let isConnected;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
