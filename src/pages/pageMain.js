@@ -27,24 +27,24 @@ export default function LandingPage() {
     setLoading(true);
     setErrorMessage(""); 
     
-    try {
-      const response = await axios.post("https://savserver.vercel.app/api/users", formData, {
-        headers: { "Content-Type": "application/json" },
-      });
-      if (response.status === 200)     
-        alert("Inscrição enviada com sucesso!");
-      } else {
-        alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
-      }
-    } catch (error) {
-      console.error("Erro ao enviar inscrição:", error);
-      setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
-      alert(errorMessage); 
-    } finally {
-      setLoading(false);
-    }
-  };
-  
+try {
+  const response = await axios.post("/users", formData, {
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.status === 200  || response.status === 201) {
+    alert("Inscrição enviada com sucesso!");
+  } else {
+    alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
+  }
+} catch (error) {
+  console.error("Erro ao enviar inscrição:", error);
+  setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
+  alert(errorMessage);
+} finally {
+  setLoading(false);
+}
+};
   
     
   return (

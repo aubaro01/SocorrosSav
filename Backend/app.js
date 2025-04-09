@@ -7,10 +7,12 @@ const exUsRoutes = require('./routes/exerUsRote');
 
 const cors = require('cors');
 
+app.use(cors({
+  origin: process.env.BASE_URL
 
+}));
 const app = express();
 app.use(express.json()); 
-app.use(cors());
 
 let isConnected;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
