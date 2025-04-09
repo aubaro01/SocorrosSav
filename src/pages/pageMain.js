@@ -28,7 +28,8 @@ export default function LandingPage() {
 
     
 try {
-  const response = await axios.post("/users", formData, {
+  const response = await axios.post(`${process.env.BASE_URL}/users`, formData,
+  {
     headers: { "Content-Type": "application/json" },
   });
 
@@ -43,8 +44,7 @@ try {
   alert(errorMessage);
 } finally {
   setLoading(false);
-}
-   
+}   
 }; 
     
   return (
