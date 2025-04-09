@@ -43,8 +43,14 @@ export default function LandingPage() {
     } finally {
       setLoading(false);
     }
-  };
-  
+  } catch (error) {
+    console.error("Erro ao enviar inscrição:", error);
+    setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
+    alert(errorMessage);
+  } finally {
+    setLoading(false);
+  }
+};
   
     
   return (
