@@ -20,7 +20,7 @@ export default function LandingPage() {
     const formData = {
       nome: event.target.nome.value,
       circuito: event.target.circuito.value,
-      password: event.target.password.value,
+      Pass: event.target.password.value,
     };
 
     
