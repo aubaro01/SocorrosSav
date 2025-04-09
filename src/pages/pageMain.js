@@ -27,23 +27,23 @@ export default function LandingPage() {
     setErrorMessage(""); 
     
     try {
-      const response = await axios.post(`${process.env.USER_CREATE}/users`, formData, {
-        headers: { "Content-Type": "application/json" },
-      });
-      if (response.status === 200)     
-        alert("Inscrição enviada com sucesso!");
-      } else {
-        alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
-      }
-    } catch (error) {
-      console.error("Erro ao enviar inscrição:", error);
-      setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
-      alert(errorMessage); 
-    } finally {
-      setLoading(false);
-    }
-  };
-  
+  const response = await axios.post(`${process.env.USER_CREATE}/users`, formData, {
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.status === 200) {
+    alert("Inscrição enviada com sucesso!");
+  } else {
+    alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
+  }
+} catch (error) {
+  console.error("Erro ao enviar inscrição:", error);
+  setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
+  alert(errorMessage); 
+} finally {
+  setLoading(false);
+}
+
   
     
   return (
