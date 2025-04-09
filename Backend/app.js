@@ -4,16 +4,16 @@ require('dotenv').config();
 const userRoutes = require('./routes/userRote'); 
 const exerRoutes = require('./routes/exercRote'); 
 const exUsRoutes = require('./routes/exerUsRote'); 
-
 const cors = require('cors');
+
+const app = express(); 
 
 app.use(cors({
   origin: process.env.BASE_URL
 }));
-const app = express();
+
 app.use(express.json()); 
 
-let isConnected;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Conectado ao MongoDB com sucesso');
@@ -29,7 +29,6 @@ app.use('/api', exUsRoutes);
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'API online!!' });
 });
-
 
 module.exports = (req, res) => {
   app(req, res);  
