@@ -26,13 +26,12 @@ export default function LandingPage() {
     setLoading(true);
     setErrorMessage(""); 
 
-    
-try {
-  const response = await axios.post(`${process.env.BASE_URL}/users`, formData,
-  {
-    headers: { "Content-Type": "application/json" },
-  });
-
+    try{
+    const response = await axios.post("https://savserver.vercel.app/api/users",formData,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   if (response.status === 200  || response.status === 201) {
     alert("Inscrição enviada com sucesso!");
   } else {
