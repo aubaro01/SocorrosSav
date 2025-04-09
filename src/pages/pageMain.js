@@ -26,37 +26,26 @@ export default function LandingPage() {
     setLoading(true);
     setErrorMessage(""); 
 
-    try {
-      const response = await axios.post("https://savserver.vercel.app/api/users", formData, {
-        headers: { "Content-Type": "application/json" },
-      });
+    
+try {
+  const response = await axios.post("/users", formData, {
+    headers: { "Content-Type": "application/json" },
+  });
 
-      if (response.status === 200) {
-        alert("Inscrição enviada com sucesso!");
-      } else {
-        alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
-      }
-    } catch (error) {
-      console.error("Erro ao enviar inscrição:", error);
-
-      if (error.response) {
-        console.error("Erro na resposta do servidor:", error.response);
-        setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
-      } else if (error.request) {
-        console.error("Erro na requisição:", error.request);
-        setErrorMessage("Não foi possível se conectar ao servidor.");
-      } else {
-        console.error("Erro desconhecido:", error.message);
-        setErrorMessage("Erro desconhecido.");
-      }
-
-      alert(errorMessage);
-    } finally {
-      setLoading(false);
-    }
-};
-
-  
+  if (response.status === 200  || response.status === 201) {
+    alert("Inscrição enviada com sucesso!");
+  } else {
+    alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
+  }
+} catch (error) {
+  console.error("Erro ao enviar inscrição:", error);
+  setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
+  alert(errorMessage);
+} finally {
+  setLoading(false);
+}
+   
+}; 
     
   return (
     <div className="d-flex flex-column min-vh-100">
