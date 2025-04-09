@@ -14,7 +14,7 @@ export default function LandingPage() {
   const [showModal, setShowModal] = useState(false); 
   const [errorMessage, setErrorMessage] = useState("");  
   
-  const handleSubmit = async (event) => {
+ const handleSubmit = async (event) => {
     event.preventDefault();
     
     const formData = {
@@ -23,9 +23,9 @@ export default function LandingPage() {
       Pass: event.target.password.value,
     };
 
-    
     setLoading(true);
     setErrorMessage(""); 
+
     
 try {
   const response = await axios.post("/users", formData, {
@@ -44,8 +44,8 @@ try {
 } finally {
   setLoading(false);
 }
-};
-  
+   
+}; 
     
   return (
     <div className="d-flex flex-column min-vh-100">
