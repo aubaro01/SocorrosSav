@@ -21,6 +21,7 @@ export default function LandingPage() {
       circuito: event.target.circuito.value,
       password: event.target.password.value,
     };
+
     
     setLoading(true);
     setErrorMessage(""); 
@@ -29,7 +30,7 @@ export default function LandingPage() {
       const response = await axios.post(`${process.env.USER_CREATE}/users`, formData, {
         headers: { "Content-Type": "application/json" },
       });
-      if (response.status === 200) {
+      if (response.status === 200)     
         alert("Inscrição enviada com sucesso!");
       } else {
         alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
