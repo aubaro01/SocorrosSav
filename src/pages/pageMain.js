@@ -22,7 +22,7 @@ export default function LandingPage() {
   
     setLoading(true); 
   
-     const response = await fetch(`${process.env.USER_CREATE}/users`, {
+     const response = await fetch(`${process.env.USER_CREATE}/users` {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
