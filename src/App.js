@@ -16,10 +16,10 @@ function App() {
         <Routes>
           <Route path="*" element={<ErroPage />} />
           <Route path="/" element={<PageMain />} />
-          <Route path="/OVA&PLS/:id" element={<Page1 />} />
-          <Route path="/RVA/:id" element={<Page2 />} />
-          <Route path="/Maca/:id" element={<Page3 />} />
-          <Route path="/SBV/:id" element={<Page4 />} />
+          <Route path="/OVA&PLS/OVA&PLS" element={<Page1 />} />
+          <Route path="/RVA/RVA" element={<Page2 />} />
+          <Route path="/Maca/Maca" element={<Page3 />} />
+          <Route path="/SBV/SBV" element={<Page4 />} />
         </Routes>
       </div>
     </Router>

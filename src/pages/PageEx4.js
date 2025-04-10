@@ -4,10 +4,12 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 export default function PageSBV() {
-  const { id } = useParams(); 
+  const { nome } = useParams(); 
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -15,7 +17,21 @@ export default function PageSBV() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exerId] = useState(id); 
+  const [exercicioNome, setExercicioNome] = useState(''); 
+
+  useEffect(() => {
+    const fetchExercicioNome = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/exers/${nome}`); 
+      } catch (error) {
+        console.error("Erro ao buscar nome do exercício:", error);
+      }
+    };
+
+    fetchExercicioNome();
+  }, [nome]); 
+
+  const { Exerid } = useParams(); 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -23,7 +39,7 @@ export default function PageSBV() {
     const requestData = {
       nome: formData.nome,
       Pass: formData.pass,
-      id_Exer_fk: exerId, 
+      id_Exer_fk: Exerid, 
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
 
