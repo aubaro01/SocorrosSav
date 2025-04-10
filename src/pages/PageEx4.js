@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
 
 export default function PageSBV() {
-  const { nome } = useParams(); 
+  const { nome } = useParams();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -17,21 +14,21 @@ export default function PageSBV() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState(''); 
+  const [exercicioNome, setExercicioNome] = useState('');
 
   useEffect(() => {
     const fetchExercicioNome = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/exers/${nome}`); 
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/exers/${nome}`);
       } catch (error) {
         console.error("Erro ao buscar nome do exercício:", error);
       }
     };
 
     fetchExercicioNome();
-  }, [nome]); 
+  }, [nome]);
 
-  const { Exerid } = useParams(); 
+  const { Exerid } = useParams();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -39,12 +36,12 @@ export default function PageSBV() {
     const requestData = {
       nome: formData.nome,
       Pass: formData.pass,
-      id_Exer_fk: Exerid, 
+      id_Exer_fk: Exerid,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/userexerc`, requestData); 
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/userexerc`, requestData);
       console.log("Dados enviados:", response.data);
       setSubmitted(true);
     } catch (error) {
@@ -73,12 +70,12 @@ export default function PageSBV() {
       content: (
         <>
           <div className="ratio ratio-16x9 mb-4">
-          <iframe
+            <iframe
               src="https://drive.google.com/file/d/1Zgxj_U9-lCpL6SPoaAr-Uqs8jv1rVVtX/preview"
               title="Vídeo demonstrativo do exercício"
               allowFullScreen
               allow="autoplay"
-             
+
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
@@ -212,7 +209,7 @@ export default function PageSBV() {
         </>
       ),
     },
-  
+
   ];
 
   return (
