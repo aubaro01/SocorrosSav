@@ -13,7 +13,6 @@ const createUser = async (req, res) => {
       return res.status(400).json({ message: 'Já existe um usuário com esse nome, circuito e senha.' });
     }
 
-
     const newUser = new User({
       nome,
       circuito,
