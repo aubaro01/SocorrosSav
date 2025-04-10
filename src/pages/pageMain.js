@@ -11,12 +11,12 @@ const modal = "/assets/form1.png";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false); 
-  const [errorMessage, setErrorMessage] = useState("");  
-  
- const handleSubmit = async (event) => {
+  const [showModal, setShowModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");  
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     const formData = {
       nome: event.target.nome.value,
       circuito: event.target.circuito.value,
@@ -24,26 +24,29 @@ export default function LandingPage() {
     };
 
     setLoading(true);
-    setErrorMessage(""); 
-    
-try {
-  const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users`, formData, {
-    headers: { "Content-Type": "application/json" },
-});
-  if (response.status === 200  || response.status === 201) {
-    alert("Inscrição enviada com sucesso!");
-  } else {
-    alert(`Erro: ${response.data.message || 'Erro desconhecido'}`);
-  }
-} catch (error) {
-  console.error("Erro ao enviar inscrição:", error);
-  setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
-  alert(errorMessage);
-} finally {
-  setLoading(false);
-}   
-}; 
-    
+    setErrorMessage("");
+    setSuccessMessage(""); 
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users`, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.status === 200 || response.status === 201) {
+     
+        event.target.reset();
+        setSuccessMessage("Inscrição enviada com sucesso! Agora, está pronto para começar os exercícios!");
+      } else {
+        setErrorMessage(`Erro: ${response.data.message || 'Erro desconhecido'}`);
+      }
+    } catch (error) {
+      console.error("Erro ao enviar inscrição:", error);
+      setErrorMessage(error.response?.data?.message || "Erro ao enviar inscrição.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="d-flex flex-column min-vh-100">
       {/* Header */}
@@ -63,12 +66,9 @@ try {
             <strong>Instruções!</strong>
           </h3>
           <p className="text-muted">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           </p>
-          <p className="text-muted">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <figcaption class="blockquote-footer">
+          <figcaption className="blockquote-footer">
             Talvez um <cite title="Source Title">Sal 4:1</cite>
           </figcaption>
           <Button variant="btn btn-dark" onClick={() => setShowModal(true)}>
@@ -76,7 +76,6 @@ try {
           </Button>
         </section>
 
-       
         <section className="bg-light py-5">
           <div className="container text-center">
             <img
@@ -90,12 +89,11 @@ try {
               Sector à Verde: <strong>Exercícios 3,</strong> dentro do auditório<br />
               Sector à Amarelo: <strong>Exercícios 4,</strong> entrada do auditório<br />
               Sector à Vermelho: <strong>Exercícios 5,</strong> perto dos perdidos e achados<br />
-
             </p>
           </div>
         </section>
 
-        {/* Form Section */}
+      
         <section className="container py-5">
           <div className="text-center mb-4">
             <h2 className="fw-bold">Inscreva-se</h2>
@@ -103,6 +101,20 @@ try {
               Preencha o formulário abaixo para criar o seu perfil para os exercícios ao longo do dia...
             </p>
           </div>
+
+         
+          {successMessage && (
+            <div className="alert alert-success text-center mb-4">
+              <strong>{successMessage}</strong>
+            </div>
+          )}
+
+       
+          {errorMessage && (
+            <div className="alert alert-danger text-center mb-4">
+              <strong>{errorMessage}</strong>
+            </div>
+          )}
 
           <form className="mx-auto" style={{ maxWidth: "400px" }} onSubmit={handleSubmit}>
             {/* Nome Field */}
@@ -159,10 +171,12 @@ try {
       {/* Footer */}
       <footer className="bg-dark text-white text-center py-3">
         <p>
-          © {new Date().getFullYear()} SAV. <br />
+          © SAV. <br />
           Todos os direitos reservados.
         </p>
       </footer>
+
+      {/* Modal */}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
