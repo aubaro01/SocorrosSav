@@ -30,7 +30,6 @@ try {
   const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users`, formData, {
     headers: { "Content-Type": "application/json" },
 });
-    t
   if (response.status === 200  || response.status === 201) {
     alert("Inscrição enviada com sucesso!");
   } else {
