@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+
+
 
 export default function PageSBV() {
+  const { id } = useParams(); 
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -10,11 +15,25 @@ export default function PageSBV() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [exerId] = useState(id); 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Dados enviados:", formData);
-    setSubmitted(true);
+
+    const requestData = {
+      nome: formData.nome,
+      Pass: formData.pass,
+      id_Exer_fk: exerId, 
+      exer_res: formData.concluido ? "Feito" : "Não Feito",
+    };
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/userexerc`, requestData); 
+      console.log("Dados enviados:", response.data);
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+    }
   };
 
   const handleChange = (e) => {
@@ -31,7 +50,6 @@ export default function PageSBV() {
     setFormData({ nome: "", pass: "", concluido: false });
   };
 
-  // Array com as etapas do SBV (excluindo Transporte em Maca)
   const steps = [
     {
       id: 0,

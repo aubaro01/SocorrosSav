@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PageMain from './pages/pageMain';
 import Page1 from './pages/PageEx1';
 import Page2 from './pages/PageEx2';
@@ -9,18 +9,17 @@ import ErroPage from './pages/erroPage';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function App() {
   return (
     <Router>
-      <div>     
+      <div>
         <Routes>
           <Route path="*" element={<ErroPage />} />
           <Route path="/" element={<PageMain />} />
-          <Route path="/OVA&PLS" element={<Page1 />} />
-          <Route path="/RVA" element={<Page2 />} />
-          <Route path="/Maca" element={<Page3 />} />
-          <Route path="/SBV" element={<Page4 />} />
+          <Route path="/OVA&PLS/:id" element={<Page1 />} />
+          <Route path="/RVA/:id" element={<Page2 />} />
+          <Route path="/Maca/:id" element={<Page3 />} />
+          <Route path="/SBV/:id" element={<Page4 />} />
         </Routes>
       </div>
     </Router>
