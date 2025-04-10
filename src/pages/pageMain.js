@@ -267,7 +267,7 @@ export default function LandingPage() {
               Precisa de ajuda?
             </h6>
             <p className="mb-0">
-              -----1.
+              Fale com o seu instrutor ou qualquer outro instrutor.
             </p>
           </div>
         </Modal.Body>
