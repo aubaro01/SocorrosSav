@@ -6,10 +6,15 @@ const exerRoutes = require('./routes/exercRote');
 const exUsRoutes = require('./routes/exerUsRote'); 
 const cors = require('cors');
 
+<<<<<<< Updated upstream
 const app = express(); 
 
 app.use(cors({
   origin: process.env.BASE_URL,
+=======
+app.use(cors({
+  origin: process.env. REACT_APP_API_URL
+>>>>>>> Stashed changes
 }));
 
 app.use(express.json()); 
