@@ -3,9 +3,14 @@ const User = require('../models/user');
 const createUser = async (req, res) => {
   try {
     const { nome, circuito, Pass } = req.body;
-
     if (!nome || !circuito || !Pass) {
       return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
+    }
+
+    const existingUser = await User.findOne({ nome, circuito, Pass });
+
+    if (existingUser) {
+      return res.status(400).json({ message: 'Já existe um usuário com esse nome, circuito e senha.' });
     }
 
 
@@ -15,12 +20,11 @@ const createUser = async (req, res) => {
       Pass,
     });
 
-
     const savedUser = await newUser.save();
 
     res.status(201).json({ nome: savedUser.nome, circuito: savedUser.circuito });
   } catch (error) {
-    console.error('Erro ao criar o utilizador:', error); 
+    console.error('Erro ao criar o utilizador:', error);
     res.status(500).json({ message: `Erro interno do servidor: ${error.message}` });
   }
 };
