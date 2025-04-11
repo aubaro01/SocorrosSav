@@ -5,8 +5,9 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
+
 export default function PageSBV() {
-  const { nome } = useParams();
+  const { nome } = useParams(); 
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -14,21 +15,24 @@ export default function PageSBV() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState('');
-
+  const [exercicioNome, setExercicioNome] = useState("");
+  const [exercicioId, setExercicioId] = useState(null);
   useEffect(() => {
-    const fetchExercicioNome = async () => {
+    const fetchExercicio = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/exers/${nome}`);
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/api/exers/${nome}`
+        );
+
+        setExercicioNome(response.data.nome); 
+        setExercicioId(response.data.id);  
       } catch (error) {
-        console.error("Erro ao buscar nome do exercício:", error);
+        console.error("Erro ao buscar exercício:", error);
       }
     };
 
-    fetchExercicioNome();
+    fetchExercicio();
   }, [nome]);
-
-  const { Exerid } = useParams();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,12 +40,15 @@ export default function PageSBV() {
     const requestData = {
       nome: formData.nome,
       Pass: formData.pass,
-      id_Exer_fk: Exerid,
+      id_Exer_fk: exercicioId,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/userexerc`, requestData);
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/userexerc`,
+        requestData
+      );
       console.log("Dados enviados:", response.data);
       setSubmitted(true);
     } catch (error) {
@@ -283,7 +290,6 @@ export default function PageSBV() {
           <h4 style={{ fontSize: "1.2rem", fontWeight: "600", textAlign: "center", marginBottom: "1.5rem", color: "#ecf0f1" }}>
             Resumo do Exercício
           </h4>
-          {/* Resumo resumido – ajuste conforme necessário */}
           <div className="text-center">
             <Button
               onClick={() => setShowModal(true)}
@@ -318,12 +324,12 @@ export default function PageSBV() {
           {!submitted ? (
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formNome">
-                <Form.Label className="fw-semibold">Nome Completo</Form.Label>
-                <Form.Control type="text" name="nome" value={formData.nome} onChange={handleChange} placeholder="Digite seu nome completo" required className="p-2" />
+                <Form.Label className="fw-semibold">Nome</Form.Label>
+                <Form.Control type="text" name="nome" value={formData.nome} onChange={handleChange} placeholder="Digite seu nome" required className="p-2" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formPass">
-                <Form.Label className="fw-semibold">Código de Acesso</Form.Label>
-                <Form.Control type="password" name="pass" value={formData.pass} onChange={handleChange} placeholder="Digite seu código de acesso" required className="p-2" />
+                <Form.Label className="fw-semibold">Password</Form.Label>
+                <Form.Control type="password" name="pass" value={formData.pass} onChange={handleChange} placeholder="Digite a sua password" required className="p-2" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formConcluido">
                 <Form.Check type="checkbox" name="concluido" checked={formData.concluido} onChange={handleChange} label="Exercício concluído" className="fw-semibold" />
