@@ -31,19 +31,24 @@ const getAllExers = async (req, res) => {
 
 const getExerByName = async (req, res) => {
   try {
-    const { nome } = req.params;  
+    const { nome } = req.params;
 
-    const exer = await Exer.findOne({ exerc_nome: nome }); 
+    const exer = await Exer.findOne({
+      where: { nome }, 
+      attributes: ["id", "nome"] 
+    });
 
     if (!exer) {
-      return res.status(404).json({ message: "Exercício não encontrado!" });  
+      return res.status(404).json({ message: "Exercício não encontrado!" });
     }
 
-    res.status(200).json(exer); 
+    res.status(200).json(exer);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
+
 
 module.exports = {
   createExer,
