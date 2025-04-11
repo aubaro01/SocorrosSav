@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 
 export default function PageSBV() {
-  const { nome } = useParams(); 
+  const { nome } = useParams();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -24,8 +24,8 @@ export default function PageSBV() {
           `${process.env.REACT_APP_API_URL}/api/exers/${nome}`
         );
 
-        setExercicioNome(response.data.nome); 
-        setExercicioId(response.data.id);  
+        setExercicioNome(response.data.nome);
+        setExercicioId(response.data.id);
       } catch (error) {
         console.error("Erro ao buscar exercício:", error);
       }
@@ -82,8 +82,9 @@ export default function PageSBV() {
               title="Vídeo demonstrativo do exercício"
               allowFullScreen
               allow="autoplay"
-
+              sandbox="allow-scripts allow-same-origin allow-forms"
             ></iframe>
+
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
             Assista ao vídeo para conhecer a técnica correta.

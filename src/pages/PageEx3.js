@@ -44,7 +44,7 @@ export default function PageEx4() {
               title="Vídeo demonstrativo do exercício"
               allowFullScreen
               allow="autoplay"
-
+              sandbox="allow-scripts allow-same-origin allow-forms"
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
