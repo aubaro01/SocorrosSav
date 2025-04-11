@@ -46,7 +46,7 @@ export default function PageSBV() {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/userexerc`,
+        `${process.env.REACT_APP_API_URL}/api/ExerUser`,
         requestData
       );
       console.log("Dados enviados:", response.data);
