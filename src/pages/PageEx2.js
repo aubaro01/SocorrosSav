@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
+import Inem from "../components/ChInem";
 
 export default function PageEx4() {
   const [showModal, setShowModal] = useState(false);
@@ -31,7 +32,7 @@ export default function PageEx4() {
     setFormData({ nome: "", pass: "", concluido: false });
   };
 
-  
+
   const steps = [
     {
       id: 0,
@@ -39,7 +40,7 @@ export default function PageEx4() {
       content: (
         <>
           <div className="ratio ratio-16x9 mb-4">
-          <iframe
+            <iframe
               src="https://drive.google.com/file/d/1Xu8e10-q4nnZmxmdtWw5-jkiJvk-1V0C/preview"
               title="Vídeo demonstrativo do exercício"
               allowFullScreen
@@ -63,7 +64,7 @@ export default function PageEx4() {
               src="/assets/rva.png"
               alt="vítima dentro do auditorio"
               className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }}/>
+              style={{ maxHeight: "350px", border: "3px solid #f39c12" }} />
           </div>
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
@@ -76,7 +77,7 @@ export default function PageEx4() {
             </ul>
           </div>
         </div>
-     ),
+      ),
     },
     {
       id: 2,
@@ -260,6 +261,10 @@ export default function PageEx4() {
                 {step.content}
               </section>
             ))}
+
+            <div className="text-center my-4">
+              <Inem />
+            </div>
 
             <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
               <h4
