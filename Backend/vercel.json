@@ -12,7 +12,7 @@
         "dest": "/app.js",
         "headers": {
         "Access-Control-Allow-Origin": "https://socorrosav.vercel.app",
-        "Access-Control-Allow-Methods": "GET, POST, PUT",
+        "Access-Control-Allow-Methods": "GET, POST",
         "Access-Control-Allow-Headers": "Content-Type"
       }
       }
