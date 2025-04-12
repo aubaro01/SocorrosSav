@@ -9,7 +9,7 @@ function Inem() {
   return (
     <>
       <Button variant="dark" onClick={handleShow}>
-       Chamada ao INEM
+       Chamada à Emergência Médica	
       </Button>
 
       <Modal
@@ -22,7 +22,7 @@ function Inem() {
       >
         <Modal.Header>
           <Modal.Title className="fw-bold text-danger-emphasis">
-            Chamada ao INEM
+            Chamada à Emergência Médica
           </Modal.Title>
         </Modal.Header>
 
@@ -46,7 +46,7 @@ function Inem() {
 
             <p className="text-muted">
               <strong>1. Diga logo no início que é uma emergência médica:</strong><br />
-              "É uma emergência médica, por favor encaminhe para o INEM."<br />
+              "É uma emergência médica, por favor encaminhe para a emergência médica."<br />
               <em>(Isto evita atrasos, pois o 112 pode encaminhar para vários serviços.)</em>
             </p>
 
@@ -59,7 +59,7 @@ function Inem() {
 
             <p className="text-muted">
               <strong>3. Indique a localização exata:</strong><br />
-              "Estamos no <strong>Salão de Assembleias das Testemunhas de Jeová, Rua Dom Pedro IV, Valongo (Porto)</strong>."
+              "Estamos no Porto, em Valongo, no <strong>Salão de Assembleias das Testemunhas de Jeová na Rua Dom Pedro IV</strong>."
             </p>
 
             <p className="text-muted">
@@ -89,11 +89,11 @@ function Inem() {
             <div className="text-muted">
               <div className="mb-3">
                 <p className="mb-1"><strong>Operador:</strong> 112, qual é a sua emergência?</p>
-                <p className="mb-1"><strong>Utilizador:</strong> É uma emergência médica. Por favor, encaminhe para o INEM.</p>
+                <p className="mb-1"><strong>Utilizador:</strong> É uma emergência médica. Por favor, encaminhe para a emergência médica .</p>
               </div>
 
               <div className="mb-3">
-                <p className="mb-1"><strong>Operador:</strong> INEM, bom dia. Está a falar com [nome]. Qual é a sua emergência?</p>
+                <p className="mb-1"><strong>Operador:</strong> Emergência médica, bom dia. Está a falar com [nome]. Qual é a sua emergência?</p>
                 <p className="mb-1"><strong>Utilizador:</strong> Chamo-me [seu nome]. A minha mãe desmaiou e não responde. Está inconsciente.</p>
               </div>
 
@@ -119,7 +119,7 @@ function Inem() {
 
               <div className="mb-3">
                 <p className="mb-1"><strong>Operador:</strong> Qual é a localização exata onde se encontra?</p>
-                <p className="mb-1"><strong>Utilizador:</strong> Estamos no <strong>Salão de Assembleias das Testemunhas de Jeová, Rua Dom Pedro IV, Valongo (Porto)</strong>.</p>
+                <p className="mb-1"><strong>Utilizador:</strong> Estamos no Porto, em Valongo, no <strong>Salão de Assembleias das Testemunhas de Jeová na Rua Dom Pedro IV</strong>.</p>
               </div>
 
               <div className="mb-3">
