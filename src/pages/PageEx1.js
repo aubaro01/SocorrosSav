@@ -86,9 +86,9 @@ export default function CombinedPage() {
               <li className="mb-2">Coloque-se por detrás da vítima mantendo uma posição de equilíbrio.</li>
               <li className="mb-2">Segure o tórax da vítima passando um braço por baixo da axila.</li>
               <li className="mb-3">
-              Com a outra mão aplique até 5 pancadas vigorosas entre as omoplatas.
-               </li>
-              
+                Com a outra mão aplique até 5 pancadas vigorosas entre as omoplatas.
+              </li>
+
             </ul>
           </div>
           <div className="col-md-6 text-center">
@@ -123,14 +123,6 @@ export default function CombinedPage() {
 
             {/* Passo 1 */}
             <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/dva3.png"
-                  alt="Passo 1: Posicionar-se atrás da vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
               <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1</h4>
                 <p
@@ -144,18 +136,19 @@ export default function CombinedPage() {
                   seus braços.
                 </p>
               </div>
-            </div>
-
-            {/* Passo 2 */}
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
+              <div className="col-md-6 text-center">
                 <img
-                  src="/assets/dva4.png"
-                  alt="Passo 2: Posição de segurança"
+                  src="/assets/dva3.png"
+                  alt="Passo 1: Posicionar-se atrás da vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
+
+            </div>
+
+            {/* Passo 2 */}
+            <div className="row mb-4 align-items-center">
               <div className="col-md-6 order-md-1">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2</h4>
                 <p
@@ -169,18 +162,18 @@ export default function CombinedPage() {
                   com o polegar voltado contra o abdômen.
                 </p>
               </div>
-            </div>
-
-            {/* Passo 3 */}
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
+              <div className="col-md-6 text-center order-md-2">
                 <img
-                  src="/assets/dva5.png"
-                  alt="Passo 3: Posicionar os pés"
+                  src="/assets/dva4.png"
+                  alt="Passo 2: Posição de segurança"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
+            </div>
+
+            {/* Passo 3 */}
+            <div className="row mb-4 align-items-center">
               <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 3</h4>
                 <p
@@ -194,19 +187,22 @@ export default function CombinedPage() {
                   compressão rápida para dentro e para cima.
                 </p>
               </div>
-            </div>
-
-            {/* Passo 4 */}
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
+              <div className="col-md-6 text-center">
                 <img
                   src="/assets/dva6.png"
                   alt="Passo 4: Alinhar joelhos"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
+                <img
+                  src="/assets/dva5.png"
+                  alt="Passo 3: Posicionar os pés"
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                />
               </div>
             </div>
+
 
             {/* Lembrete */}
             <div className="row mb-4 align-items-center">
