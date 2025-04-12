@@ -28,7 +28,6 @@ export default function CombinedPage() {
     setFormData({ nome: "", codigo: "", concluido: false });
   };
 
-  // Conteúdo do exercício DVA
   const stepsDVA = [
     {
       id: 0,
@@ -36,7 +35,7 @@ export default function CombinedPage() {
       content: (
         <>
           <div className="ratio ratio-16x9 mb-4">
-          <iframe
+            <iframe
               src="https://drive.google.com/file/d/13qk7SmcpZ7w8CcaaSQ-RUHl3y2P86i7L/preview"
               title="Vídeo demonstrativo do exercício"
               allowFullScreen
@@ -345,7 +344,7 @@ export default function CombinedPage() {
       content: (
         <>
           <div className="ratio ratio-16x9 mb-4">
-          <iframe
+            <iframe
               src="https://drive.google.com/file/d/1nVGa1CQbQj3lnEj7ry9G8F4WQpQucHVd/preview"
               title="Vídeo demonstrativo do exercício"
               allowFullScreen
