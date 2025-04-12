@@ -83,13 +83,12 @@ export default function CombinedPage() {
               Se a vítima não conseguir tossir, aplique cinco (5) pancadas nas costas.
             </p>
             <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <li className="mb-2">Mantenha a vítima longe de si</li>
-              <li className="mb-2">Coloque-se em uma posição de segurança</li>
+              <li className="mb-2">Coloque-se por detrás da vítima mantendo uma posição de equilíbrio.</li>
+              <li className="mb-2">Segure o tórax da vítima passando um braço por baixo da axila.</li>
               <li className="mb-3">
-                Deixe os seus pés bem firmes no chão, um pé à frente e outro atrás
-              </li>
-              <li className="mb-2">Joelhos alinhados com os pés</li>
-              <li>Não ultrapasse a linha dos dedos com os joelhos</li>
+              Com a outra mão aplique até 5 pancadas vigorosas entre as omoplatas.
+               </li>
+              
             </ul>
           </div>
           <div className="col-md-6 text-center">
@@ -206,19 +205,6 @@ export default function CombinedPage() {
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
-              </div>
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 4</h4>
-                <p
-                  style={{
-                    fontSize: "1.1rem",
-                    lineHeight: "1.7",
-                    color: "#e9ecef",
-                  }}
-                >
-                  Mantenha os joelhos alinhados com os pés, sem ultrapassar a linha dos
-                  dedos.
-                </p>
               </div>
             </div>
 
