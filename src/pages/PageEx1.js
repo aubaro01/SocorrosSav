@@ -347,14 +347,12 @@ export default function CombinedPage() {
         <div className="row">
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Dobre os joelhos e quadris, abaixando o corpo como se fosse sentar em
-              uma cadeira invisível.
             </p>
             <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <li className="mb-2">Mantenha o peito erguido</li>
-              <li className="mb-2">Coluna em posição neutra</li>
-              <li className="mb-2">Joelhos alinhados com os pés</li>
-              <li>Não ultrapasse a linha dos dedos com os joelhos</li>
+              <li className="mb-2"></li>
+              <li className="mb-2"></li>
+              <li className="mb-2"></li>
+              <li></li>
             </ul>
           </div>
           <div className="col-md-6 text-center">
@@ -382,8 +380,7 @@ export default function CombinedPage() {
                 marginBottom: "2rem",
               }}
             >
-              Para o transporte de uma vítima inconsciente, há vários cuidados a serem
-              tomados. Siga os passos abaixo:
+              texto
             </p>
             {/* Passo 1 - Avaliar */}
             <div className="row mb-4 align-items-center">
@@ -397,7 +394,7 @@ export default function CombinedPage() {
               </div>
               <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 1 - Avaliar
+                  Passo 1
                 </h4>
                 <ul
                   style={{
@@ -407,16 +404,11 @@ export default function CombinedPage() {
                   }}
                 >
                   <li className="mb-2">
-                    Verifique se a vítima está usando algo que possa colocá-la em
+                    Verifique se a vítima está usar algo que possa colocá-la em
                     perigo (ex.: objetos pontiagudos, acessórios).
                   </li>
                   <li className="mb-2">
-                    Certifique-se de que o ambiente é seguro para realizar o
-                    transporte.
-                  </li>
-                  <li>
-                    Verifique se há riscos adicionais, como tráfego de veículos ou
-                    incêndio.
+                   Realizar VOS (ver, ouvir, sentir)
                   </li>
                 </ul>
               </div>
@@ -433,7 +425,7 @@ export default function CombinedPage() {
               </div>
               <div className="col-md-6 order-md-1">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 2 - Posicionar
+                  Passo 2 
                 </h4>
                 <ul
                   style={{
@@ -442,15 +434,20 @@ export default function CombinedPage() {
                     color: "#e9ecef",
                   }}
                 >
+                   <li className="mb-2">
+                    Colocar a mão mais proxima de nós em posição de sinaleiro
+                   </li>
+                   <li className="mb-2">
+                    Segurar a outra mão entrelançando os dedos e colocando-a junto do rosto da pessoa.
+                   </li>
                   <li className="mb-2">
-                    Coloque a vítima em uma posição estável, de preferência deitada
-                    de costas.
+                    Coloque a vítima em uma posição estável.
                   </li>
                   <li className="mb-2">
                     Certifique-se de que a cabeça, o pescoço e a coluna estão
                     alinhados.
                   </li>
-                  <li>
+                  <li className="mb-2">
                     Evite movimentos bruscos que possam agravar lesões.
                   </li>
                 </ul>
@@ -465,36 +462,6 @@ export default function CombinedPage() {
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
-              </div>
-              <div className="col-md-6">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 3 - Transportar
-                </h4>
-                <ul
-                  style={{
-                    fontSize: "1.1rem",
-                    lineHeight: "1.7",
-                    color: "#e9ecef",
-                  }}
-                >
-                  <li className="mb-2">
-                    Use técnicas adequadas para levantar a vítima, como o método de
-                    arrastamento ou a técnica de dois socorristas.
-                  </li>
-                  <li className="mb-2">
-                    Mantenha a vítima estável durante o transporte, evitando
-                    movimentos desnecessários.
-                  </li>
-                  <li>
-                    Leve a vítima para um local seguro ou aguarde a chegada de
-                    socorro profissional.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* Repetição de Passos (para reforço) */}
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
                 <img
                   src="/assets/pls5.png"
                   alt="Passo 2: Posicionar a vítima"
@@ -502,9 +469,9 @@ export default function CombinedPage() {
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              <div className="col-md-6 order-md-1">
+              <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 2 - Posicionar
+                  Passo 3
                 </h4>
                 <ul
                   style={{
@@ -514,31 +481,27 @@ export default function CombinedPage() {
                   }}
                 >
                   <li className="mb-2">
-                    Coloque a vítima em uma posição estável, de preferência deitada
-                    de costas.
+                   Dobrar o joelho da vítima que está mais longe.
                   </li>
                   <li className="mb-2">
-                    Certifique-se de que a cabeça, o pescoço e a coluna estão
-                    alinhados.
-                  </li>
-                  <li>
-                    Evite movimentos bruscos que possam agravar lesões.
+                    Rodar a vítima para o lado do braço que está apoiado no chão
                   </li>
                 </ul>
               </div>
             </div>
+            {/* Repetição de Passos (para reforço) */}
             <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
+              <div className="col-md-6 text-center order-md-2">
+              <img
                   src="/assets/pls6.png"
                   alt="Passo 3: Transportar a vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 order-md-1">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 3 - Transportar
+                  Passo 4
                 </h4>
                 <ul
                   style={{
@@ -548,53 +511,21 @@ export default function CombinedPage() {
                   }}
                 >
                   <li className="mb-2">
-                    Use técnicas adequadas para levantar a vítima, como o método de
-                    arrastamento ou a técnica de dois socorristas.
-                  </li>
-                  <li className="mb-2">
-                    Mantenha a vítima estável durante o transporte, evitando
-                    movimentos desnecessários.
-                  </li>
-                  <li>
-                    Leve a vítima para um local seguro ou aguarde a chegada de
-                    socorro profissional.
+                    Permeabilizar a via aérea, inclinado a cabeça ligeramente para trás.
                   </li>
                 </ul>
               </div>
             </div>
             <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
-                <img
+              <div className="col-md-6 text-center">
+              <img
                   src="/assets/pls7.png"
                   alt="Passo 2: Posicionar a vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 2 - Posicionar
-                </h4>
-                <ul
-                  style={{
-                    fontSize: "1.1rem",
-                    lineHeight: "1.7",
-                    color: "#e9ecef",
-                  }}
-                >
-                  <li className="mb-2">
-                    Coloque a vítima em uma posição estável, de preferência deitada
-                    de costas.
-                  </li>
-                  <li className="mb-2">
-                    Certifique-se de que a cabeça, o pescoço e a coluna estão
-                    alinhados.
-                  </li>
-                  <li>
-                    Evite movimentos bruscos que possam agravar lesões.
-                  </li>
-                </ul>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -602,7 +533,7 @@ export default function CombinedPage() {
     },
     {
       id: 3,
-      title: "Posição Inicial",
+      title: "Vigiar Vítima",
       content: (
         <>
           <div className="text-center mb-4">
@@ -614,9 +545,7 @@ export default function CombinedPage() {
             />
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Fique em pé com os pés afastados na largura dos ombros e braços relaxados
-            ao lado do corpo. Esta posição é a base para um bom agachamento e
-            proporciona estabilidade durante o exercício.
+          Após colocar a pessoa nesta posição é importante observar até à chegada da ambulância. Se nesse tempo a vítima deixar de respirar, deve voltar a deitá-la rapidamente de barriga para cima e iniciar
           </p>
         </>
       ),
