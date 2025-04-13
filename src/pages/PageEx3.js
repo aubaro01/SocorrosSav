@@ -971,7 +971,7 @@ export default function PageEx4() {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formPass">
-                <Form.Label className="fw-semibold">Password</Form.Label>
+                <Form.Label className="fw-semibold">Circuito</Form.Label>
                 <Form.Control
                   type="password"
                   name="pass"

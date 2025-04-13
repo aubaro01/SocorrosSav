@@ -2,12 +2,12 @@ const User = require('../models/user');
 
 const createUser = async (req, res) => {
   try {
-    const { nome, circuito, Pass } = req.body;
-    if (!nome || !circuito || !Pass) {
+    const { nome, circuito } = req.body;
+    if (!nome || !circuito ) {
       return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
     }
 
-    const existingUser = await User.findOne({ nome, circuito, Pass });
+    const existingUser = await User.findOne({ nome, circuito });
 
     if (existingUser) {
       return res.status(400).json({ message: 'Já existe um usuário com esse nome, circuito e senha.' });
@@ -16,7 +16,6 @@ const createUser = async (req, res) => {
     const newUser = new User({
       nome,
       circuito,
-      Pass,
     });
 
     const savedUser = await newUser.save();

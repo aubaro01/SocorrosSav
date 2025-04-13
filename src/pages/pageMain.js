@@ -19,9 +19,8 @@ export default function LandingPage() {
 
     const formData = {
       nome: event.target.nome.value,
-      circuito: event.target.circuito.value,
-      Pass: event.target.password.value,
-    };
+      circuito: event.target.circuito.value
+        };
 
     setLoading(true);
     setErrorMessage("");
@@ -98,7 +97,7 @@ export default function LandingPage() {
           <div className="text-center mb-4">
             <h2 className="fw-bold">Inscreva-se</h2>
             <p className="text-muted">
-              Preencha o formulário abaixo para criar o seu perfil para os exercícios ao longo do dia...
+              Este formulário é para inscrição dos circuitos, que deve ser feita pelo responsavél dos <strong>Primeiros Socorros.</strong>
             </p>
           </div>
 
@@ -144,20 +143,6 @@ export default function LandingPage() {
                 required
               />
               <div className="form-text"><em>*</em> Números e letra.</div>
-            </div>
-
-            {/* Password Field */}
-            <div className="mb-3">
-              <label htmlFor="password" className="form-label">Password</label>
-              <input
-                type="password"
-                id="password"
-                className="form-control"
-                placeholder="Digite uma password"
-                minLength="1"
-                maxLength="10"
-                required
-              />
             </div>
 
             {/* Submit Button */}
