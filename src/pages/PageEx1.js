@@ -431,7 +431,7 @@ export default function PageExe1() {
                     perigo (ex.: objetos pontiagudos, acessórios).
                   </li>
                   <li className="mb-2">
-                   Realizar VOS (ver, ouvir, sentir)
+                    Realizar VOS (ver, ouvir, sentir)
                   </li>
                 </ul>
               </div>
@@ -448,7 +448,7 @@ export default function PageExe1() {
               </div>
               <div className="col-md-6 order-md-1">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 2 
+                  Passo 2
                 </h4>
                 <ul
                   style={{
@@ -457,12 +457,12 @@ export default function PageExe1() {
                     color: "#e9ecef",
                   }}
                 >
-                   <li className="mb-2">
+                  <li className="mb-2">
                     Colocar a mão mais proxima de nós em posição de sinaleiro
-                   </li>
-                   <li className="mb-2">
+                  </li>
+                  <li className="mb-2">
                     Segurar a outra mão entrelançando os dedos e colocando-a junto do rosto da pessoa.
-                   </li>
+                  </li>
                   <li className="mb-2">
                     Coloque a vítima em uma posição estável.
                   </li>
@@ -504,7 +504,7 @@ export default function PageExe1() {
                   }}
                 >
                   <li className="mb-2">
-                   Dobrar o joelho da vítima que está mais longe.
+                    Dobrar o joelho da vítima que está mais longe.
                   </li>
                   <li className="mb-2">
                     Rodar a vítima para o lado do braço que está apoiado no chão
@@ -515,7 +515,7 @@ export default function PageExe1() {
             {/* Repetição de Passos (para reforço) */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center order-md-2">
-              <img
+                <img
                   src="/assets/pls6.png"
                   alt="Passo 3: Transportar a vítima"
                   className="img-fluid rounded"
@@ -541,14 +541,14 @@ export default function PageExe1() {
             </div>
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center">
-              <img
+                <img
                   src="/assets/pls7.png"
                   alt="Passo 2: Posicionar a vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-             
+
             </div>
           </div>
         </div>
@@ -568,7 +568,7 @@ export default function PageExe1() {
             />
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-          Após colocar a pessoa nesta posição é importante observar até à chegada da ambulância. Se nesse tempo a vítima deixar de respirar, deve voltar a deitá-la rapidamente de barriga para cima e iniciar
+            Após colocar a pessoa nesta posição é importante observar até à chegada da ambulância. Se nesse tempo a vítima deixar de respirar, deve voltar a deitá-la rapidamente de barriga para cima e iniciar
           </p>
         </>
       ),
@@ -816,15 +816,21 @@ export default function PageExe1() {
         </div>
       </footer>
 
-      <Modal show={showModal} onHide={handleModalClose} centered>
-        <Modal.Header closeButton className="border-0">
-          <Modal.Title className="fw-bold text-dark">Registrar Exercício</Modal.Title>
+      <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
+        <Modal.Header closeButton className="border-0 pb-0" style={{ backgroundColor: '#f8f9fa' }}>
+          <Modal.Title className="fw-bold" style={{ color: '#2c3e50', fontSize: '1.5rem' }}>
+            <i className="bi bi-clipboard-check me-2" style={{ color: '#27ae60' }}></i>
+            Registrar Exercício
+          </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="p-4">
+
+        <Modal.Body className="px-4 pt-3 pb-4">
           {!submitted ? (
             <Form onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="formNome">
-                <Form.Label className="fw-semibold">Nome Completo</Form.Label>
+              <Form.Group className="mb-4" controlId="formNome">
+                <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
+                  Nome Completo
+                </Form.Label>
                 <Form.Control
                   type="text"
                   name="nome"
@@ -832,41 +838,106 @@ export default function PageExe1() {
                   onChange={handleChange}
                   placeholder="Digite seu nome completo"
                   required
-                  className="p-2"
+                  className="p-3 rounded-3"
+                  style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formCircuito">
-                <Form.Label className="fw-semibold">Circuito</Form.Label>
+
+              <Form.Group className="mb-4" controlId="formCircuito">
+                <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
+                  Circuito
+                </Form.Label>
                 <Form.Control
                   type="text"
                   name="circuito"
                   value={formData.circuito}
                   onChange={handleChange}
-                  placeholder="Digite  o seu circuito"
+                  placeholder="Digite o seu circuito"
                   required
-                  className="p-2"
+                  className="p-3 rounded-3"
+                  style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formConcluido">
-                <Form.Check
-                  type="checkbox"
-                  name="concluido"
-                  checked={formData.concluido}
-                  onChange={handleChange}
-                  label="Exercício concluído"
-                  className="fw-semibold"
-                />
+
+              <Form.Group className="mb-4" controlId="formConcluido">
+                <div className="form-check form-switch d-flex align-items-center">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    name="concluido"
+                    id="flexSwitchCheckChecked"
+                    checked={formData.concluido}
+                    onChange={handleChange}
+                    style={{
+                      width: "3em",
+                      height: "1.5em",
+                      cursor: "pointer",
+                      marginRight: "10px",
+                    }}
+                  />
+                  <label
+                    className="form-check-label fw-semibold"
+                    htmlFor="flexSwitchCheckChecked"
+                    style={{
+                      color: formData.concluido ? "#2ecc71" : "#34495e",
+                      fontSize: "1.05rem",
+                      transition: "color 0.3s ease",
+                      userSelect: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {formData.concluido ? (
+                      <>
+                        <i className="bi bi-check-circle-fill me-2"></i>
+                        Exercício Marcado como concluído
+                      </>
+                    ) : (
+                      <>
+                        <i className="bi bi-circle me-2"></i>
+                        Marcar como concluído
+                      </>
+                    )}
+                  </label>
+                </div>
               </Form.Group>
-              <div className="text-center">
-                <Button type="submit" className="btn btn-success fw-bold px-4 py-2">
-                  Enviar
+
+              <div className="text-center mt-4">
+                <Button
+                  type="submit"
+                  className="fw-bold px-4 py-3 rounded-3"
+                  style={{
+                    backgroundColor: '#27ae60',
+                    border: 'none',
+                    fontSize: '1.1rem',
+                    width: '100%',
+                    boxShadow: '0 4px 6px rgba(39, 174, 96, 0.2)'
+                  }}
+                >
+                  <i className="bi bi-send-check me-2"></i>
+                  Enviar Registro
                 </Button>
               </div>
             </Form>
           ) : (
-            <div className="text-center">
-              <h5 className="text-success fw-bold">Registro concluído com sucesso!</h5>
-              <Button onClick={handleModalClose} className="btn btn-secondary mt-3 px-4">
+            <div className="text-center py-3">
+              <div className="mb-4">
+                <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
+              </div>
+              <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
+                Registro concluído com sucesso!
+              </h5>
+              <p className="text-muted mb-4">
+                Obrigado por completar o exercício.
+              </p>
+              <Button
+                onClick={handleModalClose}
+                className="fw-semibold px-4 py-2 rounded-3"
+                style={{
+                  backgroundColor: '#7f8c8d',
+                  border: 'none',
+                  width: '50%'
+                }}
+              >
                 Fechar
               </Button>
             </div>

@@ -292,7 +292,7 @@ export default function PageEx2() {
                 <Inem />
               </div>
               <p className="mt-3 small text-muted">
-               <strong>Exercício de chamada à emergência médica.</strong> 
+                <strong>Exercício de chamada à emergência médica.</strong>
               </p>
             </div>
 
@@ -442,16 +442,21 @@ export default function PageEx2() {
         </div>
       </footer>
 
-      {/* Modal de Registro */}
-      <Modal show={showModal} onHide={handleModalClose} centered>
-        <Modal.Header closeButton className="border-0">
-          <Modal.Title className="fw-bold text-dark">Registrar Exercício</Modal.Title>
+      <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
+        <Modal.Header closeButton className="border-0 pb-0" style={{ backgroundColor: '#f8f9fa' }}>
+          <Modal.Title className="fw-bold" style={{ color: '#2c3e50', fontSize: '1.5rem' }}>
+            <i className="bi bi-clipboard-check me-2" style={{ color: '#27ae60' }}></i>
+            Registrar Exercício
+          </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="p-4">
+
+        <Modal.Body className="px-4 pt-3 pb-4">
           {!submitted ? (
             <Form onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="formNome">
-                <Form.Label className="fw-semibold">Nome Completo</Form.Label>
+              <Form.Group className="mb-4" controlId="formNome">
+                <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
+                  Nome Completo
+                </Form.Label>
                 <Form.Control
                   type="text"
                   name="nome"
@@ -459,11 +464,15 @@ export default function PageEx2() {
                   onChange={handleChange}
                   placeholder="Digite seu nome completo"
                   required
-                  className="p-2"
+                  className="p-3 rounded-3"
+                  style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formCircuito">
-                <Form.Label className="fw-semibold">Circuito</Form.Label>
+
+              <Form.Group className="mb-4" controlId="formCircuito">
+                <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
+                  Circuito
+                </Form.Label>
                 <Form.Control
                   type="text"
                   name="circuito"
@@ -471,29 +480,90 @@ export default function PageEx2() {
                   onChange={handleChange}
                   placeholder="Digite o seu circuito"
                   required
-                  className="p-2"
+                  className="p-3 rounded-3"
+                  style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formConcluido">
-                <Form.Check
-                  type="checkbox"
-                  name="concluido"
-                  checked={formData.concluido}
-                  onChange={handleChange}
-                  label="Exercício concluído"
-                  className="fw-semibold"
-                />
+
+              <Form.Group className="mb-4" controlId="formConcluido">
+                <div className="form-check form-switch d-flex align-items-center">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    name="concluido"
+                    id="flexSwitchCheckChecked"
+                    checked={formData.concluido}
+                    onChange={handleChange}
+                    style={{
+                      width: "3em",
+                      height: "1.5em",
+                      cursor: "pointer",
+                      marginRight: "10px",
+                    }}
+                  />
+                  <label
+                    className="form-check-label fw-semibold"
+                    htmlFor="flexSwitchCheckChecked"
+                    style={{
+                      color: formData.concluido ? "#2ecc71" : "#34495e",
+                      fontSize: "1.05rem",
+                      transition: "color 0.3s ease",
+                      userSelect: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {formData.concluido ? (
+                      <>
+                        <i className="bi bi-check-circle-fill me-2"></i>
+                        Exercício Marcado como concluído
+                      </>
+                    ) : (
+                      <>
+                        <i className="bi bi-circle me-2"></i>
+                        Marcar como concluído
+                      </>
+                    )}
+                  </label>
+                </div>
               </Form.Group>
-              <div className="text-center">
-                <Button type="submit" className="btn btn-success fw-bold px-4 py-2">
-                  Enviar
+
+              <div className="text-center mt-4">
+                <Button
+                  type="submit"
+                  className="fw-bold px-4 py-3 rounded-3"
+                  style={{
+                    backgroundColor: '#27ae60',
+                    border: 'none',
+                    fontSize: '1.1rem',
+                    width: '100%',
+                    boxShadow: '0 4px 6px rgba(39, 174, 96, 0.2)'
+                  }}
+                >
+                  <i className="bi bi-send-check me-2"></i>
+                  Enviar Registro
                 </Button>
               </div>
             </Form>
           ) : (
-            <div className="text-center">
-              <h5 className="text-success fw-bold">Registro concluído com sucesso!</h5>
-              <Button onClick={handleModalClose} className="btn btn-secondary mt-3 px-4">
+            <div className="text-center py-3">
+              <div className="mb-4">
+                <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
+              </div>
+              <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
+                Registro concluído com sucesso!
+              </h5>
+              <p className="text-muted mb-4">
+                Obrigado por completar o exercício.
+              </p>
+              <Button
+                onClick={handleModalClose}
+                className="fw-semibold px-4 py-2 rounded-3"
+                style={{
+                  backgroundColor: '#7f8c8d',
+                  border: 'none',
+                  width: '50%'
+                }}
+              >
                 Fechar
               </Button>
             </div>
