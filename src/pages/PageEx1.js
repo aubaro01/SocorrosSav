@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export default function CombinedPage() {
   const [showModal, setShowModal] = useState(false);
@@ -10,16 +12,37 @@ export default function CombinedPage() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [exercicioNome, setExercicioNome] = useState("RVA");
+  const exercicioId = process.env.REACT_APP_EXER1_ID;
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Dados enviados:", formData);
-    setSubmitted(true);
+
+    const requestData = {
+      nome: formData.nome,
+      circuito: formData.circuito,
+      id_Exer_fk: exercicioId,
+      exer_res: formData.concluido ? "Feito" : "Não Feito",
+    };
+
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/ExerUser`,
+        requestData
+      );
+      console.log("Dados enviados:", response.data);
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+    }
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
 
   const handleModalClose = () => {
