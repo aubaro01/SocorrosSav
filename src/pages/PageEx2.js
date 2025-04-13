@@ -7,7 +7,7 @@ export default function PageEx4() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
-    pass: "",
+    circuito: "",
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -29,7 +29,7 @@ export default function PageEx4() {
   const handleModalClose = () => {
     setShowModal(false);
     setSubmitted(false);
-    setFormData({ nome: "", pass: "", concluido: false });
+    setFormData({ nome: "", circuito: "", concluido: false });
   };
 
 
@@ -262,8 +262,19 @@ export default function PageEx4() {
               </section>
             ))}
 
-            <div className="text-center my-4">
-              <Inem />
+            <div className="text-center my-5 p-4 bg-white border border-2 border-warning rounded-3 shadow">
+              <h3 className="mb-4 fw-bold text-danger">
+                <i className="bi bi-exclamation-triangle-fill me-2"></i>
+                Emergência Médica - 112
+              </h3>
+              <p>Clique no botão abaixo para mais detalhes do exercício</p>
+              <p>👇</p>
+              <div className="d-flex justify-content-center">
+                <Inem />
+              </div>
+              <p className="mt-3 small text-muted">
+                Exercício de chamada à emergência médica.
+              </p>
             </div>
 
             <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
@@ -432,14 +443,14 @@ export default function PageEx4() {
                   className="p-2"
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formPass">
-                <Form.Label className="fw-semibold">Código de Acesso</Form.Label>
+              <Form.Group className="mb-3" controlId="formCircuito">
+                <Form.Label className="fw-semibold">Circuito</Form.Label>
                 <Form.Control
-                  type="password"
-                  name="pass"
-                  value={formData.pass}
+                  type="text"
+                  name="circuito"
+                  value={formData.circuito}
                   onChange={handleChange}
-                  placeholder="Digite seu código de acesso"
+                  placeholder="Digite o seu circuito"
                   required
                   className="p-2"
                 />

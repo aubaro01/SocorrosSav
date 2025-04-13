@@ -6,7 +6,7 @@ export default function PageEx4() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
-    pass: "",
+    circuito: "",
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -28,7 +28,7 @@ export default function PageEx4() {
   const handleModalClose = () => {
     setShowModal(false);
     setSubmitted(false);
-    setFormData({ nome: "", pass: "", concluido: false });
+    setFormData({ nome: "", circuito: "", concluido: false });
   };
 
 
@@ -970,14 +970,14 @@ export default function PageEx4() {
                   className="p-2"
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formPass">
+              <Form.Group className="mb-3" controlId="formCircuito">
                 <Form.Label className="fw-semibold">Circuito</Form.Label>
                 <Form.Control
-                  type="password"
-                  name="pass"
-                  value={formData.pass}
+                  type="text"
+                  name="circuito"
+                  value={formData.circuito}
                   onChange={handleChange}
-                  placeholder="Digite seu código de acesso"
+                  placeholder="Digite o seu circuito"
                   required
                   className="p-2"
                 />
