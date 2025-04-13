@@ -273,7 +273,7 @@ export default function PageEx4() {
                 <Inem />
               </div>
               <p className="mt-3 small text-muted">
-                Exercício de chamada à emergência médica.
+               <strong>Exercício de chamada à emergência médica.</strong> 
               </p>
             </div>
 
