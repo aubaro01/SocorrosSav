@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Inem from "../components/ChInem";
 
-export default function PageEx4() {
+export default function PageEx2() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",

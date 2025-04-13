@@ -4,7 +4,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-export default function PageSBV() {
+export default function PageEx4() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -12,7 +12,7 @@ export default function PageSBV() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState("Suporte Básico de Vida");
+  const [exercicioNome, setExercicioNome] = useState("SBV");
   const exercicioId = process.env.REACT_APP_EXER4_ID;
 
   const handleSubmit = async (event) => {
