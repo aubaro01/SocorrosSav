@@ -11,7 +11,7 @@ export default function PageSBV() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
-    pass: "",
+    circuito: "",
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -39,7 +39,7 @@ export default function PageSBV() {
 
     const requestData = {
       nome: formData.nome,
-      Pass: formData.pass,
+      circuito: formData.pass,
       id_Exer_fk: exercicioId,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
@@ -67,7 +67,7 @@ export default function PageSBV() {
   const handleModalClose = () => {
     setShowModal(false);
     setSubmitted(false);
-    setFormData({ nome: "", pass: "", concluido: false });
+    setFormData({ nome: "", circuito: "", concluido: false });
   };
 
   const steps = [
@@ -329,8 +329,8 @@ export default function PageSBV() {
                 <Form.Control type="text" name="nome" value={formData.nome} onChange={handleChange} placeholder="Digite seu nome" required className="p-2" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formPass">
-                <Form.Label className="fw-semibold">Password</Form.Label>
-                <Form.Control type="password" name="pass" value={formData.pass} onChange={handleChange} placeholder="Digite a sua password" required className="p-2" />
+                <Form.Label className="fw-semibold">Circuito</Form.Label>
+                <Form.Control type="text" name="circuito" value={formData.circuito} onChange={handleChange} placeholder="Digite o seu circuito" required className="p-2" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formConcluido">
                 <Form.Check type="checkbox" name="concluido" checked={formData.concluido} onChange={handleChange} label="Exercício concluído" className="fw-semibold" />
