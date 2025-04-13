@@ -4,7 +4,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-export default function PageEx4() {
+export default function PageEx3() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -12,7 +12,7 @@ export default function PageEx4() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState("RVA");
+  const [exercicioNome, setExercicioNome] = useState("Maca");
   const exercicioId = process.env.REACT_APP_EXER3_ID;
 
   const handleSubmit = async (event) => {
