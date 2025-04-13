@@ -262,8 +262,19 @@ export default function PageEx4() {
               </section>
             ))}
 
-            <div className="text-center my-4">
-              <Inem />
+            <div className="text-center my-5 p-4 bg-white border border-2 border-warning rounded-3 shadow">
+              <h3 className="mb-4 fw-bold text-danger">
+                <i className="bi bi-exclamation-triangle-fill me-2"></i>
+                Emergência Médica - 112
+              </h3>
+              <p>Clique no botão abaixo para mais detalhes do exercício</p>
+              <p>👇</p>
+              <div className="d-flex justify-content-center">
+                <Inem />
+              </div>
+              <p className="mt-3 small text-muted">
+                Exercício de chamada à emergência médica.
+              </p>
             </div>
 
             <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
