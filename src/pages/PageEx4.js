@@ -1,12 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 export default function PageSBV() {
-  const { nome } = useParams();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -14,33 +12,15 @@ export default function PageSBV() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState("");
-  const [exercicioId, setExercicioId] = useState(process.env.REACT_APP_EXER4_ID || null); 
-  
-  useEffect(() => {
-    const fetchExercicio = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/exers/${nome}`
-        );
-
-        setExercicioNome(response.data.nome);
-        setExercicioId(response.data.id || process.env.REACT_APP_EXER4_ID);
-      } catch (error) {
-        console.error("Erro ao buscar exercício:", error);
-        setExercicioId(process.env.REACT_APP_EXER4_ID);
-      }
-    };
-
-    fetchExercicio();
-  }, [nome]);
+  const [exercicioNome, setExercicioNome] = useState("Suporte Básico de Vida");
+  const exercicioId = process.env.REACT_APP_EXER4_ID;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const requestData = {
       nome: formData.nome,
-      circuito: formData.circuito,  // Corrigido de 'pass' para 'circuito'
+      circuito: formData.circuito,
       id_Exer_fk: exercicioId,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
@@ -70,7 +50,6 @@ export default function PageSBV() {
     setSubmitted(false);
     setFormData({ nome: "", circuito: "", concluido: false });
   };
-
 
   const steps = [
     {

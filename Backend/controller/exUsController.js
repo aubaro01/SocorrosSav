@@ -4,14 +4,14 @@ const exerc = require('../models/exerc');
 
 const createUserExerc = async (req, res) => {
   try {
-    const { nome, Pass, id_Exer_fk, exer_res } = req.body;
+    const { nome, Circuito, id_Exer_fk, exer_res } = req.body;
 
     const user = await User.findOne({ nome });
     if (!user) {
       return res.status(400).json({ message: 'Utilizador não encontrado.' });
     }
 
-    if (user.Pass !== Pass) {
+    if (user.circuito !== Circuito) {
       return res.status(400).json({ message: 'Senha incorreta.' });
     }
 
@@ -39,6 +39,16 @@ const createUserExerc = async (req, res) => {
   }
 };
 
+const getAll = async (req, res) => {
+  try {
+    const exers = await UserExerc.find(); 
+    res.status(200).json(exers);  
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   createUserExerc,
+  getAll
 };

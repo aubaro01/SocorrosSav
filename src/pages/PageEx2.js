@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import Inem from "../components/ChInem";
 
 export default function PageEx4() {
@@ -11,11 +13,29 @@ export default function PageEx4() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [exercicioNome, setExercicioNome] = useState("RVA");
+  const exercicioId = process.env.REACT_APP_EXER2_ID;
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Dados enviados:", formData);
-    setSubmitted(true);
+
+    const requestData = {
+      nome: formData.nome,
+      circuito: formData.circuito,
+      id_Exer_fk: exercicioId,
+      exer_res: formData.concluido ? "Feito" : "Não Feito",
+    };
+
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/ExerUser`,
+        requestData
+      );
+      console.log("Dados enviados:", response.data);
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+    }
   };
 
   const handleChange = (e) => {
@@ -31,7 +51,6 @@ export default function PageEx4() {
     setSubmitted(false);
     setFormData({ nome: "", circuito: "", concluido: false });
   };
-
 
   const steps = [
     {
