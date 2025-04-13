@@ -9,10 +9,6 @@ const userSchema = new mongoose.Schema(
     circuito: {
       type: String,
       required: true, 
-    },
-    Pass: {
-      type: String,
-      required: true, 
     }
   },
   {
