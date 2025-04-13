@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-
 export default function PageSBV() {
   const { nome } = useParams();
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +15,8 @@ export default function PageSBV() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [exercicioNome, setExercicioNome] = useState("");
-  const [exercicioId, setExercicioId] = useState(null);
+  const [exercicioId, setExercicioId] = useState(process.env.REACT_APP_EXER4_ID || null); 
+  
   useEffect(() => {
     const fetchExercicio = async () => {
       try {
@@ -25,9 +25,10 @@ export default function PageSBV() {
         );
 
         setExercicioNome(response.data.nome);
-        setExercicioId(response.data.id);
+        setExercicioId(response.data.id || process.env.REACT_APP_EXER4_ID);
       } catch (error) {
         console.error("Erro ao buscar exercício:", error);
+        setExercicioId(process.env.REACT_APP_EXER4_ID);
       }
     };
 
@@ -39,7 +40,7 @@ export default function PageSBV() {
 
     const requestData = {
       nome: formData.nome,
-      circuito: formData.pass,
+      circuito: formData.circuito,  // Corrigido de 'pass' para 'circuito'
       id_Exer_fk: exercicioId,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
@@ -69,6 +70,7 @@ export default function PageSBV() {
     setSubmitted(false);
     setFormData({ nome: "", circuito: "", concluido: false });
   };
+
 
   const steps = [
     {
