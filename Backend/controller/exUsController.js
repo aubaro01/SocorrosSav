@@ -67,7 +67,7 @@ const getUserExerciseCount = async (req, res) => {
         }
       },
       {
-        $sort: { nome: 1 } 
+        $sort: { nome: 1 }
       }
     ]);
     const cleanMap = new Map();
