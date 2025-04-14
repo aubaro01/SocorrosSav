@@ -4,14 +4,14 @@ const exerc = require('../models/exerc');
 
 const createUserExerc = async (req, res) => {
   try {
-    const { nome, Circuito, id_Exer_fk, exer_res } = req.body;
+    const { nome, circuito, id_Exer_fk, exer_res } = req.body;
 
     const user = await User.findOne({ nome });
     if (!user) {
       return res.status(400).json({ message: 'Utilizador não encontrado.' });
     }
 
-    if (user.circuito !== Circuito) {
+    if (user.circuito !== circuito) {
       return res.status(400).json({ message: 'Senha incorreta.' });
     }
 

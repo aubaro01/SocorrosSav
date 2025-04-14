@@ -4,6 +4,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
+
 export default function PageEx4() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -12,15 +13,28 @@ export default function PageEx4() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState("SBV");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   const exercicioId = process.env.REACT_APP_EXER4_ID;
+  if (!exercicioId) {
+    console.error("REACT_APP_EXER4_ID não está definido no ambiente");
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    if (!formData.nome.trim() || !formData.circuito.trim()) {
+      setError("Por favor, preencha todos os campos obrigatórios");
+      setIsLoading(false);
+      return;
+    }
 
     const requestData = {
-      nome: formData.nome,
-      circuito: formData.circuito,
+      nome: formData.nome.trim(),
+      circuito: formData.circuito.trim(),
       id_Exer_fk: exercicioId,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
@@ -28,12 +42,25 @@ export default function PageEx4() {
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/ExerUser`,
-        requestData
+        requestData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
       );
-      console.log("Dados enviados:", response.data);
       setSubmitted(true);
-    } catch (error) {
-      console.error("Erro ao enviar dados:", error);
+    } catch (err) {
+      let errorMessage = "Erro ao enviar dados";
+      if (err.response) {
+        errorMessage = err.response.data?.message ||
+          `Erro ${err.response.status}: ${err.response.statusText}`;
+      } else if (err.request) {
+        errorMessage = "Sem resposta do servidor";
+      }
+      setError(errorMessage);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -48,6 +75,7 @@ export default function PageEx4() {
   const handleModalClose = () => {
     setShowModal(false);
     setSubmitted(false);
+    setError(null);
     setFormData({ nome: "", circuito: "", concluido: false });
   };
 
@@ -297,7 +325,6 @@ export default function PageEx4() {
           </p>
         </div>
       </footer>
-
       <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
         <Modal.Header closeButton className="border-0 pb-0" style={{ backgroundColor: '#f8f9fa' }}>
           <Modal.Title className="fw-bold" style={{ color: '#2c3e50', fontSize: '1.5rem' }}>
@@ -307,27 +334,41 @@ export default function PageEx4() {
         </Modal.Header>
 
         <Modal.Body className="px-4 pt-3 pb-4">
+          {/* Mensagem de erro */}
+          {error && (
+            <div className="alert alert-danger d-flex align-items-center mb-4" role="alert">
+              <i className="bi bi-exclamation-triangle-fill me-2"></i>
+              <div>{error}</div>
+            </div>
+          )}
+
           {!submitted ? (
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-4" controlId="formNome">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Nome Completo
+                  Nome  <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
-                  placeholder="Digite seu nome completo"
+                  placeholder="Digite seu nome usado no registro"
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
+                  disabled={isLoading}
                 />
+                {!formData.nome && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formCircuito">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Circuito
+                  Circuito <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -338,7 +379,13 @@ export default function PageEx4() {
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
+                  disabled={isLoading}
                 />
+                {!formData.circuito && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formConcluido">
@@ -353,9 +400,11 @@ export default function PageEx4() {
                     style={{
                       width: "3em",
                       height: "1.5em",
-                      cursor: "pointer",
+                      cursor: isLoading ? "not-allowed" : "pointer",
                       marginRight: "10px",
+                      opacity: isLoading ? 0.7 : 1
                     }}
+                    disabled={isLoading}
                   />
                   <label
                     className="form-check-label fw-semibold"
@@ -365,13 +414,13 @@ export default function PageEx4() {
                       fontSize: "1.05rem",
                       transition: "color 0.3s ease",
                       userSelect: "none",
-                      cursor: "pointer",
+                      cursor: isLoading ? "not-allowed" : "pointer",
                     }}
                   >
                     {formData.concluido ? (
                       <>
                         <i className="bi bi-check-circle-fill me-2"></i>
-                        Exercício Marcado como concluído
+                        Exercício concluído
                       </>
                     ) : (
                       <>
@@ -392,11 +441,22 @@ export default function PageEx4() {
                     border: 'none',
                     fontSize: '1.1rem',
                     width: '100%',
-                    boxShadow: '0 4px 6px rgba(39, 174, 96, 0.2)'
+                    boxShadow: '0 4px 6px rgba(39, 174, 96, 0.2)',
+                    opacity: isLoading ? 0.8 : 1
                   }}
+                  disabled={isLoading}
                 >
-                  <i className="bi bi-send-check me-2"></i>
-                  Enviar Registro
+                  {isLoading ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Enviar...
+                    </>
+                  ) : (
+                    <>
+                      <i className="bi bi-send-check me-2"></i>
+                      Enviar Registro
+                    </>
+                  )}
                 </Button>
               </div>
             </Form>
