@@ -60,17 +60,38 @@ const getUserExerciseCount = async (req, res) => {
       {
         $project: {
           _id: 0,
-          nome: { $trim: { input: '$userInfo.nome' } },
-          totalExercicios: 1
+          totalExercicios: 1,
+          nome: {
+            $toUpper: { $trim: { input: '$userInfo.nome' } }
+          }
         }
+      },
+      {
+        $sort: { nome: 1 } 
       }
     ]);
+    const cleanMap = new Map();
 
-    res.status(200).json(exercCount);
+    for (const user of exercCount) {
+      const nome = user.nome;
+      if (cleanMap.has(nome)) {
+        cleanMap.set(nome, cleanMap.get(nome) + user.totalExercicios);
+      } else {
+        cleanMap.set(nome, user.totalExercicios);
+      }
+    }
+
+    const result = Array.from(cleanMap, ([nome, totalExercicios]) => ({
+      nome,
+      totalExercicios
+    }));
+
+    res.status(200).json(result);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 
 
