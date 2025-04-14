@@ -13,17 +13,33 @@ export default function PageEx2() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
-  const [exercicioNome, setExercicioNome] = useState("RVA");
+  const [exercicioNome] = useState("RVA");
   const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const exercicioId = process.env.REACT_APP_EXER2_ID;
+
+
+  useEffect(() => {
+    if (!exercicioId) {
+      console.error("REACT_APP_EXER1_ID não está definido no ambiente");
+      setError("Erro de configuração - ID do exercício não encontrado");
+    }
+  }, [exercicioId]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    if (!formData.nome.trim() || !formData.circuito.trim()) {
+      setError("Por favor, preencha todos os campos obrigatórios");
+      setIsLoading(false);
+      return;
+    }
 
     const requestData = {
-      nome: formData.nome,
-      circuito: formData.circuito,
+      nome: formData.nome.trim(),
+      circuito: formData.circuito.trim(),
       id_Exer_fk: exercicioId,
       exer_res: formData.concluido ? "Feito" : "Não Feito",
     };
@@ -31,12 +47,31 @@ export default function PageEx2() {
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/ExerUser`,
-        requestData
+        requestData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
       );
       console.log("Dados enviados:", response.data);
       setSubmitted(true);
     } catch (error) {
+      let errorMessage = "Erro ao enviar dados";
+
+      if (error.response) {
+        errorMessage = error.response.data?.message ||
+          `Erro ${error.response.status}: ${error.response.statusText}`;
+      } else if (error.request) {
+        errorMessage = "Sem resposta do servidor";
+      } else {
+        errorMessage = error.message || "Erro ao configurar a requisição";
+      }
+
       console.error("Erro ao enviar dados:", error);
+      setError(errorMessage);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -51,6 +86,7 @@ export default function PageEx2() {
   const handleModalClose = () => {
     setShowModal(false);
     setSubmitted(false);
+    setError(null);
     setFormData({ nome: "", circuito: "", concluido: false });
   };
 
@@ -460,14 +496,14 @@ export default function PageEx2() {
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-4" controlId="formNome">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Nome Completo <span className="text-danger">*</span>
+                  Nome <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
-                  placeholder="Digite seu nome completo"
+                  placeholder="Digite o seu nome"
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
@@ -490,6 +526,8 @@ export default function PageEx2() {
                   value={formData.circuito}
                   onChange={handleChange}
                   placeholder="Digite o seu circuito"
+                  minLength={2}
+                  maxLength={3}
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
@@ -562,12 +600,12 @@ export default function PageEx2() {
                   {isLoading ? (
                     <>
                       <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                       A Enviar...
+                      A Enviar...
                     </>
                   ) : (
                     <>
                       <i className="bi bi-send-check me-2"></i>
-                      Enviar Registro
+                      Enviar
                     </>
                   )}
                 </Button>
@@ -579,7 +617,7 @@ export default function PageEx2() {
                 <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
               </div>
               <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
-                Registro concluído com sucesso!
+                Exercício concluído com sucesso!
               </h5>
               <p className="text-muted mb-4">
                 Obrigado por completar o exercício.
