@@ -50,19 +50,17 @@ const getUserExerciseCount = async (req, res) => {
       },
       {
         $lookup: {
-          from: 'users', 
+          from: 'users',
           localField: '_id',
           foreignField: '_id',
           as: 'userInfo'
         }
       },
-      {
-        $unwind: '$userInfo'
-      },
+      { $unwind: '$userInfo' },
       {
         $project: {
           _id: 0,
-          nome: '$userInfo.nome',
+          nome: { $trim: { input: '$userInfo.nome' } },
           totalExercicios: 1
         }
       }
@@ -73,6 +71,7 @@ const getUserExerciseCount = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 
 
