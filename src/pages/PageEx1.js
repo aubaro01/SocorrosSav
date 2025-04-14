@@ -106,7 +106,7 @@ export default function PageExe1() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Este vídeo demonstra a técnica correta para realizar o exercício.
+            Este vídeo demonstra como realizar a Desobstrução de uma Via Aérea.
             <br />
             Observe atentamente os movimentos antes de começar a praticar.
           </p>
@@ -379,8 +379,6 @@ export default function PageExe1() {
       ),
     },
   ];
-
-  // Conteúdo do exercício PLS
   const stepsPLS = [
     {
       id: 0,
@@ -396,7 +394,7 @@ export default function PageExe1() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Este vídeo demonstra a técnica correta para realizar o exercício.
+            Este vídeo demonstra como fazer o PLS (Posição Lateral de Segurança).
             Observe atentamente os movimentos antes de começar a praticar.
           </p>
         </>
@@ -410,12 +408,6 @@ export default function PageExe1() {
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
             </p>
-            <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <li className="mb-2"></li>
-              <li className="mb-2"></li>
-              <li className="mb-2"></li>
-              <li></li>
-            </ul>
           </div>
           <div className="col-md-6 text-center">
             <img
@@ -434,17 +426,6 @@ export default function PageExe1() {
       content: (
         <div className="row">
           <div className="col-md-12">
-            <p
-              style={{
-                fontSize: "1.1rem",
-                lineHeight: "1.7",
-                color: "#e9ecef",
-                marginBottom: "2rem",
-              }}
-            >
-              texto
-            </p>
-            {/* Passo 1 - Avaliar */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -475,7 +456,6 @@ export default function PageExe1() {
                 </ul>
               </div>
             </div>
-            {/* Passo 2 - Posicionar */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center order-md-2">
                 <img
@@ -515,7 +495,6 @@ export default function PageExe1() {
                 </ul>
               </div>
             </div>
-            {/* Passo 3 - Transportar */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -551,7 +530,6 @@ export default function PageExe1() {
                 </ul>
               </div>
             </div>
-            {/* Repetição de Passos (para reforço) */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center order-md-2">
                 <img
@@ -587,7 +565,6 @@ export default function PageExe1() {
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-
             </div>
           </div>
         </div>
@@ -628,7 +605,6 @@ export default function PageExe1() {
       </header>
 
       <main className="container py-5">
-        {/* Seção DVA */}
         <div className="text-center mb-5">
           <h2 style={{ fontSize: "2.5rem", fontWeight: "700", color: "black", marginBottom: "1rem" }}>
             Desobstrução de Via Aérea (DVA)
@@ -679,7 +655,6 @@ export default function PageExe1() {
           </section>
         ))}
 
-        {/* Seção PLS */}
         <div className="text-center mb-5">
           <h2 style={{ fontSize: "2.5rem", fontWeight: "700", color: "black", marginBottom: "1rem" }}>
             Posição Lateral de Segurança (PLS)
@@ -726,11 +701,9 @@ export default function PageExe1() {
             {step.content}
           </section>
         ))}
-
-        {/* Resumo e registro */}
         <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
           <h4 style={{ fontSize: "1.2rem", fontWeight: "600", textAlign: "center", marginBottom: "1.5rem", color: "#ecf0f1" }}>
-            Resumo do Exercício
+            Resumo
           </h4>
           <div className="row">
             <div className="col-md-6">
@@ -753,7 +726,7 @@ export default function PageExe1() {
                   1
                 </div>
                 <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                  Encorajar a tossir / Assistir ao vídeo
+                  Encorajar a tossir 
                 </p>
               </div>
               <div className="d-flex align-items-center mb-3">
@@ -775,11 +748,9 @@ export default function PageExe1() {
                   2
                 </div>
                 <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                  Pancadas / Posicionar corretamente
+                 Pancadas Interescapulares 
                 </p>
               </div>
-            </div>
-            <div className="col-md-6">
               <div className="d-flex align-items-center mb-3">
                 <div
                   style={{
@@ -799,10 +770,12 @@ export default function PageExe1() {
                   3
                 </div>
                 <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                  Compressões / Transportar a vítima
-                </p>
+                  Manobra de Heimlich              
+                  </p>
               </div>
-              <div className="d-flex align-items-center mb-3">
+            </div>
+            <div className="col-md-6">
+            <div className="d-flex align-items-center mb-3">
                 <div
                   style={{
                     minWidth: "30px",
@@ -821,7 +794,51 @@ export default function PageExe1() {
                   4
                 </div>
                 <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                  Manobra de Heimlich / Posição Inicial
+                Condições de Segurança
+                </p>
+              </div>
+              <div className="d-flex align-items-center mb-3">
+                <div
+                  style={{
+                    minWidth: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    backgroundColor: "#f39c12",
+                    color: "#2c3e50",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginRight: "10px",
+                    fontSize: "0.9rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  5
+                </div>
+                <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
+                 Avaliar Consciência
+                </p>
+              </div>
+              <div className="d-flex align-items-center mb-3">
+                <div
+                  style={{
+                    minWidth: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    backgroundColor: "#f39c12",
+                    color: "#2c3e50",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginRight: "10px",
+                    fontSize: "0.9rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  6
+                </div>
+                <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
+                  Vigiar Vítima
                 </p>
               </div>
             </div>
