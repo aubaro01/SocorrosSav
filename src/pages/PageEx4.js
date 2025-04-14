@@ -138,7 +138,6 @@ export default function PageEx4() {
               Para o transporte de uma vítima inconsciente, siga os passos:
             </p>
 
-            {/* Passo 1 - Avaliar */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -164,7 +163,6 @@ export default function PageEx4() {
               </div>
             </div>
 
-            {/* Passo 2 - Posicionar */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center order-md-2">
                 <img
@@ -325,7 +323,7 @@ export default function PageEx4() {
           </p>
         </div>
       </footer>
-      
+
       <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
         <Modal.Header closeButton className="border-0 pb-0" style={{ backgroundColor: '#f8f9fa' }}>
           <Modal.Title className="fw-bold" style={{ color: '#2c3e50', fontSize: '1.5rem' }}>

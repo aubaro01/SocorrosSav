@@ -591,7 +591,7 @@ export default function PageEx3() {
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
                   <img
-                    src="/assets/tm11.jpg"
+                    src="/assets/tm14.jpg"
                     alt="Movimento de subida"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px" }}
@@ -637,7 +637,7 @@ export default function PageEx3() {
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
                   <img
-                    src="/assets/tm14.jpg"
+                    src="/assets/tm11.jpg"
                     alt="Controle de descida"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px" }}
