@@ -17,7 +17,7 @@ export default function PageExe1() {
   const [error, setError] = useState(null);
   const exercicioId = process.env.REACT_APP_EXER1_ID;
 
-  
+
   useEffect(() => {
     if (!exercicioId) {
       console.error("REACT_APP_EXER1_ID não está definido no ambiente");
@@ -880,7 +880,6 @@ export default function PageExe1() {
         </Modal.Header>
 
         <Modal.Body className="px-4 pt-3 pb-4">
-          {/* Mensagem de erro */}
           {error && (
             <div className="alert alert-danger d-flex align-items-center mb-4" role="alert">
               <i className="bi bi-exclamation-triangle-fill me-2"></i>
@@ -892,14 +891,14 @@ export default function PageExe1() {
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-4" controlId="formNome">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Nome Completo <span className="text-danger">*</span>
+                  Nome <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
-                  placeholder="Digite seu nome completo"
+                  placeholder="Digite o seu nome"
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
@@ -922,6 +921,8 @@ export default function PageExe1() {
                   value={formData.circuito}
                   onChange={handleChange}
                   placeholder="Digite o seu circuito"
+                  minLength={2}
+                  maxLength={3}
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
@@ -966,7 +967,7 @@ export default function PageExe1() {
                     {formData.concluido ? (
                       <>
                         <i className="bi bi-check-circle-fill me-2"></i>
-                        Exercício Marcado como concluído
+                        Exercício marcado como concluído
                       </>
                     ) : (
                       <>
@@ -994,12 +995,12 @@ export default function PageExe1() {
                   {isLoading ? (
                     <>
                       <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                      Enviando...
+                      A Enviar...
                     </>
                   ) : (
                     <>
                       <i className="bi bi-send-check me-2"></i>
-                      Enviar Registro
+                      Enviar
                     </>
                   )}
                 </Button>
@@ -1011,7 +1012,7 @@ export default function PageExe1() {
                 <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
               </div>
               <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
-                Registro concluído com sucesso!
+                Exercício concluído com sucesso!
               </h5>
               <p className="text-muted mb-4">
                 Obrigado por completar o exercício.

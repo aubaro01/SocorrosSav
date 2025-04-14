@@ -13,13 +13,18 @@ export default function PageEx4() {
     concluido: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [exercicioNome] = useState("SBV");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
   const exercicioId = process.env.REACT_APP_EXER4_ID;
-  if (!exercicioId) {
-    console.error("REACT_APP_EXER4_ID não está definido no ambiente");
-  }
+
+
+  useEffect(() => {
+    if (!exercicioId) {
+      console.error("REACT_APP_EXER1_ID não está definido no ambiente");
+      setError("Erro de configuração - ID do exercício não encontrado");
+    }
+  }, [exercicioId]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -49,15 +54,21 @@ export default function PageEx4() {
           }
         }
       );
+      console.log("Dados enviados:", response.data);
       setSubmitted(true);
-    } catch (err) {
+    } catch (error) {
       let errorMessage = "Erro ao enviar dados";
-      if (err.response) {
-        errorMessage = err.response.data?.message ||
-          `Erro ${err.response.status}: ${err.response.statusText}`;
-      } else if (err.request) {
+
+      if (error.response) {
+        errorMessage = error.response.data?.message ||
+          `Erro ${error.response.status}: ${error.response.statusText}`;
+      } else if (error.request) {
         errorMessage = "Sem resposta do servidor";
+      } else {
+        errorMessage = error.message || "Erro ao configurar a requisição";
       }
+
+      console.error("Erro ao enviar dados:", error);
       setError(errorMessage);
     } finally {
       setIsLoading(false);
@@ -78,6 +89,7 @@ export default function PageEx4() {
     setError(null);
     setFormData({ nome: "", circuito: "", concluido: false });
   };
+
 
   const steps = [
     {
@@ -352,7 +364,7 @@ export default function PageEx4() {
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
-                  placeholder="Digite seu nome usado no registro"
+                  placeholder="Digite o seu nome"
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
@@ -375,6 +387,8 @@ export default function PageEx4() {
                   value={formData.circuito}
                   onChange={handleChange}
                   placeholder="Digite o seu circuito"
+                  minLength={2}
+                  maxLength={3}
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
@@ -419,7 +433,7 @@ export default function PageEx4() {
                     {formData.concluido ? (
                       <>
                         <i className="bi bi-check-circle-fill me-2"></i>
-                        Exercício concluído
+                        Exercício marcado como concluído
                       </>
                     ) : (
                       <>
@@ -453,7 +467,7 @@ export default function PageEx4() {
                   ) : (
                     <>
                       <i className="bi bi-send-check me-2"></i>
-                      Enviar Registro
+                      Enviar
                     </>
                   )}
                 </Button>
@@ -465,7 +479,7 @@ export default function PageEx4() {
                 <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
               </div>
               <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
-                Registro concluído com sucesso!
+                Exercício concluído com sucesso!
               </h5>
               <p className="text-muted mb-4">
                 Obrigado por completar o exercício.
