@@ -545,28 +545,45 @@ export default function PageEx2() {
               </div>
             </Form>
           ) : (
-            <div className="text-center py-3">
+            <div className="text-center py-4 px-3">
               <div className="mb-4">
-                <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
+                <i
+                  className="bi bi-check-circle-fill"
+                  style={{
+                    fontSize: '4rem',
+                    color: '#2ecc71',
+                  }}
+                  aria-hidden="true"
+                ></i>
               </div>
-              <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
+
+              <h5 className="fw-bold mb-3" style={{ color: '#34495e' }}>
                 Registro concluído com sucesso!
               </h5>
+
               <p className="text-muted mb-4">
-                Obrigado por completar o exercício.
+                Obrigado por completar o exercício. Pode avançar para o próximo.
               </p>
+
               <Button
                 onClick={handleModalClose}
-                className="fw-semibold px-4 py-2 rounded-3"
+                className="fw-semibold rounded-3"
                 style={{
-                  backgroundColor: '#7f8c8d',
+                  backgroundColor: '#2c3e50',
+                  color: '#ecf0f1',
                   border: 'none',
-                  width: '50%'
+                  padding: '0.75rem 2rem',
+                  width: '100%',
+                  maxWidth: '300px',
+                  transition: 'background-color 0.3s ease',
                 }}
+                onMouseEnter={(e) => (e.target.style.backgroundColor = '#34495e')}
+                onMouseLeave={(e) => (e.target.style.backgroundColor = '#2c3e50')}
               >
                 Fechar
               </Button>
             </div>
+
           )}
         </Modal.Body>
       </Modal>
