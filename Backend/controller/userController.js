@@ -10,7 +10,7 @@ const createUser = async (req, res) => {
     const existingUser = await User.findOne({ nome, circuito });
 
     if (existingUser) {
-      return res.status(400).json({ message: 'Já existe um usuário com esse nome, circuito e senha.' });
+      return res.status(400).json({ message: 'Já existe um usuário com esse nome e circuito.' });
     }
 
     const newUser = new User({
