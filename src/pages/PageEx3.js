@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 export default function PageEx3() {
+  const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -75,12 +76,11 @@ export default function PageEx3() {
     },
     {
       id: 1,
-      title: "Transporte de vítima dentro do auditório",
+      title: "– Transporte de vítima no interior/exterior do auditório",
       content: (
         <div className="row">
           <div className="col-md-12">
 
-            {/* Passo 1 */}
             <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>              <div className="row align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -126,7 +126,6 @@ export default function PageEx3() {
             </div>
             </div>
 
-            {/* Passo 2 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>              <div className="row align-items-center">
 
               <div className="col-md-6 order-md-2 text-center">
@@ -173,7 +172,6 @@ export default function PageEx3() {
             </div>
             </div>
 
-            {/* Passo 3 */}
             <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
@@ -200,27 +198,34 @@ export default function PageEx3() {
                     }}>
                       3
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Posicionamento dos 3 socorristas</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Posicionamento dos 5 socorristas</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Socorrista 1: Responsável pela cabeça (comando)</span>
+                      <span>Socorrista 1 – Responsável pela cabeça (voz de comando)</span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Socorrista 2: Responsável pelo tronco</span>
+                      <span>Socorrista 2 – Responsável pelos membros superiores</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>Socorrista 3: Responsável pelos membros inferiores</span>
+                      <span>Socorrista 3 – Responsável pelo tronco</span>
+                    </li>
+                    <li className="d-flex">
+                      <span className="me-2">•</span>
+                      <span>Socorrista 4 – Responsável pelos membros inferiores</span>
+                    </li>
+                    <li className="d-flex">
+                      <span className="me-2">•</span>
+                      <span>Socorrista 5 – Responsável pela maca</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Passo 4 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
@@ -267,7 +272,6 @@ export default function PageEx3() {
               </div>
             </div>
 
-            {/* Passo 5 */}
             <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
@@ -299,7 +303,7 @@ export default function PageEx3() {
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Posicionar a maca paralelamente à vítima</span>
+                      <span>O Socorrista 5 posiciona a maca alinhado com os pés da vítima alinhado</span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
@@ -314,7 +318,6 @@ export default function PageEx3() {
               </div>
             </div>
 
-            {/* Passo 6 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
@@ -341,16 +344,12 @@ export default function PageEx3() {
                     }}>
                       6
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Abaixar em bloco</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}> Baixar em bloco</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
                       <span>Manter alinhamento durante toda a descida</span>
-                    </li>
-                    <li className="mb-2 d-flex">
-                      <span className="me-2">•</span>
-                      <span>Flexionar joelhos para amortecer o impacto</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -361,12 +360,11 @@ export default function PageEx3() {
               </div>
             </div>
 
-            {/* Passo 7 */}
             <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
                   <img
-                    src="/assets/tm4.png"
+                    src="/assets/tm13.jpg"
                     alt="Passo 7: Colar cintas"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px" }}
@@ -408,7 +406,6 @@ export default function PageEx3() {
               </div>
             </div>
 
-            {/* Passo 8 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
@@ -444,18 +441,15 @@ export default function PageEx3() {
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Distribuir peso igualmente entre a equipe</span>
+                      <span>Os socorristas lado a lado com a mão fechada verificam se as mãos ficam à mesma
+                        altura</span>
                     </li>
-                    <li className="d-flex">
-                      <span className="me-2">•</span>
-                      <span>Manter postura ergonômica durante o transporte</span>
-                    </li>
+
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Passo 9 */}
             <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
@@ -482,7 +476,7 @@ export default function PageEx3() {
                     }}>
                       9
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Levantamento com flexão</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Levantamento dos socorristas</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
@@ -502,7 +496,6 @@ export default function PageEx3() {
               </div>
             </div>
 
-            {/* Passo 10 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
@@ -532,7 +525,7 @@ export default function PageEx3() {
                     <h4 style={{ color: "#f39c12", margin: 0 }}>Preparar para avançar</h4>
                   </div>
                   <div className="alert alert-warning mt-3">
-                    <strong>Comando final:</strong> À ordem do socorrista responsável pela cabeça
+                    <strong>Comando final:</strong> à ordem do socorrista responsável pela cabeça, avançam sempre para a frente
                   </div>
                 </div>
               </div>
@@ -552,12 +545,11 @@ export default function PageEx3() {
         <div className="row">
           <div className="col-md-12">
 
-            {/* Passo 1 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(243, 156, 18, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
                   <img
-                    src="/assets/rva5.png"
+                    src="/assets/tm12.jpg"
                     alt="Posicionamento inicial"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px" }}
@@ -579,32 +571,27 @@ export default function PageEx3() {
                     }}>
                       1
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>-----</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Subir/Descer escadas </h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>------</span>
+                      <span>A cabeça da vítima tem de estar sempre na direção da subida ou descida</span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>----</span>
-                    </li>
-                    <li className="d-flex">
-                      <span className="me-2">•</span>
-                      <span>------</span>
+                      <span>Socorristas aos pés da vítima sobem/descem 3 degraus</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Passo 2 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(243, 156, 18, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
                   <img
-                    src="/assets/tm9.png"
+                    src="/assets/tm11.jpg"
                     alt="Movimento de subida"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px" }}
@@ -626,32 +613,31 @@ export default function PageEx3() {
                     }}>
                       2
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>-----</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Nivelação de maca </h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>-----</span>
+                      <span>Na descida, os socorristas aos pés da vítima colocam a pega da maca no antebraço</span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>------</span>
+                      <span>Na subida, os socorristas à cabeça da vítima colocam a pega da maca no antebraço</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>------</span>
+                      <span>À voz do socorrista responsável pela cabeça iniciam a subida/descida</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Passo 3 */}
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(243, 156, 18, 0.1)", borderLeft: "4px solid #f39c12" }}>
               <div className="row align-items-center">
                 <div className="col-md-6 text-center">
                   <img
-                    src="/assets/rva5.png"
+                    src="/assets/tm14.jpg"
                     alt="Controle de descida"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px" }}
@@ -673,28 +659,34 @@ export default function PageEx3() {
                     }}>
                       3
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Controle na descida</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Controle na subida/descida</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Manter centro de gravidade baixo</span>
+                      <span>Descer/subir os degraus lentamente para poderem estar sincronizados.
+                      </span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Descer degrau por degrau com segurança</span>
+                      <span>Colocar um pé de cada vez em cada degrau para dar segurança ao movimento e evitar
+                        tropeços.
+                      </span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>-----</span>
+                      <span>Se existir, segurar corrimão com uma das mãos para ter mais estabilidade.</span>
+                    </li>
+                    <li className="d-flex">
+                      <span className="me-2">•</span>
+                      <span>Evitar movimentos bruscos para não destabilizar a maca.</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-
             <div className="alert alert-warning mt-4">
-              <strong>Nota:</strong> Priorizar sempre a segurança da equipe e da vítima, utilizando equipamentos de proteção individual quando necessário.
+              <strong>Nota:</strong> Priorizar sempre a segurança da equipe e da vítima, utilizar equipamentos de proteção individual quando necessário.
             </div>
           </div>
         </div>
@@ -792,7 +784,7 @@ export default function PageEx3() {
                   color: "#ecf0f1",
                 }}
               >
-                Resumo do Procedimento
+                Resumo
               </h4>
               <div className="row">
                 <div className="col-md-6">
@@ -815,28 +807,6 @@ export default function PageEx3() {
                       1
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                      Assistir ao vídeo demonstrativo
-                    </p>
-                  </div>
-                  <div className="d-flex align-items-center mb-3">
-                    <div
-                      style={{
-                        minWidth: "30px",
-                        height: "30px",
-                        borderRadius: "50%",
-                        backgroundColor: "#f39c12",
-                        color: "#2c3e50",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginRight: "10px",
-                        fontSize: "0.9rem",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      2
-                    </div>
-                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
                       Preparar a vítima e o ambiente
                     </p>
                   </div>
@@ -856,7 +826,7 @@ export default function PageEx3() {
                         fontWeight: "bold",
                       }}
                     >
-                      3
+                      2
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
                       Posicionar os socorristas corretamente
@@ -880,7 +850,7 @@ export default function PageEx3() {
                         fontWeight: "bold",
                       }}
                     >
-                      4
+                      3
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
                       Realizar o levantamento em bloco
@@ -902,36 +872,15 @@ export default function PageEx3() {
                         fontWeight: "bold",
                       }}
                     >
-                      5
+                      4
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
                       Posicionar a vítima na maca com segurança
                     </p>
                   </div>
-                  <div className="d-flex align-items-center mb-3">
-                    <div
-                      style={{
-                        minWidth: "30px",
-                        height: "30px",
-                        borderRadius: "50%",
-                        backgroundColor: "#f39c12",
-                        color: "#2c3e50",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginRight: "10px",
-                        fontSize: "0.9rem",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      6
-                    </div>
-                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                      Transportar mantendo alinhamento corporal
-                    </p>
-                  </div>
                 </div>
               </div>
+
               <p
                 style={{
                   fontSize: "1.1rem",
@@ -980,11 +929,18 @@ export default function PageEx3() {
         </Modal.Header>
 
         <Modal.Body className="px-4 pt-3 pb-4">
+          {error && (
+            <div className="alert alert-danger d-flex align-items-center mb-4" role="alert">
+              <i className="bi bi-exclamation-triangle-fill me-2"></i>
+              <div>{error}</div>
+            </div>
+          )}
+
           {!submitted ? (
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-4" controlId="formNome">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Nome Completo
+                  Nome <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -996,11 +952,16 @@ export default function PageEx3() {
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
                 />
+                {!formData.nome.trim() && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formCircuito">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Circuito
+                  Circuito <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -1012,6 +973,11 @@ export default function PageEx3() {
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
                 />
+                {!formData.circuito.trim() && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formConcluido">
@@ -1044,7 +1010,7 @@ export default function PageEx3() {
                     {formData.concluido ? (
                       <>
                         <i className="bi bi-check-circle-fill me-2"></i>
-                        Exercício Marcado como concluído
+                        Exercício marcado como concluído
                       </>
                     ) : (
                       <>
@@ -1074,24 +1040,40 @@ export default function PageEx3() {
               </div>
             </Form>
           ) : (
-            <div className="text-center py-3">
+            <div className="text-center py-4 px-3">
               <div className="mb-4">
-                <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
+                <i
+                  className="bi bi-check-circle-fill"
+                  style={{
+                    fontSize: '4rem',
+                    color: '#2ecc71',
+                  }}
+                  aria-hidden="true"
+                ></i>
               </div>
-              <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
+
+              <h5 className="fw-bold mb-3" style={{ color: '#34495e' }}>
                 Registro concluído com sucesso!
               </h5>
+
               <p className="text-muted mb-4">
-                Obrigado por completar o exercício.
+                Obrigado por completar o exercício. Pode avançar para o próximo.
               </p>
+
               <Button
                 onClick={handleModalClose}
-                className="fw-semibold px-4 py-2 rounded-3"
+                className="fw-semibold rounded-3"
                 style={{
-                  backgroundColor: '#7f8c8d',
+                  backgroundColor: '#2c3e50',
+                  color: '#ecf0f1',
                   border: 'none',
-                  width: '50%'
+                  padding: '0.75rem 2rem',
+                  width: '100%',
+                  maxWidth: '300px',
+                  transition: 'background-color 0.3s ease',
                 }}
+                onMouseEnter={(e) => (e.target.style.backgroundColor = '#34495e')}
+                onMouseLeave={(e) => (e.target.style.backgroundColor = '#2c3e50')}
               >
                 Fechar
               </Button>

@@ -325,6 +325,7 @@ export default function PageEx4() {
           </p>
         </div>
       </footer>
+      
       <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
         <Modal.Header closeButton className="border-0 pb-0" style={{ backgroundColor: '#f8f9fa' }}>
           <Modal.Title className="fw-bold" style={{ color: '#2c3e50', fontSize: '1.5rem' }}>
