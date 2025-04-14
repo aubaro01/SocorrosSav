@@ -14,6 +14,8 @@ export default function PageEx2() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [exercicioNome, setExercicioNome] = useState("RVA");
+  const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
   const exercicioId = process.env.REACT_APP_EXER2_ID;
 
   const handleSubmit = async (event) => {
@@ -108,7 +110,6 @@ export default function PageEx2() {
               Para o transporte de uma vítima inconsciente, siga os cuidados descritos abaixo:
             </p>
 
-            {/* Passo 1 - Avaliação */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -128,7 +129,6 @@ export default function PageEx2() {
               </div>
             </div>
 
-            {/* Passo 2 - Posicionamento */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center order-md-2">
                 <img
@@ -148,7 +148,6 @@ export default function PageEx2() {
               </div>
             </div>
 
-            {/* Passo 3 - Transporte */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -433,7 +432,6 @@ export default function PageEx2() {
         </div>
       </main>
 
-      {/* Footer  */}
       <footer className="border-top py-4" style={{ backgroundColor: "#F9F9F9" }}>
         <div className="container text-center">
           <p style={{ fontSize: "0.9rem", color: "#757575" }}>
@@ -451,11 +449,18 @@ export default function PageEx2() {
         </Modal.Header>
 
         <Modal.Body className="px-4 pt-3 pb-4">
+          {error && (
+            <div className="alert alert-danger d-flex align-items-center mb-4" role="alert">
+              <i className="bi bi-exclamation-triangle-fill me-2"></i>
+              <div>{error}</div>
+            </div>
+          )}
+
           {!submitted ? (
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-4" controlId="formNome">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Nome Completo
+                  Nome Completo <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -466,12 +471,18 @@ export default function PageEx2() {
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
+                  disabled={isLoading}
                 />
+                {!formData.nome.trim() && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formCircuito">
                 <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
-                  Circuito
+                  Circuito <span className="text-danger">*</span>
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -482,7 +493,13 @@ export default function PageEx2() {
                   required
                   className="p-3 rounded-3"
                   style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
+                  disabled={isLoading}
                 />
+                {!formData.circuito.trim() && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
               </Form.Group>
 
               <Form.Group className="mb-4" controlId="formConcluido">
@@ -497,9 +514,11 @@ export default function PageEx2() {
                     style={{
                       width: "3em",
                       height: "1.5em",
-                      cursor: "pointer",
+                      cursor: isLoading ? "not-allowed" : "pointer",
                       marginRight: "10px",
+                      opacity: isLoading ? 0.7 : 1
                     }}
+                    disabled={isLoading}
                   />
                   <label
                     className="form-check-label fw-semibold"
@@ -509,13 +528,13 @@ export default function PageEx2() {
                       fontSize: "1.05rem",
                       transition: "color 0.3s ease",
                       userSelect: "none",
-                      cursor: "pointer",
+                      cursor: isLoading ? "not-allowed" : "pointer",
                     }}
                   >
                     {formData.concluido ? (
                       <>
                         <i className="bi bi-check-circle-fill me-2"></i>
-                        Exercício Marcado como concluído
+                        Exercício marcado como concluído
                       </>
                     ) : (
                       <>
@@ -538,52 +557,45 @@ export default function PageEx2() {
                     width: '100%',
                     boxShadow: '0 4px 6px rgba(39, 174, 96, 0.2)'
                   }}
+                  disabled={isLoading}
                 >
-                  <i className="bi bi-send-check me-2"></i>
-                  Enviar Registro
+                  {isLoading ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                       A Enviar...
+                    </>
+                  ) : (
+                    <>
+                      <i className="bi bi-send-check me-2"></i>
+                      Enviar Registro
+                    </>
+                  )}
                 </Button>
               </div>
             </Form>
           ) : (
-            <div className="text-center py-4 px-3">
+            <div className="text-center py-3">
               <div className="mb-4">
-                <i
-                  className="bi bi-check-circle-fill"
-                  style={{
-                    fontSize: '4rem',
-                    color: '#2ecc71',
-                  }}
-                  aria-hidden="true"
-                ></i>
+                <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
               </div>
-
-              <h5 className="fw-bold mb-3" style={{ color: '#34495e' }}>
+              <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
                 Registro concluído com sucesso!
               </h5>
-
               <p className="text-muted mb-4">
-                Obrigado por completar o exercício. Pode avançar para o próximo.
+                Obrigado por completar o exercício.
               </p>
-
               <Button
                 onClick={handleModalClose}
-                className="fw-semibold rounded-3"
+                className="fw-semibold px-4 py-2 rounded-3"
                 style={{
-                  backgroundColor: '#2c3e50',
-                  color: '#ecf0f1',
+                  backgroundColor: '#7f8c8d',
                   border: 'none',
-                  padding: '0.75rem 2rem',
-                  width: '100%',
-                  maxWidth: '300px',
-                  transition: 'background-color 0.3s ease',
+                  width: '50%'
                 }}
-                onMouseEnter={(e) => (e.target.style.backgroundColor = '#34495e')}
-                onMouseLeave={(e) => (e.target.style.backgroundColor = '#2c3e50')}
               >
                 Fechar
               </Button>
             </div>
-
           )}
         </Modal.Body>
       </Modal>
