@@ -481,16 +481,6 @@ export default function PageExe1() {
                   <li className="mb-2">
                     Segurar a outra mão entrelançando os dedos e colocando-a junto do rosto da pessoa.
                   </li>
-                  <li className="mb-2">
-                    Coloque a vítima em uma posição estável.
-                  </li>
-                  <li className="mb-2">
-                    Certifique-se de que a cabeça, o pescoço e a coluna estão
-                    alinhados.
-                  </li>
-                  <li className="mb-2">
-                    Evite movimentos bruscos que possam agravar lesões.
-                  </li>
                 </ul>
               </div>
             </div>

@@ -194,7 +194,7 @@ export default function PageEx3() {
                 <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Posicionar a vítima deitada de costas em posição estável</span>
+                    <span>Posicionar a vítima em decúbito dorsal, numa posição estável.</span>
                   </li>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
@@ -298,7 +298,7 @@ export default function PageEx3() {
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Levantar simultaneamente ao comando do socorrista 1</span>
+                      <span>Socorristas 2,3 e 4 devem apoiar-se com o ombro, uns nos outros</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -381,12 +381,12 @@ export default function PageEx3() {
                     }}>
                       6
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}> Baixar em bloco</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Baixar em bloco</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Manter alinhamento durante toda a descida</span>
+                      <span>Baixar simultaneamente ao comando do socorrista 1.</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -432,7 +432,7 @@ export default function PageEx3() {
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Ajustar conforme o biótipo da vítima</span>
+                      <span>Ajustar conforme o biótipo corporal da vítima</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -562,7 +562,7 @@ export default function PageEx3() {
                     <h4 style={{ color: "#f39c12", margin: 0 }}>Preparar para avançar</h4>
                   </div>
                   <div className="alert alert-warning mt-3">
-                    <strong>Comando final:</strong> à ordem do socorrista responsável pela cabeça, avançam sempre para a frente
+                    <strong>Comando final:</strong> à ordem do socorrista 1 pela cabeça, avançam sempre para a frente
                   </div>
                 </div>
               </div>

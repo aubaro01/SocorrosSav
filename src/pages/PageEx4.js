@@ -120,14 +120,11 @@ export default function PageEx4() {
         <div className="row">
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Dobre os joelhos e quadris, abaixando o corpo como se fosse sentar em uma cadeira invisível.
+              Comece por verificar se não existe perigo para si, para
+              a vítima ou para terceiros, tal como: tráfego, eletricidade,
+              gás ou outros.
             </p>
-            <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <li className="mb-2">Mantenha o peito erguido</li>
-              <li className="mb-2">Coluna em posição neutra</li>
-              <li className="mb-2">Joelhos alinhados com os pés</li>
-              <li>Não ultrapasse a linha dos dedos com os joelhos</li>
-            </ul>
+
           </div>
           <div className="col-md-6 text-center">
             <img
@@ -142,40 +139,52 @@ export default function PageEx4() {
     },
     {
       id: 2,
-      title: "Avaliar Consciência",
+      title: "SBV - Vítima respira",
       content: (
         <div className="row">
           <div className="col-md-12">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-              Para o transporte de uma vítima inconsciente, siga os passos:
+              Para o suporte básico de vida de uma vítima consciente, tenha em atenção os seguintes passos:
             </p>
 
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/sbv2.png"
-                  alt="Passo 1: Avaliar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
-              <div className="col-md-6">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1 - Avaliar</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">
-                    Verifique se a vítima está usando algo que possa colocá-la em perigo.
-                  </li>
-                  <li className="mb-2">
-                    Certifique-se de que o ambiente é seguro para o transporte.
-                  </li>
-                  <li>
-                    Observe riscos como tráfego ou incêndio.
-                  </li>
-                </ul>
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <h4 className="text-warning mb-3">Passo 1 - Avaliar consciência</h4>
+                  <ul className="fs-5 lh-lg text-light">
+                    <li className="mb-2">
+                      Tente interagir com a pessoa: faça gestos, chame pelo nome ou inicie uma conversa.
+                      <br />
+                      <em className="text-warning">Exemplos: “Está a sentir-se bem?”, “Consegue ouvir-me?” ou "[nome da vítima] está tudo bem?"</em>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-6 text-center">
+                  <img
+                    src="/assets/sbv2.png"
+                    alt="Passo 1: Avaliar consciência"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px" }}
+                  />
+                </div>
               </div>
             </div>
 
             <div className="row mb-4 align-items-center">
+
+              <div className="col-md-6 order-md-1">
+                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Permeabilizar via aérea</h4>
+                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  <li className="mb-2">Coloque a palma de uma mão sobre a testa da vítima.</li>
+                  <li className="mb-2">Com a outra mão, posicione os dedos indicador e médio na parte óssea da mandíbula.</li>
+                  <li className="mb-2">Incline suavemente a cabeça para trás e eleve a mandíbula.</li>
+                  <li className="mb-2">Evite pressionar os tecidos moles sob o queixo.</li>
+                  <li className="mb-2">Não feche a boca da vítima.</li>
+                </ul>
+              </div>
+              <div className="alert alert-warning mt-4">
+                <strong>Pontos a ter em atenção:</strong> Não realizar esta manobra se houver suspeita de traumatismo na coluna cervical.
+              </div>
               <div className="col-md-6 text-center order-md-2">
                 <img
                   src="/assets/sbv3.png"
@@ -184,33 +193,29 @@ export default function PageEx4() {
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Posicionar</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Coloque a vítima em uma posição estável, deitada de costas.</li>
-                  <li className="mb-2">Certifique-se do alinhamento da cabeça, pescoço e coluna.</li>
-                  <li>Evite movimentos bruscos.</li>
-                </ul>
-              </div>
             </div>
 
-            {/* Passo 3 - Transportar */}
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/sbv4.png"
-                  alt="Passo 3: Transportar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
-              <div className="col-md-6">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 3 - Transportar</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Utilize técnicas adequadas, como o arrastamento ou dois socorristas.</li>
-                  <li className="mb-2">Mantenha a vítima estável durante o transporte.</li>
-                  <li>Leve a vítima para um local seguro ou aguarde socorro profissional.</li>
-                </ul>
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <h4 className="text-warning mb-3">Passo 3 - VOS</h4>
+                  <ul className="fs-5 lh-lg text-light">
+                    <li className="mb-2"><strong>V - Vêr</strong> os movimentos do torax</li>
+                    <li className="mb-2"><strong>O - Ouvir</strong> os sons respiratórios</li>
+                    <li lassName="mb-2"><strong>S - Sentir</strong> o ar expirado</li>
+                  </ul>
+                </div>
+                <div className="col-md-6 text-center">
+                  <img
+                    src="/assets/sbv4.png"
+                    alt="Passo 1: Avaliar consciência"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px" }}
+                  />
+                </div>
+                <div className="alert alert-warning mt-4">
+                  <strong>Nota:</strong> A execução do VOS não deve exceder os 10 segundos.
+                </div>
               </div>
             </div>
           </div>
@@ -219,20 +224,112 @@ export default function PageEx4() {
     },
     {
       id: 3,
-      title: "Posição Inicial",
+      title: "SBV - Vítima não respira",
       content: (
         <>
-          <div className="text-center mb-4">
-            <img
-              src="/assets/sbv7.png"
-              alt="Posição Inicial"
-              className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
-            />
+          <div className="row mb-4 align-items-center">
+            <div className="col-md-6 order-md-1">
+              <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1 -  Ligar 112</h4>
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
+                Caso a vítima não responda e não tenha a respiração
+                normalizada, deve ativar de imediato o sistema de
+                emergência médica, o 112.
+              </p>
+            </div>
+            <div className="col-md-6 text-center order-md-2">
+              <img
+                src="/assets/emerNumber.png"
+                alt="Passo 2: Posicionar a vítima"
+                className="img-fluid rounded"
+                style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
+            </div>
           </div>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Fique em pé com os pés afastados na largura dos ombros e braços relaxados. Essa é a base para um bom agachamento e estabilidade.
-          </p>
+
+          <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
+                <ul className="fs-5 lh-lg text-light">
+                  <li className="mb-2">Coloque a base de uma mão no centro do tórax</li>
+                  <li className="mb-2">Coloque a outra mão por cima e entrelace os dedos</li>
+                  <li lassName="mb-2">Estique os braços com os ombros alinhados às mãos</li>
+                  <li lassName="mb-2">Comprima o esterno 5–6 cm de profundidade.</li>
+                  <li lassName="mb-2">Alivie totalmente a pressão entre compressões.</li>
+                  <li lassName="mb-2">Realize 30 compressões por minuto, ritmadas.</li>
+                </ul>
+              </div>
+
+              <div className="alert alert-warning mt-4">
+                <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
+                <p>
+                  <br />
+                  Deve parar-se de executar quanto :
+                  <br />
+                  a)  chegarem os técnicos de emergência médica;<br />
+                  b)  estiver fisicamente exausto(a);<br />
+                  c)  a vítima recomeçar a respirar normalmente
+                </p>
+              </div>
+
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/sbv6.png"
+                  alt="Passo 1: Avaliar consciência"
+                  className="img-fluid rounded shadow"
+                  style={{ maxHeight: "250px" }}
+                />
+              </div>
+            </div>
+
+            <div className="row mb-4 align-items-center" id="insuflacões">
+              <div className="col-md-6 order-md-1">
+                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}> 2.1 insuflações</h4>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}> 
+                  Só deve ser executado caso tenha máscara ou conheça o historial médico da vítima.
+                </p>
+                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
+                  <li className="mb-2">Colocar a máscara na vítima</li>
+                  <li className="mb-2">Inspira normalmente.</li>
+                  <li className="mb-2">Sopra pela válvula por 3 segundo, até ver o tórax subir</li>
+                  <li className="mb-2">Observa a elevação do tórax</li>
+                </ul>
+              </div>
+              <div className="alert alert-warning mt-4">
+                <strong>Nota:</strong> No máximo em 10 segundos. 
+                <br />
+                Se não tiver a máscara apropriada e não conhecer
+                o historial clinico da vítima, realize apenas compressões
+                até à chegada de ajuda diferenciada.
+              </div>
+              <div className="col-md-6 text-center order-md-2">
+                <img
+                  src="/assets/sbv.png"
+                  alt="Passo 2: Posicionar a vítima"
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
+              </div>
+            </div>
+          </div>
+
+          <div className="row mb-4 align-items-center">
+            <div className="col-md-6 order-md-1">
+              <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Caso a vítima recomeçe a respirar</h4>
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
+                Caso a vítima volte a respirar, deve colocar em PLS (Posição Lateral de Segurança).
+              </p>
+            </div>
+            <div className="alert alert-warning mt-4">
+              <strong>Nota:</strong> Explicar o PLS(?).
+            </div>
+            <div className="col-md-6 text-center order-md-2">
+              <img
+                src="/assets/sbv7.png"
+                alt="Passo 2: Posicionar a vítima"
+                className="img-fluid rounded"
+                style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
+            </div>
+          </div>
+
         </>
       ),
     },
@@ -265,7 +362,7 @@ export default function PageEx4() {
             style={{ width: "50px", height: "3px", backgroundColor: "#f39c12", marginBottom: "1.5rem" }}
           ></div>
           <p style={{ fontSize: "1.2rem", color: "black" }}>
-            Lições para avaliar e transportar vítimas com segurança.
+            Lições para realizar SBV (Suporte Básico de Vida).
           </p>
         </div>
 
@@ -308,7 +405,7 @@ export default function PageEx4() {
 
         <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
           <h4 style={{ fontSize: "1.2rem", fontWeight: "600", textAlign: "center", marginBottom: "1.5rem", color: "#ecf0f1" }}>
-            Resumo do Exercício
+            Resumo
           </h4>
           <div className="text-center">
             <Button
