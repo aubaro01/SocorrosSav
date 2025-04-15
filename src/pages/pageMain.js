@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from 'react-bootstrap';
 import axios from "axios";
-import Perguntas from '../components/Pergunta';
-import Perguntasdata from '../data/PerguntasData.json';
+
 
 axios.defaults.baseURL = process.env.USER_CREATE;
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
-const modal = "/assets/form1.png";
+const modal = "/assets/ModalF.png";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(false);
@@ -94,23 +93,14 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="container mt-5">
-          <h3 className="text-center mb-4">Perguntas</h3>
-          <div className="row justify-content-center">
-            <div className="col-12 col-md-10 col-lg-8">
-              <Perguntas data={Perguntasdata} />
-            </div>
-          </div>
-        </section>
 
         <section className="container py-5">
-          <div className="text-center mb-4">
-            <h2 className="fw-bold">Inscreva-se</h2>
-            <p className="text-muted">
-              Este formulário é para inscrição dos circuitos, que deve ser feita pelo responsavél dos <strong>Primeiros Socorros.</strong>
-            </p>
-          </div>
-
+  <div className="text-center mb-4">
+    <h2 className="fw-bold">Inscrever o meu Circuito</h2>
+    <p className="text-muted text-break">
+      Este formulário destina-se à inscrição dos circuitos e deve ser preenchido pelo responsável pelos <strong>Primeiros Socorros de cada circuito</strong>.
+    </p>
+  </div>
 
           {successMessage && (
             <div className="alert alert-success text-center mb-4">
@@ -145,12 +135,11 @@ export default function LandingPage() {
                 type="text"
                 id="circuito"
                 className="form-control"
-                placeholder="Digite o seu circuito *"
+                placeholder="Digite o seu circuito"
                 minLength="1"
                 maxLength="3"
                 required
               />
-              <div className="form-text"><em>*</em> Números e letra.</div>
             </div>
 
             <button type="submit" className="btn btn-dark w-100" disabled={loading}>
@@ -175,7 +164,7 @@ export default function LandingPage() {
         scrollable
         className="instruction-modal"
       >
-        <Modal.Header closeButton className="border-black border-bottom-2">
+        <Modal.Header className="border-black border-bottom-2">
           <Modal.Title className="fw-bold">
             <i className="bi bi-info-circle me-2"></i>
             Instruções para os Exercícios
@@ -183,7 +172,7 @@ export default function LandingPage() {
         </Modal.Header>
 
         <Modal.Body>
-          <div className="alert alert-dark mb-4">
+          <div className="alert alert-warning mb-4">
             <i className="bi bi-lightbulb me-2"></i>
             Siga estes passos cuidadosamente para garantir que seu exercício seja registrado corretamente.
           </div>
@@ -196,7 +185,7 @@ export default function LandingPage() {
             <div className="ps-5">
               <p>
                 Ao finalizar cada exercício, aparecerá um resumo com as informações principais
-                e um botão para acessar o formulário de envio.
+                e um botão para acessar um formulário de envio.
               </p>
               <div className="mt-3">
                 <img
@@ -219,10 +208,10 @@ export default function LandingPage() {
               <p>No formulário que será aberto, insira:</p>
               <ul className="mb-3">
                 <li>O nome que colocou no formulário da inscrição</li>
-                <li>A senha que criou</li>
-                <li>Marque a confirmação de conclusão</li>
+                <li>O seu circuito</li>
+                <li>E marque o exercício como concluido.</li>
               </ul>
-              <div className="mt-2">
+              <div className="mt-3">
                 <img
                   src={modal}
                   alt="Formulário de envio"
@@ -241,10 +230,10 @@ export default function LandingPage() {
             </div>
             <div className="ps-5">
               <p>
-                Clique no botão <strong>"Enviar"</strong> para confirmar sua participação
+                Clique no botão <strong>"Enviar"</strong> para confirmar a participação do seu circuito
                 e registrar a conclusão do exercício.
               </p>
-              <div className="alert alert-dark mt-3 rounded-0">
+              <div className="alert alert-warning mt-3 rounded-0">
                 <i className="bi bi-exclamation-triangle me-2"></i>
                 Certifique-se de que todos os dados estão corretos antes de enviar.
               </div>
@@ -257,7 +246,7 @@ export default function LandingPage() {
               Precisa de ajuda?
             </h6>
             <p className="mb-0">
-              Fale com o seu instrutor ou qualquer outro instrutor.
+              Fale com qualquer formador.
             </p>
           </div>
         </Modal.Body>
