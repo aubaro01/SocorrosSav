@@ -248,49 +248,57 @@ export default function PageEx4() {
           </div>
 
           <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
-            <div className="row align-items-center">
-              <div className="col-md-6">
-                <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
-                <ul className="fs-5 lh-lg text-light">
-                  <li className="mb-2">  Posicionar-se ao lado da vítima;
-                  </li>
-                  <li className="mb-2">Certificar-se que a vítima está deitada de costas, sobre uma superfície firme e plana;</li>
-                  <li lassName="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
-                  <li lassName="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
-                  <li lassName="mb-2">Colocar a base de uma mão no centro do tórax (sobre a metade inferior do esterno);</li>
-                  <li lassName="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
-                  <li lassName="mb-2">Aplicar pressão sobre o esterno, deprimindo-o 5-6 cm a cada compressão (as compressões torácicas superficiais podem não produzir um fluxo sanguíneo adequado);</li>
-                  <li lassName="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100 por minuto, mas não mais do que 120 por minuto (ajuda se contar as compressões em voz alta); </li>
-                  <li lassName="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos; </li>
-                  <li lassName="mb-2">Nunca interromper as compressões mais do que 10 segundos (com o coração parado, quando não se comprime o tórax, o sangue não circula).</li>
-                </ul>
-              </div>
+  <div className="row align-items-center">
+    <div className="col-md-6">
+      <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
+      <ul className="fs-5 lh-lg text-light">
+        <li className="mb-2">Posicionar-se ao lado da vítima;</li>
+        <li className="mb-2">Certificar-se que a vítima está deitada de costas, sobre uma superfície firme e plana;</li>
+        <li className="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
+        <li className="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
+        <li className="mb-2">Colocar a base de uma mão no centro do tórax (sobre a metade inferior do esterno);</li>
+        <li className="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
+        <li className="mb-2">Aplicar pressão sobre o esterno, deprimindo-o 5-6 cm a cada compressão (as compressões torácicas superficiais podem não produzir um fluxo sanguíneo adequado);</li>
+        <li className="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100 por minuto, mas não mais do que 120 por minuto (ajuda se contar as compressões em voz alta);</li>
+        <li className="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos;</li>
+        <li className="mb-2">Nunca interromper as compressões mais do que 10 segundos (com o coração parado, quando não se comprime o tórax, o sangue não circula).</li>
+      </ul>
+    </div>
+    <div className="col-md-6 text-center">
+      <img
+        src="/assets/sbv6.png"
+        alt="Passo 2: Iniciar RCP"
+        className="img-fluid rounded shadow"
+        style={{ maxHeight: "250px" }}
+      />
+    </div>
+  </div>
+</div>
 
-              <div className="alert alert-warning mt-4">
-                <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
-                <p>
-                  <br />
-                  Deve parar-se de executar quanto :
-                  <br />
-                  a)  chegarem os técnicos de emergência médica;<br />
-                  b)  estiver fisicamente exausto(a);<br />
-                  c)  a vítima recomeçar a respirar normalmente
-                </p>
-              </div>
+<div className="alert alert-warning mt-4">
+  <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
+  <p className="mt-2 mb-0">
+    Deve parar-se de executar quando:
+    <br />
+    a) chegarem os técnicos de emergência médica;<br />
+    b) estiver fisicamente exausto(a);<br />
+    c) a vítima recomeçar a respirar normalmente.
+  </p>
+</div>
 
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/sbv6.png"
-                  alt="Passo 1: Avaliar consciência"
-                  className="img-fluid rounded shadow"
-                  style={{ maxHeight: "250px" }}
-                />
-              </div>
-            </div>
+        </>
+      ),
+    },
 
-            <div className="row mb-4 align-items-center" id="insuflacões">
+    {
+      id: 3,
+      title: "SBV - Vítima não respira",
+      content: (
+        <>
+          
+          <div className="row mb-4 align-items-center" id="insuflacões">
               <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}> 2.1 insuflações</h4>
+                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}> Isuflações</h4>
                 <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}> 
                   Só deve ser executado caso tenha máscara ou conheça o historial médico da vítima.
                   <p> - O reanimador deve posicionar-se ao lado da vítima;</p>
@@ -305,39 +313,17 @@ export default function PageEx4() {
                 >Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve
                 </p>
               </div>
-
-              <div className="alert alert-warning mt-4 text-break">
-                <strong>Nota:</strong> No máximo em 10 segundos. 
-                <br />
-                Se não tiver a máscara apropriada e não conhecer
-                o historial clinico da vítima, realize apenas compressões
-                até à chegada de ajuda diferenciada.
-              </div>
               <div className="col-md-6 text-center order-md-2">
                 <img
-                  src="/assets/sbv.png"
+                  src="/assets/sbv8.png"
                   alt="Passo 2: Posicionar a vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
               </div>
             </div>
-          </div>
-          <div className="row mb-4 align-items-center">
-            <div className="col-md-6 order-md-1">
-              <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Caso a vítima recomeçe a respirar</h4>
-              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-                Caso a vítima volte a respirar, deve colocar em PLS (Posição Lateral de Segurança).
-              </p>
-            </div>
-            <div className="col-md-6 text-center order-md-2">
-              <img
-                src="/assets/sbv7.png"
-                alt="Passo 2: Posicionar a vítima"
-                className="img-fluid rounded"
-                style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
-            </div>
-          </div>
-
+            <div className="alert alert-warning ">
+                <strong>Nota:</strong> Caso a vítima volte a respirar, deve colocar em PLS (Posição Lateral de Segurança).
+              </div>
         </>
       ),
     },
@@ -450,7 +436,6 @@ export default function PageEx4() {
         </Modal.Header>
 
         <Modal.Body className="px-4 pt-3 pb-4">
-          {/* Mensagem de erro */}
           {error && (
             <div className="alert alert-danger d-flex align-items-center mb-4" role="alert">
               <i className="bi bi-exclamation-triangle-fill me-2"></i>
