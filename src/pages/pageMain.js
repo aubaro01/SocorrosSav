@@ -84,11 +84,11 @@ export default function LandingPage() {
               className="img-fluid w-75 mx-auto d-block"
             />
             <p className="text-muted mt-3">
-              Mapa dos pontos de exercícios<br />
-              Sector à Azul: <strong>Exercícios 1 & 2,</strong> perto das casas de banho  <br />
-              Sector à Verde: <strong>Exercícios 3,</strong> dentro do auditório<br />
-              Sector à Amarelo: <strong>Exercícios 4,</strong> entrada do auditório<br />
-              Sector à Vermelho: <strong>Exercícios 5,</strong> perto dos perdidos e achados<br />
+              Mapa dos pontos dos exercícios<br />
+              Circulo à Azul: <strong>Exercício 1 & 2,</strong> perto das casas de banho  <br />
+              Circulo à Verde: <strong>Exercício 3,</strong> dentro do auditório<br />
+              Circulo à Amarelo: <strong>Exercício 4,</strong> entrada do auditório<br />
+              Circulo à Vermelho: <strong>Exercício 5,</strong> perto dos perdidos e achados<br />
             </p>
           </div>
         </section>
