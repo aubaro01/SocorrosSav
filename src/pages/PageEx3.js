@@ -562,7 +562,7 @@ export default function PageEx3() {
                     <h4 style={{ color: "#f39c12", margin: 0 }}>Preparar para avançar</h4>
                   </div>
                   <div className="alert alert-warning mt-3">
-                    <strong>Comando final:</strong> à ordem do socorrista 1 pela cabeça, avançam sempre para a frente
+                    <strong>Comando final:</strong> à ordem do socorrista 1, responsável pela cabeça, avançam sempre para a frente
                   </div>
                 </div>
               </div>

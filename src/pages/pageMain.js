@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from 'react-bootstrap';
 import axios from "axios";
+import Perguntas from '../components/Pergunta';
+import Perguntasdata from '../data/PerguntasData.json';
 
 axios.defaults.baseURL = process.env.USER_CREATE;
 
@@ -13,18 +15,18 @@ export default function LandingPage() {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");  
+  const [successMessage, setSuccessMessage] = useState("");
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = {
       nome: event.target.nome.value,
       circuito: event.target.circuito.value
-        };
+    };
 
     setLoading(true);
     setErrorMessage("");
-    setSuccessMessage(""); 
+    setSuccessMessage("");
 
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users`, formData, {
@@ -32,7 +34,7 @@ export default function LandingPage() {
       });
 
       if (response.status === 200 || response.status === 201) {
-     
+
         event.target.reset();
         setSuccessMessage("Inscrição enviada com sucesso! Agora, está pronto para começar os exercícios!");
       } else {
@@ -48,7 +50,6 @@ export default function LandingPage() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* Header */}
       <header className="bg-dark text-white py-4 text-center">
         <div className="container">
           <h1 className="fw-bold">SAV</h1>
@@ -66,7 +67,7 @@ export default function LandingPage() {
             "Procurando não apenas os vossos próprios interesses, mas também os interesses dos outros."
           </p>
           <figcaption className="blockquote-footer">
-          <cite title="Source Title"> Filipenses 2:4</cite>
+            <cite title="Source Title"> Filipenses 2:4</cite>
           </figcaption>
           <h3 className="fw-bold alert alert-secondary">
             <strong>Instruções!</strong>
@@ -93,7 +94,15 @@ export default function LandingPage() {
           </div>
         </section>
 
-      
+        <section className="container mt-5">
+          <h3 className="text-center mb-4">Perguntas</h3>
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-10 col-lg-8">
+              <Perguntas data={Perguntasdata} />
+            </div>
+          </div>
+        </section>
+
         <section className="container py-5">
           <div className="text-center mb-4">
             <h2 className="fw-bold">Inscreva-se</h2>
@@ -102,14 +111,14 @@ export default function LandingPage() {
             </p>
           </div>
 
-         
+
           {successMessage && (
             <div className="alert alert-success text-center mb-4">
               <strong>{successMessage}</strong>
             </div>
           )}
 
-       
+
           {errorMessage && (
             <div className="alert alert-danger text-center mb-4">
               <strong>{errorMessage}</strong>
@@ -117,7 +126,6 @@ export default function LandingPage() {
           )}
 
           <form className="mx-auto" style={{ maxWidth: "400px" }} onSubmit={handleSubmit}>
-            {/* Nome Field */}
             <div className="mb-3">
               <label htmlFor="nome" className="form-label">Nome</label>
               <input
@@ -131,7 +139,6 @@ export default function LandingPage() {
               />
             </div>
 
-            {/* Circuito Field */}
             <div className="mb-3">
               <label htmlFor="circuito" className="form-label">Circuito</label>
               <input
@@ -146,7 +153,6 @@ export default function LandingPage() {
               <div className="form-text"><em>*</em> Números e letra.</div>
             </div>
 
-            {/* Submit Button */}
             <button type="submit" className="btn btn-dark w-100" disabled={loading}>
               {loading ? "A Submeter..." : "Submeter Dados"}
             </button>
@@ -154,7 +160,6 @@ export default function LandingPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="bg-dark text-white text-center py-3">
         <p>
           © SAV. <br />
@@ -162,7 +167,6 @@ export default function LandingPage() {
         </p>
       </footer>
 
-      {/* Modal */}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}

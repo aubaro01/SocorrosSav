@@ -230,7 +230,7 @@ export default function PageEx4() {
           <div className="row mb-4 align-items-center">
             <div className="col-md-6 order-md-1">
               <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1 -  Ligar 112</h4>
-              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
+              <p className="text-break" style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
                 Caso a vítima não responda e não tenha a respiração
                 normalizada, deve ativar de imediato o sistema de
                 emergência médica, o 112.
@@ -294,7 +294,7 @@ export default function PageEx4() {
                   <li className="mb-2">Observa a elevação do tórax</li>
                 </ul>
               </div>
-              <div className="alert alert-warning mt-4">
+              <div className="alert alert-warning mt-4 text-break">
                 <strong>Nota:</strong> No máximo em 10 segundos. 
                 <br />
                 Se não tiver a máscara apropriada e não conhecer
@@ -317,9 +317,6 @@ export default function PageEx4() {
               <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
                 Caso a vítima volte a respirar, deve colocar em PLS (Posição Lateral de Segurança).
               </p>
-            </div>
-            <div className="alert alert-warning mt-4">
-              <strong>Nota:</strong> Explicar o PLS(?).
             </div>
             <div className="col-md-6 text-center order-md-2">
               <img
@@ -405,7 +402,7 @@ export default function PageEx4() {
 
         <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
           <h4 style={{ fontSize: "1.2rem", fontWeight: "600", textAlign: "center", marginBottom: "1.5rem", color: "#ecf0f1" }}>
-            Resumo
+            Resumo 
           </h4>
           <div className="text-center">
             <Button

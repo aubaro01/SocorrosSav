@@ -113,55 +113,83 @@ export default function PageEx2() {
     },
     {
       id: 1,
-      title: "Vítima Consciente",
+      title: "Remoção de Vítimas no Auditório",
       content: (
-        <div className="row align-items-center">
-          <div className="col-md-6 text-center">
-            <img
-              src="/assets/rva.png"
-              alt="vítima dentro do auditorio"
-              className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }} />
+        <div className="row">
+          <div className="col-12 mb-5">
+            <h4 className="text-warning mb-3">1) Vítima Consciente</h4>
+            <div className="row align-items-center">
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva.png"
+                  alt="Vítima consciente no auditório"
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
+                />
+              </div>
+              <div className="col-md-6">
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  Avaliar, incentivar e auxiliar no transporte com cadeira de rodas.
+                </p>
+                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  <li className="mb-2">Mover a vítima em segurança.</li>
+                  <p className="text-warning mt-2">
+                    <em>Peça que os irmãos deixem o lugar dessa forma, para poder realizar com segurança.</em>
+                  </p>
+                  <li className="mb-2">Colocar a vítima na cadeira de rodas de forma adequada.</li>
+                  <li className="mb-2">Verificar se ela está segura na cadeira antes de iniciar o transporte.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Avaliar, incentivar e auxiliar no transporte com cadeira de rodas.
-            </p>
-            <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <li className="mb-2">Levante a vítima com segurança.</li>
-              <li className="mb-2">Coloque-a na cadeira de rodas de forma adequada.</li>
-              <li className="mb-2">Verifique se ela está segura na cadeira antes de iniciar o transporte.</li>
-            </ul>
+
+          <div className="col-12 mb-5">
+            <h4 className="text-warning mb-3">1) Vítima Inconsciente</h4>
+            <div className="row align-items-center">
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva1.png"
+                  alt="Vítima consciente no auditório"
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
+                />
+              </div>
+              <div className="col-md-6">
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                Verifique se a vítima está com objetos que possam representar riscos (ex.: objetos pontiagudos ou acessórios perigosos).
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      ),
+      )
     },
     {
       id: 2,
-      title: "Vítima Inconsciente",
+      title: "Vítima Inconsciente - Chave de Rautek",
       content: (
         <div className="row">
           <div className="col-md-12">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-              Para o transporte de uma vítima inconsciente, siga os cuidados descritos abaixo:
+              Para a Remoção de uma vítima inconsciente no Auditório, siga os cuidados descritos abaixo:
             </p>
 
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/rva1.png"
-                  alt="Passo 1: Avaliar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
-              <div className="col-md-6">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1 - Avaliação</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Verifique se a vítima está com objetos que possam representar riscos (ex.: objetos pontiagudos ou acessórios perigosos).</li>
-                  <li className="mb-2">Certifique-se de que o ambiente está seguro para realizar o transporte.</li>
-                  <li>Observe riscos adicionais, como tráfego de veículos ou incêndios próximos.</li>
-                </ul>
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <h4 className="text-warning mb-3">Passo 1 - Avaliar</h4>
+                  <ul className="fs-5 lh-lg text-light">
+                    <li className="mb-2 text-break">Verifique se a vítima está com objetos que possam representar riscos (ex.: objetos pontiagudos ou acessórios perigosos).</li>
+                  </ul>
+                </div>
+                <div className="col-md-6 text-center">
+                  <img
+                    src="/assets/rva1.png"
+                    alt="Passo 1: Avaliar"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px" }}
+                  />
+                </div>
               </div>
             </div>
 
