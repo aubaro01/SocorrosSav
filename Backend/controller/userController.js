@@ -10,7 +10,7 @@ const createUser = async (req, res) => {
     const existingUser = await User.findOne({ nome, circuito });
 
     if (existingUser) {
-      return res.status(400).json({ message: 'Já existe um usuário com esse nome e circuito.' });
+      return res.status(400).json({ message: 'Já existe um utilizador com esse nome e circuito.' });
     }
 
     const newUser = new User({
@@ -38,7 +38,7 @@ const getAllUsers = async (req, res) => {
 
     res.status(200).json(usersWithoutPassword);
   } catch (error) {
-    console.error('Erro ao obter os usuários:', error);
+    console.error('Erro ao obter os utilizador:', error);
     res.status(500).json({ message: `Erro interno do servidor: ${error.message}` });
   }
 };

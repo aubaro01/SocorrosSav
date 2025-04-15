@@ -61,17 +61,18 @@ export default function LandingPage() {
           <h2 className="fw-bold">
             Bem-vindo(a) à <strong>Formação para Primeiros Socorros</strong>
           </h2>
+          <br />
+          <p className="text-muted">
+            "Procurando não apenas os vossos próprios interesses, mas também os interesses dos outros."
+          </p>
+          <figcaption className="blockquote-footer">
+          <cite title="Source Title"> Filipenses 2:4</cite>
+          </figcaption>
           <h3 className="fw-bold alert alert-secondary">
             <strong>Instruções!</strong>
           </h3>
-          <p className="text-muted">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          </p>
-          <figcaption className="blockquote-footer">
-            Talvez um <cite title="Source Title">Sal 4:1</cite>
-          </figcaption>
           <Button variant="btn btn-dark" onClick={() => setShowModal(true)}>
-            Ver Instruções Detalhadas
+            Instruções para responsáveis do circuitos
           </Button>
         </section>
 
