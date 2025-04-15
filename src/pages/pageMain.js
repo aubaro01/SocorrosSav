@@ -8,7 +8,7 @@ axios.defaults.baseURL = process.env.USER_CREATE;
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
-const modal = "/assets/ModalF.png";
+const modal = "/assets/modalF.png";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(false);
