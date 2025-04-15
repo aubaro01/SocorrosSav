@@ -122,7 +122,7 @@ export default function PageEx4() {
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
               Comece por verificar se não existe perigo para si, para
               a vítima ou para terceiros, tal como: tráfego, eletricidade,
-              gás ou outros.
+              gás, derrocadas  ou outros.
             </p>
 
           </div>
@@ -139,12 +139,12 @@ export default function PageEx4() {
     },
     {
       id: 2,
-      title: "SBV - Vítima respira",
+      title: "SBV - Vítima Respira",
       content: (
         <div className="row">
           <div className="col-md-12">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-              Para o suporte básico de vida de uma vítima consciente, tenha em atenção os seguintes passos:
+            Para o suporte básico de vida de uma vítima que respira mas está inconsciente, tenha em atenção os seguintes passos:
             </p>
 
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
@@ -153,9 +153,9 @@ export default function PageEx4() {
                   <h4 className="text-warning mb-3">Passo 1 - Avaliar consciência</h4>
                   <ul className="fs-5 lh-lg text-light">
                     <li className="mb-2">
-                      Tente interagir com a pessoa: faça gestos, chame pelo nome ou inicie uma conversa.
+                      Coloque-se lateralmente em relação à vítima, se possível.
                       <br />
-                      <em className="text-warning">Exemplos: “Está a sentir-se bem?”, “Consegue ouvir-me?” ou "[nome da vítima] está tudo bem?"</em>
+                      <em className="text-warning"> Abane os ombros com cuidado e pergunte em voz alta, por exemplo: “Está a sentir-se bem?”, “Consegue ouvir-me?” ou "[nome da vítima] está tudo bem?"</em>
                     </li>
                   </ul>
                 </div>
@@ -175,15 +175,15 @@ export default function PageEx4() {
               <div className="col-md-6 order-md-1">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Permeabilizar via aérea</h4>
                 <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  <li className="mb-2">Colocar a vítima em decúbito dorsal.</li>
                   <li className="mb-2">Coloque a palma de uma mão sobre a testa da vítima.</li>
                   <li className="mb-2">Com a outra mão, posicione os dedos indicador e médio na parte óssea da mandíbula.</li>
                   <li className="mb-2">Incline suavemente a cabeça para trás e eleve a mandíbula.</li>
-                  <li className="mb-2">Evite pressionar os tecidos moles sob o queixo.</li>
-                  <li className="mb-2">Não feche a boca da vítima.</li>
+                  <li className="mb-2">Evite pressionar os tecidos moles sob o queixo.</li> 
                 </ul>
               </div>
               <div className="alert alert-warning mt-4">
-                <strong>Pontos a ter em atenção:</strong> Não realizar esta manobra se houver suspeita de traumatismo na coluna cervical.
+                <strong>Nota:</strong> Não realizar esta manobra se houver suspeita de traumatismo na coluna cervical.
               </div>
               <div className="col-md-6 text-center order-md-2">
                 <img
@@ -215,6 +215,8 @@ export default function PageEx4() {
                 </div>
                 <div className="alert alert-warning mt-4">
                   <strong>Nota:</strong> A execução do VOS não deve exceder os 10 segundos.
+                  <br />
+                  Se a vítima respira normalmente coloque-a em Posição Lateral de Segurança (PLS).
                 </div>
               </div>
             </div>
@@ -250,12 +252,17 @@ export default function PageEx4() {
               <div className="col-md-6">
                 <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
                 <ul className="fs-5 lh-lg text-light">
-                  <li className="mb-2">Coloque a base de uma mão no centro do tórax</li>
-                  <li className="mb-2">Coloque a outra mão por cima e entrelace os dedos</li>
-                  <li lassName="mb-2">Estique os braços com os ombros alinhados às mãos</li>
-                  <li lassName="mb-2">Comprima o esterno 5–6 cm de profundidade.</li>
-                  <li lassName="mb-2">Alivie totalmente a pressão entre compressões.</li>
-                  <li lassName="mb-2">Realize 30 compressões por minuto, ritmadas.</li>
+                  <li className="mb-2">  Posicionar-se ao lado da vítima;
+                  </li>
+                  <li className="mb-2">Certificar-se que a vítima está deitada de costas, sobre uma superfície firme e plana;</li>
+                  <li lassName="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
+                  <li lassName="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
+                  <li lassName="mb-2">Colocar a base de uma mão no centro do tórax (sobre a metade inferior do esterno);</li>
+                  <li lassName="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
+                  <li lassName="mb-2">Aplicar pressão sobre o esterno, deprimindo-o 5-6 cm a cada compressão (as compressões torácicas superficiais podem não produzir um fluxo sanguíneo adequado);</li>
+                  <li lassName="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100 por minuto, mas não mais do que 120 por minuto (ajuda se contar as compressões em voz alta); </li>
+                  <li lassName="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos; </li>
+                  <li lassName="mb-2">Nunca interromper as compressões mais do que 10 segundos (com o coração parado, quando não se comprime o tórax, o sangue não circula).</li>
                 </ul>
               </div>
 
@@ -286,13 +293,15 @@ export default function PageEx4() {
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}> 2.1 insuflações</h4>
                 <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}> 
                   Só deve ser executado caso tenha máscara ou conheça o historial médico da vítima.
+                  <p> - O reanimador deve posicionar-se ao lado da vítima;</p>
+                  <p> - Permeabilizar a VA;</p>
                 </p>
                 <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-                  <li className="mb-2">Colocar a máscara na vítima</li>
-                  <li className="mb-2">Inspira normalmente.</li>
-                  <li className="mb-2">Sopra pela válvula por 3 segundo, até ver o tórax subir</li>
-                  <li className="mb-2">Observa a elevação do tórax</li>
+                  <li className="mb-2 text-break">Colocar a máscara sobre o nariz e boca da vítima (a parte mais estreita da máscara de bolso deverá ficar sobre o dorso do nariz e a parte mais larga da máscara deverá ficar sobre a boca);</li>
+                  <li className="mb-2">Colocar o polegar e o indicador na parte mais estreita da máscara;</li>
+                  <li className="mb-2">Colocar o polegar da outra mão na parte mais larga da máscara e usar os outros dedos para elevar o queixo da vítima, criando uma selagem hermética;</li>
                 </ul>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve</p>
               </div>
               <div className="alert alert-warning mt-4 text-break">
                 <strong>Nota:</strong> No máximo em 10 segundos. 
