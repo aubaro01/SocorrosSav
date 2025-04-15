@@ -292,7 +292,7 @@ export default function PageEx4() {
 
     {
       id: 3,
-      title: "SBV - Isuflações",
+      title: "SBV - Insuflações",
       content: (
         <>
 
