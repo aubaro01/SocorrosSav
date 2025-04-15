@@ -8,6 +8,8 @@ import Page4 from './pages/PageEx4';
 import ErroPage from './pages/erroPage';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PageTest from './'
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path="/RVA" element={<Page2 />} />
           <Route path="/Maca" element={<Page3 />} />
           <Route path="/SBV" element={<Page4 />} />
+
         </Routes>
       </div>
     </Router>

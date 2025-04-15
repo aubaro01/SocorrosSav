@@ -182,7 +182,6 @@ export default function PageExe1() {
               passos abaixo:
             </p>
 
-            {/* Passo 1 */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1</h4>
@@ -208,32 +207,30 @@ export default function PageExe1() {
 
             </div>
 
-            {/* Passo 2 */}
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2</h4>
-                <p
-                  style={{
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <h4 className="text-warning mb-3">Passo 2</h4>
+                  <p style={{
                     fontSize: "1.1rem",
                     lineHeight: "1.7",
                     color: "#e9ecef",
-                  }}
-                >
-                  Feche o punho de uma mão e posicione-o acima do umbigo da vítima,
-                  com o polegar voltado contra o abdômen.
-                </p>
-              </div>
-              <div className="col-md-6 text-center order-md-2">
-                <img
-                  src="/assets/dva4.png"
-                  alt="Passo 2: Posição de segurança"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
+                  }}>
+                    Feche o punho de uma mão e posicione-o acima do umbigo da vítima,
+                    com o polegar voltado contra o abdômen.
+                  </p>
+                </div>
+                <div className="col-md-6 text-center order-md-2">
+                  <img
+                    src="/assets/dva4.png"
+                    alt="Passo 2: Posição de segurança"
+                    className="img-fluid rounded"
+                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Passo 3 */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 3</h4>
@@ -250,37 +247,36 @@ export default function PageExe1() {
               </div>
               <div className="col-md-6 text-center">
                 <img
-                  src="/assets/dva6.png"
-                  alt="Passo 4: Alinhar joelhos"
+                  src="/assets/dva5.png"
+                  alt="Passo 3: Posicionar os pés"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
+
                 <img
-                  src="/assets/dva5.png"
-                  alt="Passo 3: Posicionar os pés"
+                  src="/assets/dva6.png"
+                  alt="Passo 4: Alinhar joelhos"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
             </div>
 
-
-            {/* Lembrete */}
             <div className="row mb-4 align-items-center">
               <div className="col-md-12">
                 <div
                   className="alert alert-warning"
                   role="alert"
                   style={{
-                    backgroundColor: "#f39c12",
-                    color: "#2c3e50",
-                    border: "none",
+                    backgroundColor: "#fff3cd",
+                    color: "#856404",
+                    border: "1px solid #ffeeba",
                     padding: "1.5rem",
                     borderRadius: "8px",
                   }}
                 >
                   <h5
-                    className="alert-heading"
+                    className="alert-warning"
                     style={{
                       fontWeight: "bold",
                       fontSize: "1.3rem",
@@ -294,7 +290,6 @@ export default function PageExe1() {
                       fontSize: "1.1rem",
                       lineHeight: "1.7",
                       marginBottom: "0",
-                      color: "#2c3e50",
                     }}
                   >
                     Repita até 5 vezes este processo. Intercale as pancadas nas costas
@@ -455,50 +450,41 @@ export default function PageExe1() {
                 </ul>
               </div>
             </div>
+
             <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
-                <img
-                  src="/assets/pls3.png"
-                  alt="Passo 2: Posicionar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 2
-                </h4>
-                <ul
-                  style={{
-                    fontSize: "1.1rem",
-                    lineHeight: "1.7",
-                    color: "#e9ecef",
-                  }}
-                >
-                  <li className="mb-2">
-                    Colocar a mão mais proxima de nós em posição de sinaleiro
-                  </li>
-                  <li className="mb-2">
-                    Segurar a outra mão entrelançando os dedos e colocando-a junto do rosto da pessoa.
-                  </li>
-                </ul>
+              <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+                <div className="row align-items-center">
+                  <div className="col-md-6">
+                    <h4 className="text-warning mb-3">Passo 2</h4>
+                    <ul
+                      style={{
+                        fontSize: "1.1rem",
+                        lineHeight: "1.7",
+                        color: "#e9ecef",
+                      }}
+                    >
+                      <li className="mb-2">
+                        Colocar a mão mais proxima de nós em posição de sinaleiro
+                      </li>
+                      <li className="mb-2">
+                        Segurar a outra mão entrelançando os dedos e colocando-a junto do rosto da pessoa.
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-6 text-center order-md-2">
+                    <img
+                      src="/assets/pls3.png"
+                      alt="Passo 2: Posicionar a vítima"
+                      className="img-fluid rounded"
+                      style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
+
+
             <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/pls4.png"
-                  alt="Passo 3: Transportar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-                <img
-                  src="/assets/pls5.png"
-                  alt="Passo 2: Posicionar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
               <div className="col-md-6">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
                   Passo 3
@@ -518,41 +504,54 @@ export default function PageExe1() {
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
+              <div className="col-md-6 text-center">
                 <img
-                  src="/assets/pls6.png"
+                  src="/assets/pls4.png"
                   alt="Passo 3: Transportar a vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
-              </div>
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>
-                  Passo 4
-                </h4>
-                <ul
-                  style={{
-                    fontSize: "1.1rem",
-                    lineHeight: "1.7",
-                    color: "#e9ecef",
-                  }}
-                >
-                  <li className="mb-2">
-                    Permeabilizar a via aérea, inclinado a cabeça ligeramente para trás.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
                 <img
-                  src="/assets/pls7.png"
+                  src="/assets/pls5.png"
                   alt="Passo 2: Posicionar a vítima"
                   className="img-fluid rounded"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
+              </div>
+            </div>
+
+            <div className="row mb-4 align-items-center">
+              <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+                <div className="row align-items-center">
+                  <div className="col-md-6">
+                    <h4 className="text-warning mb-3">Passo 4</h4>
+                    <ul
+                      style={{
+                        fontSize: "1.1rem",
+                        lineHeight: "1.7",
+                        color: "#e9ecef",
+                      }}
+                    >
+                      <li className="mb-2">
+                        Permeabilizar a via aérea, inclinado a cabeça ligeramente para trás.
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-md-6 text-center order-md-2">
+                    <img
+                      src="/assets/pls6.png"
+                      alt="Passo 3: Transportar a vítima"
+                      className="img-fluid rounded"
+                      style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                    />
+                    <img
+                      src="/assets/pls7.png"
+                      alt="Passo 2: Posicionar a vítima"
+                      className="img-fluid rounded"
+                      style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -564,6 +563,9 @@ export default function PageExe1() {
       title: "Vigiar Vítima",
       content: (
         <>
+          <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+            Após colocar a pessoa nesta posição é importante observar até à chegada da ambulância. Se nesse tempo a vítima deixar de respirar, deve voltar a deitá-la rapidamente de barriga para cima e iniciar
+          </p>
           <div className="text-center mb-4">
             <img
               src="/assets/pls1.png"
@@ -572,9 +574,6 @@ export default function PageExe1() {
               style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
             />
           </div>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Após colocar a pessoa nesta posição é importante observar até à chegada da ambulância. Se nesse tempo a vítima deixar de respirar, deve voltar a deitá-la rapidamente de barriga para cima e iniciar
-          </p>
         </>
       ),
     },

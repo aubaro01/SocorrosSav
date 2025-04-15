@@ -113,78 +113,103 @@ export default function PageEx2() {
     },
     {
       id: 1,
-      title: "Vítima Consciente",
+      title: "Remoção de Vítimas no Auditório",
       content: (
-        <div className="row align-items-center">
-          <div className="col-md-6 text-center">
-            <img
-              src="/assets/rva.png"
-              alt="vítima dentro do auditorio"
-              className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }} />
+        <div className="row">
+          <div className="col-12 mb-5">
+            <h4 className="text-warning mb-3">1.1) Vítima Consciente</h4>
+            <div className="row align-items-center">
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva.png"
+                  alt="Vítima consciente no auditório"
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
+                />
+              </div>
+              <div className="col-md-6">
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  Avaliar, incentivar e auxiliar no transporte com cadeira de rodas.
+                </p>
+                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  <li className="mb-2">Mover a vítima em segurança.</li>
+                  <p className="text-warning mt-2">
+                    <em>Peça que os irmãos deixem o lugar dessa forma, para poder realizar com segurança.</em>
+                  </p>
+                  <li className="mb-2">Colocar a vítima na cadeira de rodas de forma adequada.</li>
+                  <li className="mb-2">Verificar se ela está segura na cadeira antes de iniciar o transporte.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Avaliar, incentivar e auxiliar no transporte com cadeira de rodas.
-            </p>
-            <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <li className="mb-2">Levante a vítima com segurança.</li>
-              <li className="mb-2">Coloque-a na cadeira de rodas de forma adequada.</li>
-              <li className="mb-2">Verifique se ela está segura na cadeira antes de iniciar o transporte.</li>
-            </ul>
+
+          <div className="col-12 mb-5">
+            <h4 className="text-warning mb-3">1.2) Vítima Inconsciente</h4>
+            <div className="row align-items-center">
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva1.png"
+                  alt="Vítima consciente no auditório"
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
+                />
+              </div>
+              <div className="col-md-6">
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  Verifique se a vítima está com objetos que possam representar riscos (ex.: objetos pontiagudos ou acessórios perigosos).
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      ),
+      )
     },
     {
       id: 2,
-      title: "Vítima Inconsciente",
+      title: "Vítima Inconsciente - Chave de Rautek",
       content: (
         <div className="row">
           <div className="col-md-12">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-              Para o transporte de uma vítima inconsciente, siga os cuidados descritos abaixo:
+              Para a Remoção de uma vítima inconsciente no Auditório, siga os cuidados descritos abaixo:
             </p>
 
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center">
-                <img
-                  src="/assets/rva1.png"
-                  alt="Passo 1: Avaliar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
-              <div className="col-md-6">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1 - Avaliação</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Verifique se a vítima está com objetos que possam representar riscos (ex.: objetos pontiagudos ou acessórios perigosos).</li>
-                  <li className="mb-2">Certifique-se de que o ambiente está seguro para realizar o transporte.</li>
-                  <li>Observe riscos adicionais, como tráfego de veículos ou incêndios próximos.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="row mb-4 align-items-center">
-              <div className="col-md-6 text-center order-md-2">
-                <img
-                  src="/assets/rva2.png"
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <h4 className="text-warning mb-3">Passo 1 - Segurar</h4>
+                  <ul className="fs-5 lh-lg text-light">
+                    <li className="mb-2 text-break">Passe seu braço direito por trás do ombro direito da vítima e por baixo da axila.</li>
+                    <li className="mb-2 text-break">Com a mão esquerda, segure a cabeça da vítima encostada na sua, para manter o pescoço firme.</li>
+                    <li className="mb-2 text-break">Com sua mão direita, segure o outro braço da vítima.</li>
+                  </ul>
+                </div>
+                <div className="col-md-6 text-center">
+                  <img
+                    src="/assets/rva2.png"
+                    alt="Passo 1: Avaliar"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                  />
+                  <img
+                  src="/assets/rva3.png"
                   alt="Passo 2: Posicionar a vítima"
-                  className="img-fluid rounded"
+                  className="img-fluid rounded shadow"
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Posicionamento</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Coloque a vítima em uma posição estável, de preferência deitada de costas.</li>
-                  <li className="mb-2">Alinhe a cabeça, o pescoço e a coluna da vítima para evitar lesões adicionais.</li>
-                  <li>Evite movimentos bruscos durante o manuseio para prevenir complicações.</li>
-                </ul>
               </div>
             </div>
 
             <div className="row mb-4 align-items-center">
+              <div className="col-md-6 order-md-1">
+                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Levantar</h4>
+                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                  <li className="mb-2">####</li>
+                  <li className="mb-2">####</li>
+                  <li>####</li>
+                </ul>
+              </div>
               <div className="col-md-6 text-center">
                 <img
                   src="/assets/rva4.png"
@@ -193,13 +218,33 @@ export default function PageEx2() {
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              <div className="col-md-6">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 3 - Transporte</h4>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Utilize técnicas apropriadas para levantar a vítima, como o arrastamento ou a técnica de dois socorristas.</li>
-                  <li className="mb-2">Mantenha a vítima estável durante o transporte, evitando movimentos excessivos.</li>
-                  <li>Transporte a vítima até um local seguro ou aguarde a chegada de profissionais de socorro.</li>
-                </ul>
+              
+            </div>
+
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <h4 className="text-warning mb-3">Passo 3 - Pousar</h4>
+                  <ul className="fs-5 lh-lg text-light">
+                    <li className="mb-2 text-break">#####</li>
+                    <li className="mb-2 text-break">#####</li>
+                    <li className="mb-2 text-break">#####</li>
+                  </ul>
+                </div>
+                <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva6.png"
+                  alt="Passo 2: Posicionar a vítima"
+                  className="img-fluid rounded shadow"
+                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                />
+                  <img
+                    src="/assets/rva5.png"
+                    alt="Passo 1: Avaliar"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                  /> 
+              </div>
               </div>
             </div>
           </div>
@@ -213,7 +258,7 @@ export default function PageEx2() {
         <div className="row align-items-center">
           <div className="col-md-6 text-center mb-4 mb-md-0">
             <img
-              src="/assets/rva5.png"
+              src="/assets/rva7.png"
               alt="Salto"
               className="img-fluid rounded"
               style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
@@ -221,14 +266,10 @@ export default function PageEx2() {
           </div>
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              A partir da posição de agachamento, <strong>impulsione o corpo para cima</strong> em um salto explosivo,
-              estendendo completamente os joelhos e quadris.
+              <strong>Se houver perigo,</strong> arraste a vítima para um local seguro enquanto aguarda a Maca para o transporte.
             </p>
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Use os braços para auxiliar no impulso, movendo-os para frente e para cima.
-            </p>
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Aterrisse suavemente e retorne à posição de agachamento para amortecer o impacto.
+              Utilize a <strong>chave de Rautek</strong> para mover a vítima até um local seguro.
             </p>
           </div>
         </div>
@@ -269,7 +310,7 @@ export default function PageEx2() {
             style={{ width: "50px", height: "3px", backgroundColor: "#f39c12", marginBottom: "1.5rem" }}
           ></div>
           <p style={{ fontSize: "1.2rem", color: "black" }}>
-            Retirada de vítima Consciente e inconsciente do auditório.
+            Retirada de vítima Consciente e Inconsciente do auditório.
           </p>
         </div>
 
@@ -316,20 +357,23 @@ export default function PageEx2() {
               </section>
             ))}
 
-            <div className="text-center my-5 p-4 bg-white border border-2 border-warning rounded-3 shadow">
+            <div className="text-center my-5 p-5 bg-light border border-2 border-warning rounded-4 shadow-lg">
               <h3 className="mb-4 fw-bold text-danger">
                 <i className="bi bi-exclamation-triangle-fill me-2"></i>
                 Emergência Médica - 112
               </h3>
-              <p>Clique no botão abaixo para mais detalhes do exercício</p>
-              <p>👇</p>
-              <div className="d-flex justify-content-center">
+              <p className="mb-4 text-dark">Clique no botão abaixo para mais detalhes do exercício</p>
+              <p className="mb-4 text-dark">👇</p>
+
+              <div className="d-flex justify-content-center mb-4">
                 <Inem />
               </div>
+
               <p className="mt-3 small text-muted">
                 <strong>Exercício de chamada à emergência médica.</strong>
               </p>
             </div>
+
 
             <section className="p-4 mb-5 rounded" style={{ backgroundColor: "#2c3e50", border: "1px solid rgba(255,255,255,0.1)" }}>
               <h4
@@ -341,7 +385,7 @@ export default function PageEx2() {
                   color: "#ecf0f1",
                 }}
               >
-                Resumo do Exercício
+                Resumo
               </h4>
               <div className="row">
                 <div className="col-md-6">

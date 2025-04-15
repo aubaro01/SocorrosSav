@@ -3,28 +3,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from 'react-bootstrap';
 import axios from "axios";
 
+
 axios.defaults.baseURL = process.env.USER_CREATE;
 
 const imageUrl = "/assets/mapa.jpg";
 const FinalP = "/assets/form.png";
-const modal = "/assets/form1.png";
+const modal = "/assets/ModalF.png";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");  
+  const [successMessage, setSuccessMessage] = useState("");
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = {
       nome: event.target.nome.value,
       circuito: event.target.circuito.value
-        };
+    };
 
     setLoading(true);
     setErrorMessage("");
-    setSuccessMessage(""); 
+    setSuccessMessage("");
 
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users`, formData, {
@@ -32,7 +33,7 @@ export default function LandingPage() {
       });
 
       if (response.status === 200 || response.status === 201) {
-     
+
         event.target.reset();
         setSuccessMessage("Inscrição enviada com sucesso! Agora, está pronto para começar os exercícios!");
       } else {
@@ -48,7 +49,6 @@ export default function LandingPage() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* Header */}
       <header className="bg-dark text-white py-4 text-center">
         <div className="container">
           <h1 className="fw-bold">SAV</h1>
@@ -66,7 +66,7 @@ export default function LandingPage() {
             "Procurando não apenas os vossos próprios interesses, mas também os interesses dos outros."
           </p>
           <figcaption className="blockquote-footer">
-          <cite title="Source Title"> Filipenses 2:4</cite>
+            <cite title="Source Title"> Filipenses 2:4</cite>
           </figcaption>
           <h3 className="fw-bold alert alert-secondary">
             <strong>Instruções!</strong>
@@ -93,23 +93,22 @@ export default function LandingPage() {
           </div>
         </section>
 
-      
-        <section className="container py-5">
-          <div className="text-center mb-4">
-            <h2 className="fw-bold">Inscreva-se</h2>
-            <p className="text-muted">
-              Este formulário é para inscrição dos circuitos, que deve ser feita pelo responsavél dos <strong>Primeiros Socorros.</strong>
-            </p>
-          </div>
 
-         
+        <section className="container py-5">
+  <div className="text-center mb-4">
+    <h2 className="fw-bold">Inscrever o meu Circuito</h2>
+    <p className="text-muted text-break">
+      Este formulário destina-se à inscrição dos circuitos e deve ser preenchido pelo responsável pelos <strong>Primeiros Socorros de cada circuito</strong>.
+    </p>
+  </div>
+
           {successMessage && (
             <div className="alert alert-success text-center mb-4">
               <strong>{successMessage}</strong>
             </div>
           )}
 
-       
+
           {errorMessage && (
             <div className="alert alert-danger text-center mb-4">
               <strong>{errorMessage}</strong>
@@ -117,7 +116,6 @@ export default function LandingPage() {
           )}
 
           <form className="mx-auto" style={{ maxWidth: "400px" }} onSubmit={handleSubmit}>
-            {/* Nome Field */}
             <div className="mb-3">
               <label htmlFor="nome" className="form-label">Nome</label>
               <input
@@ -131,22 +129,19 @@ export default function LandingPage() {
               />
             </div>
 
-            {/* Circuito Field */}
             <div className="mb-3">
               <label htmlFor="circuito" className="form-label">Circuito</label>
               <input
                 type="text"
                 id="circuito"
                 className="form-control"
-                placeholder="Digite o seu circuito *"
+                placeholder="Digite o seu circuito"
                 minLength="1"
                 maxLength="3"
                 required
               />
-              <div className="form-text"><em>*</em> Números e letra.</div>
             </div>
 
-            {/* Submit Button */}
             <button type="submit" className="btn btn-dark w-100" disabled={loading}>
               {loading ? "A Submeter..." : "Submeter Dados"}
             </button>
@@ -154,7 +149,6 @@ export default function LandingPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="bg-dark text-white text-center py-3">
         <p>
           © SAV. <br />
@@ -162,7 +156,6 @@ export default function LandingPage() {
         </p>
       </footer>
 
-      {/* Modal */}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
@@ -171,7 +164,7 @@ export default function LandingPage() {
         scrollable
         className="instruction-modal"
       >
-        <Modal.Header closeButton className="border-black border-bottom-2">
+        <Modal.Header className="border-black border-bottom-2">
           <Modal.Title className="fw-bold">
             <i className="bi bi-info-circle me-2"></i>
             Instruções para os Exercícios
@@ -179,7 +172,7 @@ export default function LandingPage() {
         </Modal.Header>
 
         <Modal.Body>
-          <div className="alert alert-dark mb-4">
+          <div className="alert alert-warning mb-4">
             <i className="bi bi-lightbulb me-2"></i>
             Siga estes passos cuidadosamente para garantir que seu exercício seja registrado corretamente.
           </div>
@@ -192,7 +185,7 @@ export default function LandingPage() {
             <div className="ps-5">
               <p>
                 Ao finalizar cada exercício, aparecerá um resumo com as informações principais
-                e um botão para acessar o formulário de envio.
+                e um botão para acessar um formulário de envio.
               </p>
               <div className="mt-3">
                 <img
@@ -215,10 +208,10 @@ export default function LandingPage() {
               <p>No formulário que será aberto, insira:</p>
               <ul className="mb-3">
                 <li>O nome que colocou no formulário da inscrição</li>
-                <li>A senha que criou</li>
-                <li>Marque a confirmação de conclusão</li>
+                <li>O seu circuito</li>
+                <li>E marque o exercício como concluido.</li>
               </ul>
-              <div className="mt-2">
+              <div className="mt-3">
                 <img
                   src={modal}
                   alt="Formulário de envio"
@@ -237,10 +230,10 @@ export default function LandingPage() {
             </div>
             <div className="ps-5">
               <p>
-                Clique no botão <strong>"Enviar"</strong> para confirmar sua participação
+                Clique no botão <strong>"Enviar"</strong> para confirmar a participação do seu circuito
                 e registrar a conclusão do exercício.
               </p>
-              <div className="alert alert-dark mt-3 rounded-0">
+              <div className="alert alert-warning mt-3 rounded-0">
                 <i className="bi bi-exclamation-triangle me-2"></i>
                 Certifique-se de que todos os dados estão corretos antes de enviar.
               </div>
@@ -253,7 +246,7 @@ export default function LandingPage() {
               Precisa de ajuda?
             </h6>
             <p className="mb-0">
-              Fale com o seu instrutor ou qualquer outro instrutor.
+              Fale com qualquer formador.
             </p>
           </div>
         </Modal.Body>

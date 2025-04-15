@@ -113,7 +113,7 @@ export default function PageEx3() {
     },
     {
       id: 1,
-      title: "– Transporte de vítima no interior/exterior do auditório",
+      title: "Transporte de vítima no interior/exterior do auditório",
       content: (
         <div className="row">
           <div className="col-md-12">
@@ -562,7 +562,7 @@ export default function PageEx3() {
                     <h4 style={{ color: "#f39c12", margin: 0 }}>Preparar para avançar</h4>
                   </div>
                   <div className="alert alert-warning mt-3">
-                    <strong>Comando final:</strong> à ordem do socorrista 1 pela cabeça, avançam sempre para a frente
+                    <strong>Comando final:</strong> à ordem do socorrista 1, responsável pela cabeça, avançam sempre para a frente
                   </div>
                 </div>
               </div>
@@ -624,7 +624,8 @@ export default function PageEx3() {
               </div>
             </div>
 
-            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(243, 156, 18, 0.1)", borderLeft: "4px solid #f39c12" }}>
+
+            <div className="step-card mb-4 p-3 rounded">
               <div className="row align-items-center">
                 <div className="col-md-6 order-md-2 text-center">
                   <img
@@ -737,13 +738,10 @@ export default function PageEx3() {
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
             <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>SAV</h1>
-            <div className="py-1 px-3" style={{ border: "1px solid rgba(31, 26, 26, 0.3)", borderRadius: "4px" }}>
-              Exercício 4
-            </div>
-          </div>
-          <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
+            <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
             Transporte vítima em Maca<br />
           </p>
+          </div>
         </div>
       </header>
 
@@ -1096,7 +1094,7 @@ export default function PageEx3() {
               </h5>
 
               <p className="text-muted mb-4">
-                Obrigado por completar o exercício. Pode avançar para o próximo.
+                Obrigado por completar o exercício.
               </p>
 
               <Button
