@@ -144,7 +144,7 @@ export default function PageEx4() {
         <div className="row">
           <div className="col-md-12">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-            Para o suporte básico de vida de uma vítima que respira mas está inconsciente, tenha em atenção os seguintes passos:
+              Para o suporte básico de vida de uma vítima que respira mas está inconsciente, tenha em atenção os seguintes passos:
             </p>
 
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
@@ -179,7 +179,7 @@ export default function PageEx4() {
                   <li className="mb-2">Coloque a palma de uma mão sobre a testa da vítima.</li>
                   <li className="mb-2">Com a outra mão, posicione os dedos indicador e médio na parte óssea da mandíbula.</li>
                   <li className="mb-2">Incline suavemente a cabeça para trás e eleve a mandíbula.</li>
-                  <li className="mb-2">Evite pressionar os tecidos moles sob o queixo.</li> 
+                  <li className="mb-2">Evite pressionar os tecidos moles sob o queixo.</li>
                 </ul>
               </div>
               <div className="alert alert-warning mt-4">
@@ -248,43 +248,43 @@ export default function PageEx4() {
           </div>
 
           <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
-  <div className="row align-items-center">
-    <div className="col-md-6">
-      <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
-      <ul className="fs-5 lh-lg text-light">
-        <li className="mb-2">Posicionar-se ao lado da vítima;</li>
-        <li className="mb-2">Certificar-se que a vítima está deitada de costas, sobre uma superfície firme e plana;</li>
-        <li className="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
-        <li className="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
-        <li className="mb-2">Colocar a base de uma mão no centro do tórax (sobre a metade inferior do esterno);</li>
-        <li className="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
-        <li className="mb-2">Aplicar pressão sobre o esterno, deprimindo-o 5-6 cm a cada compressão (as compressões torácicas superficiais podem não produzir um fluxo sanguíneo adequado);</li>
-        <li className="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100 por minuto, mas não mais do que 120 por minuto (ajuda se contar as compressões em voz alta);</li>
-        <li className="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos;</li>
-        <li className="mb-2">Nunca interromper as compressões mais do que 10 segundos (com o coração parado, quando não se comprime o tórax, o sangue não circula).</li>
-      </ul>
-    </div>
-    <div className="col-md-6 text-center">
-      <img
-        src="/assets/sbv6.png"
-        alt="Passo 2: Iniciar RCP"
-        className="img-fluid rounded shadow"
-        style={{ maxHeight: "250px" }}
-      />
-    </div>
-  </div>
-</div>
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
+                <ul className="fs-5 lh-lg text-light">
+                  <li className="mb-2">Posicionar-se ao lado da vítima;</li>
+                  <li className="mb-2">Certificar-se que a vítima está deitada de costas, sobre uma superfície firme e plana;</li>
+                  <li className="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
+                  <li className="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
+                  <li className="mb-2">Colocar a base de uma mão no centro do tórax (sobre a metade inferior do esterno);</li>
+                  <li className="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
+                  <li className="mb-2">Aplicar pressão sobre o esterno, deprimindo-o 5-6 cm a cada compressão (as compressões torácicas superficiais podem não produzir um fluxo sanguíneo adequado);</li>
+                  <li className="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100 por minuto, mas não mais do que 120 por minuto (ajuda se contar as compressões em voz alta);</li>
+                  <li className="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos;</li>
+                  <li className="mb-2">Nunca interromper as compressões mais do que 10 segundos (com o coração parado, quando não se comprime o tórax, o sangue não circula).</li>
+                </ul>
+              </div>
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/sbv6.png"
+                  alt="Passo 2: Iniciar RCP"
+                  className="img-fluid rounded shadow"
+                  style={{ maxHeight: "250px" }}
+                />
+              </div>
+            </div>
+          </div>
 
-<div className="alert alert-warning mt-4">
-  <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
-  <p className="mt-2 mb-0">
-    Deve parar-se de executar quando:
-    <br />
-    a) chegarem os técnicos de emergência médica;<br />
-    b) estiver fisicamente exausto(a);<br />
-    c) a vítima recomeçar a respirar normalmente.
-  </p>
-</div>
+          <div className="alert alert-warning mt-4">
+            <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
+            <p className="mt-2 mb-0">
+              Deve parar-se de executar quando:
+              <br />
+              a) chegarem os técnicos de emergência médica;<br />
+              b) estiver fisicamente exausto(a);<br />
+              c) a vítima recomeçar a respirar normalmente.
+            </p>
+          </div>
 
         </>
       ),
@@ -292,38 +292,37 @@ export default function PageEx4() {
 
     {
       id: 3,
-      title: "SBV - Vítima não respira",
+      title: "SBV - Insuflações",
       content: (
         <>
-          
+
           <div className="row mb-4 align-items-center" id="insuflacões">
-              <div className="col-md-6 order-md-1">
-                <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}> Isuflações</h4>
-                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}> 
-                  Só deve ser executado caso tenha máscara ou conheça o historial médico da vítima.
-                  <p> - O reanimador deve posicionar-se ao lado da vítima;</p>
-                  <p> - Permeabilizar a VA;</p>
-                </p>
-                <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-                  <li className="mb-2 text-break">Colocar a máscara sobre o nariz e boca da vítima (a parte mais estreita da máscara de bolso deverá ficar sobre o dorso do nariz e a parte mais larga da máscara deverá ficar sobre a boca);</li>
-                  <li className="mb-2">Colocar o polegar e o indicador na parte mais estreita da máscara;</li>
-                  <li className="mb-2">Colocar o polegar da outra mão na parte mais larga da máscara e usar os outros dedos para elevar o queixo da vítima, criando uma selagem hermética;</li>
-                </ul>
-                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}
-                >Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve
-                </p>
-              </div>
-              <div className="col-md-6 text-center order-md-2">
-                <img
-                  src="/assets/sbv8.png"
-                  alt="Passo 2: Posicionar a vítima"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
-              </div>
+            <div className="col-md-6 order-md-1">
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
+                Só deve ser executado caso tenha máscara ou conheça o historial médico da vítima.
+                <p> - O reanimador deve posicionar-se ao lado da vítima;</p>
+                <p> - Permeabilizar a VA;</p>
+              </p>
+              <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
+                <li className="mb-2 text-break">Colocar a máscara sobre o nariz e boca da vítima (a parte mais estreita da máscara de bolso deverá ficar sobre o dorso do nariz e a parte mais larga da máscara deverá ficar sobre a boca);</li>
+                <li className="mb-2">Colocar o polegar e o indicador na parte mais estreita da máscara;</li>
+                <li className="mb-2">Colocar o polegar da outra mão na parte mais larga da máscara e usar os outros dedos para elevar o queixo da vítima, criando uma selagem hermética;</li>
+              </ul>
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}
+              >Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve
+              </p>
             </div>
-            <div className="alert alert-warning ">
-                <strong>Nota:</strong> Caso a vítima volte a respirar, deve colocar em PLS (Posição Lateral de Segurança).
-              </div>
+            <div className="col-md-6 text-center order-md-2">
+              <img
+                src="/assets/sbv8.png"
+                alt="Passo 2: Posicionar a vítima"
+                className="img-fluid rounded"
+                style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
+            </div>
+          </div>
+          <div className="alert alert-warning ">
+            <strong>Nota:</strong> Caso a vítima volte a respirar, deve colocar em PLS (Posição Lateral de Segurança).
+          </div>
         </>
       ),
     },
@@ -336,13 +335,10 @@ export default function PageEx4() {
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
             <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>SAV</h1>
-            <div className="py-1 px-3" style={{ border: "1px solid rgba(31, 26, 26, 0.3)", borderRadius: "4px" }}>
-              Exercício SBV
-            </div>
-          </div>
-          <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
+            <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
             Suporte Básico de Vida (SBV)
           </p>
+          </div>
         </div>
       </header>
 
@@ -401,6 +397,101 @@ export default function PageEx4() {
           <h4 style={{ fontSize: "1.2rem", fontWeight: "600", textAlign: "center", marginBottom: "1.5rem", color: "#ecf0f1" }}>
             Resumo 
           </h4>
+          <div className="row">
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center mb-3">
+                    <div
+                      style={{
+                        minWidth: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        backgroundColor: "#f39c12",
+                        color: "#2c3e50",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "10px",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      1
+                    </div>
+                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
+                     Avaliar as condições de segurança
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center mb-3">
+                    <div
+                      style={{
+                        minWidth: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        backgroundColor: "#f39c12",
+                        color: "#2c3e50",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "10px",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      2
+                    </div>
+                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
+                      Avaliar consciência da vítima
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center mb-3">
+                    <div
+                      style={{
+                        minWidth: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        backgroundColor: "#f39c12",
+                        color: "#2c3e50",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "10px",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      3
+                    </div>
+                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
+                    Permeabilizar via aérea
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center mb-3">
+                    <div
+                      style={{
+                        minWidth: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        backgroundColor: "#f39c12",
+                        color: "#2c3e50",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "10px",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      4
+                    </div>
+                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
+                      Realizar RCP (Paragem cardiorrespiratória)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
           <div className="text-center">
             <Button
               onClick={() => setShowModal(true)}
@@ -416,8 +507,8 @@ export default function PageEx4() {
               Registrar Conclusão
             </Button>
           </div>
-        </section>
-      </main>
+        </section >
+      </main >
 
       <footer className="border-top py-4" style={{ backgroundColor: "#F9F9F9" }}>
         <div className="container text-center">
@@ -589,6 +680,6 @@ export default function PageEx4() {
           )}
         </Modal.Body>
       </Modal>
-    </div>
+    </div >
   );
 }
