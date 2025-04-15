@@ -301,8 +301,11 @@ export default function PageEx4() {
                   <li className="mb-2">Colocar o polegar e o indicador na parte mais estreita da máscara;</li>
                   <li className="mb-2">Colocar o polegar da outra mão na parte mais larga da máscara e usar os outros dedos para elevar o queixo da vítima, criando uma selagem hermética;</li>
                 </ul>
-                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve</p>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}
+                >Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve
+                </p>
               </div>
+
               <div className="alert alert-warning mt-4 text-break">
                 <strong>Nota:</strong> No máximo em 10 segundos. 
                 <br />
@@ -319,7 +322,6 @@ export default function PageEx4() {
               </div>
             </div>
           </div>
-
           <div className="row mb-4 align-items-center">
             <div className="col-md-6 order-md-1">
               <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Caso a vítima recomeçe a respirar</h4>
