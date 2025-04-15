@@ -564,7 +564,7 @@ export default function PageExe1() {
       content: (
         <>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Após colocar a pessoa nesta posição é importante observar até à chegada da ambulância. Se nesse tempo a vítima deixar de respirar, deve voltar a deitá-la rapidamente de barriga para cima e iniciar
+          Após colocar a pessoa nesta posição é importante observar até a chegada da ambulância. Se nesse tempo a vitima deixar de respirar, deve voltar a rodar de barriga para cima e iniciar o suporte básico de vida
           </p>
           <div className="text-center mb-4">
             <img
