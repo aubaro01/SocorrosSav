@@ -390,7 +390,7 @@ export default function PageEx3() {
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Socorristas aos pés da vítima sobem/descem 3 degraus</span>
+                      <span>Flexionar os joelhos para impedir lesões aos socorristas 2,3 e 4.</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
