@@ -83,24 +83,36 @@ export default function LandingPage() {
               alt="Imagem do local"
               className="img-fluid w-75 mx-auto d-block"
             />
-            <p className="text-muted mt-3">
-              Mapa dos pontos dos exercícios<br />
-              Circulo  Azul: <strong>Exercício 1 & 2,</strong> perto das casas de banho  <br />
-              Circulo  Verde: <strong>Exercício 3,</strong> dentro do auditório<br />
-              Circulo  Amarelo: <strong>Exercício 4,</strong> entrada do auditório<br />
-              Circulo Vermelho: <strong>Exercício 5,</strong> perto dos perdidos e achados<br />
+            <p className="fs-5 mt-4">
+              <span className="d-block mb-2 fw-bold">Localização dos exercícios</span>
+              <span className="d-block mb-3">
+                <span className="badge bg-primary rounded-circle me-2"></span>
+                <strong>Círculo Azul:</strong> Exercício 1, perto das casas de banho principais
+              </span>
+              <span className="d-block mb-3">
+                <span className="badge bg-success rounded-circle me-2"></span>
+                <strong>Círculo Verde:</strong> Exercício 2, dentro do auditório
+              </span>
+              <span className="d-block mb-3">
+                <span className="badge bg-warning rounded-circle me-2"></span>
+                <strong>Círculo Amarelo:</strong> Exercício 3, junto aos Primeiros Socorros
+              </span>
+              <span className="d-block">
+                <span className="badge bg-danger rounded-circle me-2"></span>
+                <strong>Círculo Vermelho:</strong> Exercício 4, auditório 2
+              </span>
             </p>
           </div>
         </section>
 
 
         <section className="container py-5">
-  <div className="text-center mb-4">
-    <h2 className="fw-bold">Inscrever o meu Circuito</h2>
-    <p className="text-muted text-break">
-      Este formulário destina-se à inscrição dos circuitos e deve ser preenchido pelo responsável pelos <strong>Primeiros Socorros de cada circuito</strong>.
-    </p>
-  </div>
+          <div className="text-center mb-4">
+            <h2 className="fw-bold">Inscrever o meu Circuito</h2>
+            <p className="text-muted text-break">
+              Este formulário destina-se à inscrição dos circuitos e deve ser preenchido pelo responsável pelos <strong>Primeiros Socorros de cada circuito</strong>.
+            </p>
+          </div>
 
           {successMessage && (
             <div className="alert alert-success text-center mb-4">
@@ -151,7 +163,7 @@ export default function LandingPage() {
 
       <footer className="bg-dark text-white text-center py-3">
         <p>
-          © SAV. <br />
+          © S.A.V. <br />
           Todos os direitos reservados.
         </p>
       </footer>

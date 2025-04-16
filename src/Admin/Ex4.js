@@ -121,7 +121,8 @@ export default function PageEx4() {
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
               Comece por verificar se não existe perigo para si, para
-              a vítima ou para terceiros, tal como: tráfego, eletricidade,
+              a vítima ou para terceiros. <br />
+              Exemplo: tráfego, eletricidade,
               gás, derrocadas  ou outros.
             </p>
 
@@ -153,9 +154,9 @@ export default function PageEx4() {
                   <h4 className="text-warning mb-3">Passo 1 - Avaliar consciência</h4>
                   <ul className="fs-5 lh-lg text-light">
                     <li className="mb-2">
-                      Coloque-se lateralmente em relação à vítima, se possível.
+                      Coloque-se lateralmente em relação à vítima.
                       <br />
-                      <em className="text-warning"> Abane os ombros com cuidado e pergunte em voz alta, por exemplo: “Está a sentir-se bem?”, “Consegue ouvir-me?” ou "[nome da vítima] está tudo bem?"</em>
+                      <em className="text-warning"> Abane os ombros e diga, por exemplo: “Está a me ouvir?” ou  chame pelo none "[nome da vítima]"</em>
                     </li>
                   </ul>
                 </div>
@@ -177,14 +178,11 @@ export default function PageEx4() {
                 <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
                   <li className="mb-2">Colocar a vítima em decúbito dorsal.</li>
                   <li className="mb-2">Coloque a palma de uma mão sobre a testa da vítima.</li>
-                  <li className="mb-2">Com a outra mão, posicione os dedos indicador e médio na parte óssea da mandíbula.</li>
-                  <li className="mb-2">Incline suavemente a cabeça para trás e eleve a mandíbula.</li>
-                  <li className="mb-2">Evite pressionar os tecidos moles sob o queixo.</li>
+                  <li className="mb-2">Com a outra mão, posicione os dedos indicador e médio na parte inferior do queixo.</li>
+                  <li className="mb-2">Incline suavemente a cabeça para trás e abra a boca.</li>
                 </ul>
               </div>
-              <div className="alert alert-warning mt-4">
-                <strong>Nota:</strong> Não realizar esta manobra se houver suspeita de traumatismo na coluna cervical.
-              </div>
+
               <div className="col-md-6 text-center order-md-2">
                 <img
                   src="/assets/sbv3.png"
@@ -193,6 +191,9 @@ export default function PageEx4() {
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
+            </div>
+            <div className="alert alert-warning mt-4">
+              <strong>Nota:</strong> Não realizar esta manobra se houver suspeita de traumatismo na coluna cervical.
             </div>
 
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
@@ -253,15 +254,16 @@ export default function PageEx4() {
                 <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
                 <ul className="fs-5 lh-lg text-light">
                   <li className="mb-2">Posicionar-se ao lado da vítima;</li>
-                  <li className="mb-2">Certificar-se que a vítima está deitada de costas, sobre uma superfície firme e plana;</li>
+                  <li className="mb-2">Certificar-se que a vítima está em decúbito dorsal (deitada de  costas), sobre uma superfície firme e plana;</li>
                   <li className="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
                   <li className="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
-                  <li className="mb-2">Colocar a base de uma mão no centro do tórax (sobre a metade inferior do esterno);</li>
+                  <li className="mb-2">Colocar a base de uma mão no centro do tórax (na zona intermamilar);</li>
                   <li className="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
-                  <li className="mb-2">Aplicar pressão sobre o esterno, deprimindo-o 5-6 cm a cada compressão (as compressões torácicas superficiais podem não produzir um fluxo sanguíneo adequado);</li>
-                  <li className="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100 por minuto, mas não mais do que 120 por minuto (ajuda se contar as compressões em voz alta);</li>
+                  <li className="mb-2">Aplicar pressão sobre o esterno, entre 5-6 cm a cada compressão;</li>
+                  <li className="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100-120 compreesões por minuto <br />
+                    Nota: Ajuda se contar as compreesões em voz alta;
+                  </li>
                   <li className="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos;</li>
-                  <li className="mb-2">Nunca interromper as compressões mais do que 10 segundos (com o coração parado, quando não se comprime o tórax, o sangue não circula).</li>
                 </ul>
               </div>
               <div className="col-md-6 text-center">
@@ -274,13 +276,12 @@ export default function PageEx4() {
               </div>
             </div>
           </div>
-
           <div className="alert alert-warning mt-4">
             <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
             <p className="mt-2 mb-0">
               Deve parar-se de executar quando:
               <br />
-              a) chegarem os técnicos de emergência médica;<br />
+              a) chegarem os técnicos de emergência médica e o substituirem;<br />
               b) estiver fisicamente exausto(a);<br />
               c) a vítima recomeçar a respirar normalmente.
             </p>
@@ -299,18 +300,15 @@ export default function PageEx4() {
           <div className="row mb-4 align-items-center" id="insuflacões">
             <div className="col-md-6 order-md-1">
               <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-                Só deve ser executado caso tenha máscara ou conheça o historial médico da vítima.
-                <p> - O reanimador deve posicionar-se ao lado da vítima;</p>
-                <p> - Permeabilizar a VA;</p>
+                Só deve ser executado caso tenha máscara ou se sinta confortável com o estado da vítima.
+                <li className="mb-2 text-break"> Permeabilizar a Via aerea.</li>
               </p>
               <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-                <li className="mb-2 text-break">Colocar a máscara sobre o nariz e boca da vítima (a parte mais estreita da máscara de bolso deverá ficar sobre o dorso do nariz e a parte mais larga da máscara deverá ficar sobre a boca);</li>
+                <li className="mb-2 text-break"> Colocar a Colocar a máscara sobre o nariz e boca da vítima, criando uma selagem hermética;</li>
                 <li className="mb-2">Colocar o polegar e o indicador na parte mais estreita da máscara;</li>
-                <li className="mb-2">Colocar o polegar da outra mão na parte mais larga da máscara e usar os outros dedos para elevar o queixo da vítima, criando uma selagem hermética;</li>
+                <li className="mb-2">Colocar o polegar da outra mão na parte mais larga da máscara e usar os outros dedos para elevar o queixo da vítima.</li>
+                <li className="mb-2">Insuflar sobre válvula de forma a que o tórax da vítima se eleve..</li>
               </ul>
-              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}
-              >Soprar suavemente pela válvula unidirecional durante cerca de 1/2 segundos (por cada insuflação), por forma a que o tórax da vítima se eleve
-              </p>
             </div>
             <div className="col-md-6 text-center order-md-2">
               <img

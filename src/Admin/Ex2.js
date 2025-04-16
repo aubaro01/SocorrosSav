@@ -90,6 +90,7 @@ export default function PageEx2() {
     setFormData({ nome: "", circuito: "", concluido: false });
   };
 
+  
   const steps = [
     {
       id: 0,
@@ -493,21 +494,6 @@ export default function PageEx2() {
               >
                 <strong>Conclusão do Exercício</strong>
               </p>
-              <div className="text-center">
-                <Button
-                  onClick={() => setShowModal(true)}
-                  style={{
-                    backgroundColor: "#f39c12",
-                    border: "none",
-                    borderRadius: "4px",
-                    padding: "0.75rem 2.5rem",
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                  }}
-                >
-                  Registrar Conclusão
-                </Button>
-              </div>
             </section>
           </div>
         </div>
@@ -516,7 +502,7 @@ export default function PageEx2() {
       <footer className="border-top py-4" style={{ backgroundColor: "#F9F9F9" }}>
         <div className="container text-center">
           <p style={{ fontSize: "0.9rem", color: "#757575" }}>
-            © {new Date().getFullYear()} SAV. <br></br>Todos os direitos reservados.
+            © {new Date().getFullYear()} S.A.V. <br></br>Todos os direitos reservados.
           </p>
         </div>
       </footer>

@@ -76,13 +76,25 @@ export default function LandingPage() {
               alt="Imagem do local"
               className="img-fluid w-75 mx-auto d-block"
             />
-            <p className="text-muted mt-3">
-              Localização dos exercícios<br />
-              Circulo  Azul: <strong>Exercício 1,</strong> perto das casas de banho principais <br />
-              Circulo  Verde: <strong>Exercício 2,</strong> dentro do auditório<br />
-              Circulo  Amarelo: <strong>Exercício 3,</strong> junto aos Primeiros Socorros<br />
-              Circulo Vermelho: <strong>Exercício 4,</strong> auditório 2<br />
-            </p>
+            <p className="fs-5 mt-4">
+    <span className="d-block mb-2 fw-bold">Localização dos exercícios</span>
+    <span className="d-block mb-3">
+        <span className="badge bg-primary rounded-circle me-2"></span>
+        <strong>Círculo Azul:</strong> Exercício 1, perto das casas de banho principais
+    </span>
+    <span className="d-block mb-3">
+        <span className="badge bg-success rounded-circle me-2"></span>
+        <strong>Círculo Verde:</strong> Exercício 2, dentro do auditório
+    </span>
+    <span className="d-block mb-3">
+        <span className="badge bg-warning rounded-circle me-2"></span>
+        <strong>Círculo Amarelo:</strong> Exercício 3, junto aos Primeiros Socorros
+    </span>
+    <span className="d-block">
+        <span className="badge bg-danger rounded-circle me-2"></span>
+        <strong>Círculo Vermelho:</strong> Exercício 4, auditório 2
+    </span>
+</p>
           </div>
         </section>
 

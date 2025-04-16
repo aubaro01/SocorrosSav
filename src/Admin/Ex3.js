@@ -106,7 +106,7 @@ export default function PageEx3() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Assista ao vídeo abaixo para entender a técnica correta de execução do exercício. Preste atenção aos detalhes dos movimentos antes de começar a prática.
+            Assista ao vídeo.
           </p>
         </>
       ),
@@ -118,7 +118,8 @@ export default function PageEx3() {
         <div className="row">
           <div className="col-md-12">
 
-            <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>              <div className="row align-items-center">
+            <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>         
+             <div className="row align-items-center">
               <div className="col-md-6 text-center">
                 <img
                   src="/assets/tm.png"
@@ -143,28 +144,28 @@ export default function PageEx3() {
                   }}>
                     1
                   </div>
-                  <h4 style={{ color: "#f39c12", margin: 0 }}>Fixar a cabeça da vítima</h4>
+                  <h4 style={{ color: "#f39c12", margin: 0 }}>Estabelize a cabeça da vítima</h4>
                 </div>
                 <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Verificar objetos que possam representar riscos (objetos pontiagudos, acessórios perigosos)</span>
+                    <span>Verificar acessórios que possam representar riscos para a vítima (oculos, chaves, etc...)</span>
                   </li>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Certificar-se que o ambiente está seguro para o transporte</span>
+                    <span>Certificar-se que existem condições de seguro para transportar a vítima</span>
                   </li>
                   <li className="d-flex">
                     <span className="me-2">•</span>
-                    <span>Observar riscos adicionais (tráfego de veículos, incêndios próximos)</span>
+                    <span>Observar riscos adicionais ( Piso escorrecadeiro, vidros partidos, etc...)</span>
                   </li>
                 </ul>
               </div>
             </div>
             </div>
 
-            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>              <div className="row align-items-center">
-
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>              
+              <div className="row align-items-center">
               <div className="col-md-6 order-md-2 text-center">
                 <img
                   src="/assets/tm7.png"
@@ -194,11 +195,7 @@ export default function PageEx3() {
                 <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Posicionar a vítima em decúbito dorsal, numa posição estável.</span>
-                  </li>
-                  <li className="mb-2 d-flex">
-                    <span className="me-2">•</span>
-                    <span>Alinhar cabeça, pescoço e coluna para evitar lesões</span>
+                    <span>Posicionar a vítima em decúbito dorsal, numa posição estável alinhada.</span>
                   </li>
                   <li className="d-flex">
                     <span className="me-2">•</span>
@@ -244,11 +241,11 @@ export default function PageEx3() {
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Socorrista 2 – Responsável pelos membros superiores</span>
+                      <span>Socorrista 2 – Responsável pelos ombros superiores (ombros)</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>Socorrista 3 – Responsável pelo tronco</span>
+                      <span>Socorrista 3 – Responsável pelo tronco (cintura)</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -335,16 +332,12 @@ export default function PageEx3() {
                     }}>
                       5
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Introdução da maca</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Colocação da maca</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>O Socorrista 5 posiciona a maca alinhado com os pés da vítima alinhado</span>
-                    </li>
-                    <li className="mb-2 d-flex">
-                      <span className="me-2">•</span>
-                      <span>Deslizar a maca suavemente por baixo da vítima</span>
+                      <span>O Socorrista 5 alinha maca por baixo pés da vítima</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -386,15 +379,7 @@ export default function PageEx3() {
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Baixar simultaneamente ao comando do socorrista 1.</span>
-                    </li>
-                    <li className="mb-2 d-flex">
-                      <span className="me-2">•</span>
-                      <span>Flexionar os joelhos para impedir lesões aos socorristas 2,3 e 4.</span>
-                    </li>
-                    <li className="d-flex">
-                      <span className="me-2">•</span>
-                      <span>Coordenar movimento com os demais socorristas</span>
+                      <span>Baixar simultaneamente ao comando do socorrista 1</span>
                     </li>
                   </ul>
                 </div>
@@ -427,20 +412,20 @@ export default function PageEx3() {
                     }}>
                       7
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Colar cintas de segurança</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Colocar cintos de segurança</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Verificar o correto posicionamento das cintas</span>
+                      <span>Cinto superior, ajustar na parte toracica da vítima</span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Ajustar conforme o biótipo corporal da vítima</span>
+                      <span>Cinto central, ajustar na cintura da vítima</span>
                     </li>
-                    <li className="d-flex">
+                    <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Garantir fixação sem comprometer a circulação</span>
+                      <span>Cinto inferior, ajustar nas pernas da vítima</span>
                     </li>
                   </ul>
                 </div>
@@ -566,7 +551,7 @@ export default function PageEx3() {
                     <h4 style={{ color: "#f39c12", margin: 0 }}>Preparar para avançar</h4>
                   </div>
                   <div className="alert alert-warning mt-3">
-                    <strong>Comando final:</strong> à ordem do socorrista 1, responsável pela cabeça, avançam sempre para a frente
+                    <strong>Comando final:</strong> à ordem do socorrista 1 (responsável pela cabeça) avançam.
                   </div>
                 </div>
               </div>
@@ -617,7 +602,7 @@ export default function PageEx3() {
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>A cabeça da vítima tem de estar sempre na direção da subida ou descida</span>
+                      <span>A corpo da vítima tem de estar sempre nivelado</span>
                     </li>
                   </ul>
                 </div>
@@ -697,23 +682,17 @@ export default function PageEx3() {
                     }}>
                       3
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Controle na subida/descida</h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Controlo na subida/descida</h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Descer/subir os degraus lentamente para poderem estar sincronizados.
-                      </span>
-                    </li>
-                    <li className="mb-2 d-flex">
-                      <span className="me-2">•</span>
-                      <span>Colocar um pé de cada vez em cada degrau para dar segurança ao movimento e evitar
-                        tropeços.
+                      <span>Descer ou subir os degraus de forma sincronizada.
                       </span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>Se existir, segurar corrimão com uma das mãos para ter mais estabilidade.</span>
+                      <span>Se existir um corrimão, segurar com uma das mãos para ter mais estabilidade.</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
@@ -724,7 +703,7 @@ export default function PageEx3() {
               </div>
             </div>
             <div className="alert alert-warning mt-4">
-              <strong>Nota:</strong> Priorizar sempre a segurança da equipe e da vítima, utilizar equipamentos de proteção individual quando necessário.
+              <strong>Nota:</strong> Priorizar sempre a segurança da equipa e da vítima, utilizar equipamentos de proteção individual quando necessário.
             </div>
           </div>
         </div>
