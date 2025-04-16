@@ -1,11 +1,96 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button, Form } from "react-bootstrap";
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import Inem from "../components/ChInem";
 
 export default function PageEx2() {
-  
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    nome: "",
+    circuito: "",
+    concluido: false,
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [exercicioNome] = useState("RVA");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const exercicioId = process.env.REACT_APP_EXER2_ID;
 
+
+  useEffect(() => {
+    if (!exercicioId) {
+      console.error("REACT_APP_EXER1_ID não está definido no ambiente");
+      setError("Erro de configuração - ID do exercício não encontrado");
+    }
+  }, [exercicioId]);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    if (!formData.nome.trim() || !formData.circuito.trim()) {
+      setError("Por favor, preencha todos os campos obrigatórios");
+      setIsLoading(false);
+      return;
+    }
+
+    const requestData = {
+      nome: formData.nome.trim(),
+      circuito: formData.circuito.trim(),
+      id_Exer_fk: exercicioId,
+      exer_res: formData.concluido ? "Feito" : "Não Feito",
+    };
+
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/ExerUser`,
+        requestData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+      );
+      console.log("Dados enviados:", response.data);
+      setSubmitted(true);
+    } catch (error) {
+      let errorMessage = "Erro ao enviar dados";
+
+      if (error.response) {
+        errorMessage = error.response.data?.message ||
+          `Erro ${error.response.status}: ${error.response.statusText}`;
+      } else if (error.request) {
+        errorMessage = "Sem resposta do servidor";
+      } else {
+        errorMessage = error.message || "Erro ao configurar a requisição";
+      }
+
+      console.error("Erro ao enviar dados:", error);
+      setError(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+    setSubmitted(false);
+    setError(null);
+    setFormData({ nome: "", circuito: "", concluido: false });
+  };
+
+  
   const steps = [
     {
       id: 0,
@@ -421,6 +506,168 @@ export default function PageEx2() {
           </p>
         </div>
       </footer>
+
+      <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
+        <Modal.Header closeButton className="border-0 pb-0" style={{ backgroundColor: '#f8f9fa' }}>
+          <Modal.Title className="fw-bold" style={{ color: '#2c3e50', fontSize: '1.5rem' }}>
+            <i className="bi bi-clipboard-check me-2" style={{ color: '#27ae60' }}></i>
+            Registrar Exercício
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body className="px-4 pt-3 pb-4">
+          {error && (
+            <div className="alert alert-danger d-flex align-items-center mb-4" role="alert">
+              <i className="bi bi-exclamation-triangle-fill me-2"></i>
+              <div>{error}</div>
+            </div>
+          )}
+
+          {!submitted ? (
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-4" controlId="formNome">
+                <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
+                  Nome <span className="text-danger">*</span>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="nome"
+                  value={formData.nome}
+                  onChange={handleChange}
+                  placeholder="Digite o seu nome"
+                  required
+                  className="p-3 rounded-3"
+                  style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
+                  disabled={isLoading}
+                />
+                {!formData.nome.trim() && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
+              </Form.Group>
+
+              <Form.Group className="mb-4" controlId="formCircuito">
+                <Form.Label className="fw-semibold mb-2" style={{ color: '#34495e' }}>
+                  Circuito <span className="text-danger">*</span>
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="circuito"
+                  value={formData.circuito}
+                  onChange={handleChange}
+                  placeholder="Digite o seu circuito"
+                  minLength={2}
+                  maxLength={3}
+                  required
+                  className="p-3 rounded-3"
+                  style={{ border: '2px solid #dfe6e9', fontSize: '1.05rem' }}
+                  disabled={isLoading}
+                />
+                {!formData.circuito.trim() && (
+                  <Form.Text className="text-danger">
+                    Este campo é obrigatório
+                  </Form.Text>
+                )}
+              </Form.Group>
+
+              <Form.Group className="mb-4" controlId="formConcluido">
+                <div className="form-check form-switch d-flex align-items-center">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    name="concluido"
+                    id="flexSwitchCheckChecked"
+                    checked={formData.concluido}
+                    onChange={handleChange}
+                    style={{
+                      width: "3em",
+                      height: "1.5em",
+                      cursor: isLoading ? "not-allowed" : "pointer",
+                      marginRight: "10px",
+                      opacity: isLoading ? 0.7 : 1
+                    }}
+                    disabled={isLoading}
+                  />
+                  <label
+                    className="form-check-label fw-semibold"
+                    htmlFor="flexSwitchCheckChecked"
+                    style={{
+                      color: formData.concluido ? "#2ecc71" : "#34495e",
+                      fontSize: "1.05rem",
+                      transition: "color 0.3s ease",
+                      userSelect: "none",
+                      cursor: isLoading ? "not-allowed" : "pointer",
+                    }}
+                  >
+                    {formData.concluido ? (
+                      <>
+                        <i className="bi bi-check-circle-fill me-2"></i>
+                        Exercício marcado como concluído
+                      </>
+                    ) : (
+                      <>
+                        <i className="bi bi-circle me-2"></i>
+                        Marcar como concluído
+                      </>
+                    )}
+                  </label>
+                </div>
+              </Form.Group>
+
+              <div className="text-center mt-4">
+                <Button
+                  type="submit"
+                  className="fw-bold px-4 py-3 rounded-3"
+                  style={{
+                    backgroundColor: '#27ae60',
+                    border: 'none',
+                    fontSize: '1.1rem',
+                    width: '100%',
+                    boxShadow: '0 4px 6px rgba(39, 174, 96, 0.2)'
+                  }}
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      A Enviar...
+                    </>
+                  ) : (
+                    <>
+                      <i className="bi bi-send-check me-2"></i>
+                      Enviar
+                    </>
+                  )}
+                </Button>
+              </div>
+            </Form>
+          ) : (
+            <div className="text-center py-3">
+              <div className="mb-4">
+                <i className="bi bi-check-circle-fill" style={{ fontSize: '4rem', color: '#27ae60' }}></i>
+              </div>
+              <h5 className="fw-bold mb-3" style={{ color: '#2c3e50' }}>
+                Exercício concluído com sucesso!
+              </h5>
+              <p className="text-muted mb-4">
+                Obrigado por completar o exercício.
+              </p>
+              <Button
+                onClick={handleModalClose}
+                className="fw-semibold px-4 py-2 rounded-3"
+                style={{
+                  backgroundColor: '#7f8c8d',
+                  border: 'none',
+                  width: '50%'
+                }}
+              >
+                Fechar
+              </Button>
+            </div>
+          )}
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

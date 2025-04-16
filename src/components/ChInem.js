@@ -110,6 +110,11 @@ function Inem() {
             </div>
 
             <div className="mb-4 p-3 bg-light rounded">
+              <p className="mb-1"><strong className="text-dark">Operador:</strong> Qual é a localização exata onde se encontra?</p>
+              <p className="mb-1"><strong className="text-dark">Utilizador:</strong> Estamos no Porto, em Valongo, no <strong>Salão de Assembleias das Testemunhas de Jeová na Rua Dom Pedro IV</strong>.</p>
+            </div>
+
+            <div className="mb-4 p-3 bg-light rounded">
               <p className="mb-1"><strong className="text-dark">Operador:</strong> Ela está a respirar neste momento?</p>
               <p className="mb-1"><strong className="text-dark">Utilizador:</strong> Sim, mas com dificuldade.</p>
             </div>
@@ -127,11 +132,6 @@ function Inem() {
             <div className="mb-4 p-3 bg-light rounded">
               <p className="mb-1"><strong className="text-dark">Operador:</strong> Ela tem doenças conhecidas ou está a tomar alguma medicação?</p>
               <p className="mb-1"><strong className="text-dark">Utilizador:</strong> Sim, é diabética e tem problemas cardíacos.</p>
-            </div>
-
-            <div className="mb-4 p-3 bg-light rounded">
-              <p className="mb-1"><strong className="text-dark">Operador:</strong> Qual é a localização exata onde se encontra?</p>
-              <p className="mb-1"><strong className="text-dark">Utilizador:</strong> Estamos no Porto, em Valongo, no <strong>Salão de Assembleias das Testemunhas de Jeová na Rua Dom Pedro IV</strong>.</p>
             </div>
 
             <div className="mb-4 p-3 bg-light rounded">
