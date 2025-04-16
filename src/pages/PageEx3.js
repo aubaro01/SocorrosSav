@@ -388,6 +388,10 @@ export default function PageEx3() {
                       <span className="me-2">•</span>
                       <span>Baixar simultaneamente ao comando do socorrista 1.</span>
                     </li>
+                    <li className="mb-2 d-flex">
+                      <span className="me-2">•</span>
+                      <span>Socorristas aos pés da vítima sobem/descem 3 degraus</span>
+                    </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
                       <span>Coordenar movimento com os demais socorristas</span>
@@ -614,10 +618,6 @@ export default function PageEx3() {
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
                       <span>A cabeça da vítima tem de estar sempre na direção da subida ou descida</span>
-                    </li>
-                    <li className="mb-2 d-flex">
-                      <span className="me-2">•</span>
-                      <span>Socorristas aos pés da vítima sobem/descem 3 degraus</span>
                     </li>
                   </ul>
                 </div>
