@@ -372,8 +372,7 @@ export default function PageExe1() {
              ></iframe>
            </div>
            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-             Este vídeo demonstra como fazer o PLS (Posição Lateral de Segurança).
-             Observe atentamente os movimentos antes de começar a praticar.
+             Assista o vídeo.
            </p>
          </>
        ),
@@ -386,7 +385,7 @@ export default function PageExe1() {
            <div className="col-md-6">
              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
              Verifique se a vítima está usar algo que possa colocá-la em
-             perigo (ex.: objetos pontiagudos, acessórios).
+             perigo (ex.: oculos, chaves, etc...).
              </p>
            </div>
            <div className="col-md-6 text-center">
