@@ -264,7 +264,7 @@ export default function PageEx4() {
                   <li>Certificar-se de que está em decúbito dorsal (deitada de costas), sobre uma superfície firme e plana;</li>
                   <li>Afastar/remover as roupas que cobrem o tórax;</li>
                   <li>Posicionar-se verticalmente acima do tórax;</li>
-                  <li>Colocar a base de uma mão no centro do tórax (zona intermamar);</li>
+                  <li>Colocar a base de uma mão no centro do tórax (zona intermamilar);</li>
                   <li>Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
                   <li>Aplicar pressão sobre o esterno, entre 5–6 cm por compressão;</li>
                   <li>
