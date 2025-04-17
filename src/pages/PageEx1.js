@@ -20,9 +20,7 @@ export default function PageExe1() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Este vídeo demonstra como realizar a Desobstrução de uma Via Aérea.
-            <br />
-            Observe atentamente os movimentos antes de começar a praticar.
+            Assista ao vídeo.
           </p>
         </>
       ),
@@ -289,8 +287,7 @@ export default function PageExe1() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Este vídeo demonstra como fazer o PLS (Posição Lateral de Segurança).
-            Observe atentamente os movimentos antes de começar a praticar.
+            Assista ao vídeo.
           </p>
         </>
       ),
@@ -299,11 +296,11 @@ export default function PageExe1() {
       id: 1,
       title: "Condições de Segurança",
       content: (
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-md-6">
             <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Verifique se a vítima está usar algo que possa colocá-la em
-            perigo (ex.: oculos, chaves, etc...).
+              Verifique se a vítima está usar algo que possa colocá-la em
+              perigo (ex.: óculos, chaves, etc...).
             </p>
           </div>
           <div className="col-md-6 text-center">
@@ -433,9 +430,9 @@ export default function PageExe1() {
                         color: "#e9ecef",
                       }}
                     >
-                  <li className="mb-2">
-                    Rodar a vítima para o lado do braço que está apoiado no chão
-                  </li>
+                      <li className="mb-2">
+                        Rodar a vítima para o lado do braço que está apoiado no chão
+                      </li>
                       <li className="mb-2">
                         Permeabilizar a via aérea, inclinado a cabeça ligeramente para trás.
                       </li>
@@ -467,16 +464,20 @@ export default function PageExe1() {
       title: "Vigiar Vítima",
       content: (
         <>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Após colocar a pessoa nesta posição é importante observar até a chegada da ambulância. Se nesse tempo a vitima deixar de respirar, deve voltar a rodar de barriga para cima e iniciar o suporte básico de vida
-          </p>
-          <div className="text-center mb-4">
-            <img
-              src="/assets/pls1.png"
-              alt="Posição Inicial"
-              className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
-            />
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                Após colocar a pessoa nesta posição é importante observar até a chegada da ambulância. Se nesse tempo a vitima deixar de respirar, deve voltar a rodar de barriga para cima e iniciar o suporte básico de vida
+              </p>
+            </div>
+            <div className="col-md-6 text-center">
+              <img
+                src="/assets/pls1.png"
+                alt="Posição Inicial"
+                className="img-fluid rounded"
+                style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
+              />
+            </div>
           </div>
         </>
       ),
@@ -488,7 +489,7 @@ export default function PageExe1() {
       <header className="py-4" style={{ backgroundColor: "#2c3e50", color: "#fff" }}>
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V</h1>
+            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V.</h1>
             <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
               DVA & PLS
             </p>
@@ -735,9 +736,6 @@ export default function PageExe1() {
               </div>
             </div>
           </div>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "1.5rem", textAlign: "center" }}>
-            <strong>Conclusão do Exercício</strong>
-          </p>
         </section>
       </main>
 
