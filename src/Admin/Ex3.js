@@ -118,8 +118,7 @@ export default function PageEx3() {
         <div className="row">
           <div className="col-md-12">
 
-            <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>         
-             <div className="row align-items-center">
+            <div className="step-card mb-4 p-3 rounded" style={{ borderLeft: "4px solid #f39c12" }}>              <div className="row align-items-center">
               <div className="col-md-6 text-center">
                 <img
                   src="/assets/tm.png"
@@ -149,23 +148,23 @@ export default function PageEx3() {
                 <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Verificar acessórios que possam representar riscos para a vítima (oculos, chaves, etc...)</span>
+                    <span>Verificar acessórios que possam representar riscos para a vítima (óculos, chaves, etc...)</span>
                   </li>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Certificar-se que existem condições de seguro para transportar a vítima</span>
-                  </li>
-                  <li className="d-flex">
-                    <span className="me-2">•</span>
-                    <span>Observar riscos adicionais ( Piso escorrecadeiro, vidros partidos, etc...)</span>
+                    <span>Certificar-se que existem condições de segurança para transportar a vítima
+                    </span>
                   </li>
                 </ul>
+                <div className="alert alert-warning mt-3">
+                <strong><span>Exemplo de riscos durante o transporte: Piso escorregadio, vidros partidos, etc.</span></strong>
+                </div>
               </div>
             </div>
             </div>
 
-            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>              
-              <div className="row align-items-center">
+            <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>              <div className="row align-items-center">
+
               <div className="col-md-6 order-md-2 text-center">
                 <img
                   src="/assets/tm7.png"
@@ -195,7 +194,7 @@ export default function PageEx3() {
                 <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                   <li className="mb-2 d-flex">
                     <span className="me-2">•</span>
-                    <span>Posicionar a vítima em decúbito dorsal, numa posição estável alinhada.</span>
+                    <span>Posicionar a vítima em decúbito dorsal (deitada de costas), numa posição estável alinhada.</span>
                   </li>
                   <li className="d-flex">
                     <span className="me-2">•</span>
@@ -291,7 +290,7 @@ export default function PageEx3() {
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>Manter alinhamento cabeça-pescoço-coluna durante todo o movimento</span>
+                      <span>Manter alinhamento cabeça, pescoço e coluna durante todo o movimento</span>
                     </li>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
@@ -337,11 +336,11 @@ export default function PageEx3() {
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
                       <span className="me-2">•</span>
-                      <span>O Socorrista 5 alinha maca por baixo pés da vítima</span>
+                      <span>O Socorrista 5 alinha a <strong>Maca</strong> por baixo da vítima</span>
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>Garantir que a maca esteja centralizada sob o corpo</span>
+                      <span>Garantir que a <strong>Maca</strong> esteja centralizada sob o corpo</span>
                     </li>
                   </ul>
                 </div>
@@ -597,7 +596,7 @@ export default function PageEx3() {
                     }}>
                       1
                     </div>
-                    <h4 style={{ color: "#f39c12", margin: 0 }}>Subir/Descer escadas </h4>
+                    <h4 style={{ color: "#f39c12", margin: 0 }}>Subir ou Descer escadas </h4>
                   </div>
                   <ul className="step-list" style={{ color: "#e9ecef", fontSize: "1.1rem", lineHeight: "1.7" }}>
                     <li className="mb-2 d-flex">
@@ -649,7 +648,7 @@ export default function PageEx3() {
                     </li>
                     <li className="d-flex">
                       <span className="me-2">•</span>
-                      <span>À voz do socorrista responsável pela cabeça iniciam a subida/descida</span>
+                      <span>À voz do socorrista responsável pela cabeça iniciam a descida ou subida</span>
                     </li>
                   </ul>
                 </div>
@@ -716,7 +715,7 @@ export default function PageEx3() {
       <header className="py-4" style={{ backgroundColor: "#2c3e50", color: "#fff" }}>
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V</h1>
+            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V.</h1>
             <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
             Transporte vítima em Maca<br />
           </p>
@@ -929,7 +928,7 @@ export default function PageEx3() {
       <footer className="border-top py-4" style={{ backgroundColor: "#F9F9F9" }}>
         <div className="container text-center">
           <p style={{ fontSize: "0.9rem", color: "#757575" }}>
-            © {new Date().getFullYear()} SAV. <br />Todos os direitos reservados.
+            © {new Date().getFullYear()} S.A.V. <br />Todos os direitos reservados.
           </p>
         </div>
       </footer>

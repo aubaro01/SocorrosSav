@@ -90,7 +90,7 @@ export default function PageEx2() {
     setFormData({ nome: "", circuito: "", concluido: false });
   };
 
-  
+
   const steps = [
     {
       id: 0,
@@ -107,7 +107,7 @@ export default function PageEx2() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Assista ao vídeo abaixo para entender a técnica correta de execução do exercício. Preste atenção aos detalhes dos movimentos antes de começar a prática.
+            Assista ao vídeo.
           </p>
         </>
       ),
@@ -133,7 +133,7 @@ export default function PageEx2() {
                   Avaliar, incentivar e auxiliar no transporte com cadeira de rodas.
                 </p>
                 <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                   <li className="mb-2">Conversar com a vítima.</li>
+                  <li className="mb-2">Conversar com a vítima.</li>
                   <li className="mb-2">Mover a vítima em segurança.</li>
                   <p className="text-warning mt-2">
                     <em>Peça que os irmãos deixem o lugar dessa forma, para poder realizar com segurança.</em>
@@ -194,12 +194,12 @@ export default function PageEx2() {
                     style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                   />
                   <img
-                  src="/assets/rva3.png"
-                  alt="Passo 2: Posicionar a vítima"
-                  className="img-fluid rounded shadow"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
-              </div>
+                    src="/assets/rva3.png"
+                    alt="Passo 2: Posicionar a vítima"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                  />
+                </div>
               </div>
             </div>
 
@@ -220,7 +220,7 @@ export default function PageEx2() {
                   style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
                 />
               </div>
-              
+
             </div>
 
             <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
@@ -234,19 +234,19 @@ export default function PageEx2() {
                   </ul>
                 </div>
                 <div className="col-md-6 text-center">
-                <img
-                  src="/assets/rva6.png"
-                  alt="Passo 2: Posicionar a vítima"
-                  className="img-fluid rounded shadow"
-                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                />
+                  <img
+                    src="/assets/rva6.png"
+                    alt="Passo 2: Posicionar a vítima"
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                  />
                   <img
                     src="/assets/rva5.png"
                     alt="Passo 1: Avaliar"
                     className="img-fluid rounded shadow"
                     style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                  /> 
-              </div>
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -284,14 +284,11 @@ export default function PageEx2() {
       <header className="py-4" style={{ backgroundColor: "#2c3e50", color: "#fff" }}>
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V</h1>
-            <div className="py-1 px-3" style={{ border: "1px solid rgba(31, 26, 26, 0.3)", borderRadius: "4px" }}>
-              Exercício 2
-            </div>
+            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V.</h1>
+            <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
+              Remoção de Vítima no Auditório<br></br>
+            </p>
           </div>
-          <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
-            Remoção de Vítima no Auditório<br></br>
-          </p>
         </div>
       </header>
 
@@ -494,6 +491,21 @@ export default function PageEx2() {
               >
                 <strong>Conclusão do Exercício</strong>
               </p>
+              <div className="text-center">
+                <Button
+                  onClick={() => setShowModal(true)}
+                  style={{
+                    backgroundColor: "#f39c12",
+                    border: "none",
+                    borderRadius: "4px",
+                    padding: "0.75rem 2.5rem",
+                    fontSize: "1.1rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Registrar Conclusão
+                </Button>
+              </div>
             </section>
           </div>
         </div>

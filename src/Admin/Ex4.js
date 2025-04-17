@@ -108,7 +108,7 @@ export default function PageEx4() {
 
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Assista ao vídeo para conhecer a técnica correta.
+            Assista ao vídeo.
           </p>
         </>
       ),
@@ -117,25 +117,24 @@ export default function PageEx4() {
       id: 1,
       title: "Condições de Segurança",
       content: (
-        <div className="row">
-          <div className="col-md-6">
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+        <div className="row align-items-center">
+            <div className="col-md-6">
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
               Comece por verificar se não existe perigo para si, para
               a vítima ou para terceiros. <br />
-              Exemplo: tráfego, eletricidade,
-              gás, derrocadas  ou outros.
-            </p>
-
+              Exemplo: <strong>tráfego, eletricidade,
+              gás, derrocadas  ou outros.</strong>            
+               </p>
+            </div>
+            <div className="col-md-6 text-center">
+              <img
+                src="/assets/sbv1.png"
+                alt="Posição Inicial"
+                className="img-fluid rounded"
+                style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
+              />
+            </div>
           </div>
-          <div className="col-md-6 text-center">
-            <img
-              src="/assets/sbv1.png"
-              alt="Agachamento"
-              className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
-            />
-          </div>
-        </div>
       ),
     },
     {
@@ -156,7 +155,7 @@ export default function PageEx4() {
                     <li className="mb-2">
                       Coloque-se lateralmente em relação à vítima.
                       <br />
-                      <em className="text-warning"> Abane os ombros e diga, por exemplo: “Está a me ouvir?” ou  chame pelo none "[nome da vítima]"</em>
+                      <em className="text-warning"> Abane os ombros e diga, por exemplo: “Está a me ouvir?” ou chame pelo nome "[nome da vítima]"</em>
                     </li>
                   </ul>
                 </div>
@@ -176,7 +175,7 @@ export default function PageEx4() {
               <div className="col-md-6 order-md-1">
                 <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Permeabilizar via aérea</h4>
                 <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                  <li className="mb-2">Colocar a vítima em decúbito dorsal.</li>
+                  <li className="mb-2">Colocar a vítima em decúbito dorsal (deitada de costas).</li>
                   <li className="mb-2">Coloque a palma de uma mão sobre a testa da vítima.</li>
                   <li className="mb-2">Com a outra mão, posicione os dedos indicador e médio na parte inferior do queixo.</li>
                   <li className="mb-2">Incline suavemente a cabeça para trás e abra a boca.</li>
@@ -230,40 +229,50 @@ export default function PageEx4() {
       title: "SBV - Vítima não respira",
       content: (
         <>
-          <div className="row mb-4 align-items-center">
+          <div className="row mb-5 align-items-center">
             <div className="col-md-6 order-md-1">
-              <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 1 -  Ligar 112</h4>
-              <p className="text-break" style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
-                Caso a vítima não responda e não tenha a respiração
-                normalizada, deve ativar de imediato o sistema de
-                emergência médica, o 112.
+              <h4 className="mb-3" style={{ color: "#f39c12" }}>
+                Passo 1 – Ligar 112
+              </h4>
+              <p className="text-break" style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                Caso a vítima não responda e não tenha a respiração normalizada, deve ativar de imediato o sistema de emergência médica, o 112.
               </p>
             </div>
             <div className="col-md-6 text-center order-md-2">
               <img
                 src="/assets/emerNumber.png"
-                alt="Passo 2: Posicionar a vítima"
-                className="img-fluid rounded"
-                style={{ maxHeight: "250px", border: "3px solid #f39c12" }} />
+                alt="Passo 1: Ligar 112"
+                className="img-fluid rounded shadow"
+                style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+              />
             </div>
           </div>
-
-          <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+          <div
+            className="step-card mb-5 p-4 rounded shadow-sm"
+            style={{
+              backgroundColor: "rgba(209, 144, 39, 0.1)",
+              borderLeft: "4px solid #f39c12"
+            }}
+          >
             <div className="row align-items-center">
               <div className="col-md-6">
-                <h4 className="text-warning mb-3">Passo 2 - Iniciar RCP (Paragem cardiorrespiratória)</h4>
-                <ul className="fs-5 lh-lg text-light">
-                  <li className="mb-2">Posicionar-se ao lado da vítima;</li>
-                  <li className="mb-2">Certificar-se que a vítima está em decúbito dorsal (deitada de  costas), sobre uma superfície firme e plana;</li>
-                  <li className="mb-2">Afastar/remover as roupas que cobrem o tórax da vítima;</li>
-                  <li className="mb-2">Posicionar-se verticalmente acima do tórax da vítima;</li>
-                  <li className="mb-2">Colocar a base de uma mão no centro do tórax (na zona intermamilar);</li>
-                  <li className="mb-2 text-break">Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
-                  <li className="mb-2">Aplicar pressão sobre o esterno, entre 5-6 cm a cada compressão;</li>
-                  <li className="mb-2 text-break">Aplicar 30 compressões de forma rítmica a uma frequência de pelo menos 100-120 compreesões por minuto <br />
-                    Nota: Ajuda se contar as compreesões em voz alta;
+                <h4 className="text-warning mb-4">
+                  Passo 2 – Iniciar RCP (Paragem cardiorrespiratória)
+                </h4>
+                <ul className="fs-5 lh-lg text-light ps-3" style={{ listStyleType: "disc" }}>
+                  <li>Posicionar-se ao lado da vítima;</li>
+                  <li>Certificar-se de que está em decúbito dorsal (deitada de costas), sobre uma superfície firme e plana;</li>
+                  <li>Afastar/remover as roupas que cobrem o tórax;</li>
+                  <li>Posicionar-se verticalmente acima do tórax;</li>
+                  <li>Colocar a base de uma mão no centro do tórax (zona intermamar);</li>
+                  <li>Colocar a outra mão sobre a primeira entrelaçando os dedos;</li>
+                  <li>Aplicar pressão sobre o esterno, entre 5–6 cm por compressão;</li>
+                  <li>
+                    Aplicar 30 compressões rítmicas a 100–120 compressões por minuto;
+                    <br />
+                    <em className="text-warning small"><strong>Nota: ajuda se contar em voz alta.</strong></em>
                   </li>
-                  <li className="mb-2">No final de cada compressão garantir a descompressão total do tórax sem remover as mãos;</li>
+                  <li>No final de cada compressão, garantir a descompressão total sem tirar as mãos.</li>
                 </ul>
               </div>
               <div className="col-md-6 text-center">
@@ -277,16 +286,21 @@ export default function PageEx4() {
             </div>
           </div>
           <div className="alert alert-warning mt-4">
-            <strong>Nota:</strong> A cada 30 compressões deve ser feita <strong><a href="#insuflacoes" className="text-decoration-none">2 insuflações.</a></strong>
-            <p className="mt-2 mb-0">
-              Deve parar-se de executar quando:
-              <br />
-              a) chegarem os técnicos de emergência médica e o substituirem;<br />
-              b) estiver fisicamente exausto(a);<br />
-              c) a vítima recomeçar a respirar normalmente.
+            <p className="mb-2">
+              <strong>Nota:</strong> A cada 30 compressões deve ser feita
+              <strong>
+                <a href="#insuflacoes" className="text-decoration-none text-dark"> 2 insuflações.</a>
+              </strong>
             </p>
+            <p className="mb-0">
+              Deve parar-se de executar quando:
+            </p>
+            <ul className="mt-2 mb-0 ps-3">
+              <li>chegarem os técnicos de emergência médica e o substituírem;</li>
+              <li>estiver fisicamente exausto(a);</li>
+              <li>a vítima recomeçar a respirar normalmente.</li>
+            </ul>
           </div>
-
         </>
       ),
     },
@@ -296,12 +310,14 @@ export default function PageEx4() {
       title: "SBV - Insuflações",
       content: (
         <>
-
           <div className="row mb-4 align-items-center" id="insuflacões">
             <div className="col-md-6 order-md-1">
               <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
                 Só deve ser executado caso tenha máscara ou se sinta confortável com o estado da vítima.
-                <li className="mb-2 text-break"> Permeabilizar a Via aerea.</li>
+                <br />
+                <ul style={{ paddingLeft: "1.2rem", margin: 0, listStyleType: "none" }}>
+                  <li className="mb-2 text-break">Permeabilizar a via aérea</li>
+                </ul>
               </p>
               <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef", marginBottom: "2rem" }}>
                 <li className="mb-2 text-break"> Colocar a Colocar a máscara sobre o nariz e boca da vítima, criando uma selagem hermética;</li>
@@ -511,7 +527,7 @@ export default function PageEx4() {
       <footer className="border-top py-4" style={{ backgroundColor: "#F9F9F9" }}>
         <div className="container text-center">
           <p style={{ fontSize: "0.9rem", color: "#757575" }}>
-            © {new Date().getFullYear()} SAV. <br />Todos os direitos reservados.
+            © {new Date().getFullYear()} S.A.V. <br />Todos os direitos reservados.
           </p>
         </div>
       </footer>

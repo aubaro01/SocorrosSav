@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Modal, Button, Form } from "react-bootstrap";
 import Inem from "../components/ChInem";
 
 export default function PageEx2() {
@@ -22,7 +21,7 @@ export default function PageEx2() {
             ></iframe>
           </div>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-            Assista ao vídeo abaixo para entender a técnica correta de execução do exercício. Preste atenção aos detalhes dos movimentos antes de começar a prática.
+            Assista ao vídeo.
           </p>
         </>
       ),
@@ -33,7 +32,7 @@ export default function PageEx2() {
       content: (
         <div className="row">
           <div className="col-12 mb-5">
-            <h4 className="text-warning mb-3">1.1) Vítima Consciente</h4>
+            <h4 className="text-warning mb-3"> Vítima Consciente</h4>
             <div className="row align-items-center">
               <div className="col-md-6 text-center">
                 <img
@@ -168,30 +167,6 @@ export default function PageEx2() {
         </div>
       ),
     },
-    {
-      id: 3,
-      title: "Transporte de vítima inconsciente",
-      content: (
-        <div className="row align-items-center">
-          <div className="col-md-6 text-center mb-4 mb-md-0">
-            <img
-              src="/assets/rva7.png"
-              alt="Salto"
-              className="img-fluid rounded"
-              style={{ maxHeight: "350px", border: "3px solid #f39c12" }}
-            />
-          </div>
-          <div className="col-md-6">
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              <strong>Se houver perigo,</strong> arraste a vítima para um local seguro enquanto aguarda a Maca para o transporte.
-            </p>
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Utilize a <strong>chave de Rautek</strong> para mover a vítima até um local seguro.
-            </p>
-          </div>
-        </div>
-      ),
-    },
   ];
 
   return (
@@ -199,14 +174,11 @@ export default function PageEx2() {
       <header className="py-4" style={{ backgroundColor: "#2c3e50", color: "#fff" }}>
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V</h1>
-            <div className="py-1 px-3" style={{ border: "1px solid rgba(31, 26, 26, 0.3)", borderRadius: "4px" }}>
-              Exercício 2
-            </div>
-          </div>
-          <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
+            <h1 className="m-0" style={{ fontSize: "1.8rem", fontWeight: "700" }}>S.A.V.</h1>
+            <p className="mt-2 mb-0" style={{ fontSize: "1.1rem", color: "#ecf0f1" }}>
             Remoção de Vítima no Auditório<br></br>
           </p>
+          </div>
         </div>
       </header>
 
@@ -398,17 +370,6 @@ export default function PageEx2() {
                   </div>
                 </div>
               </div>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.7",
-                  color: "#e9ecef",
-                  marginBottom: "1.5rem",
-                  textAlign: "center",
-                }}
-              >
-                <strong>Conclusão do Exercício</strong>
-              </p>
             </section>
           </div>
         </div>
