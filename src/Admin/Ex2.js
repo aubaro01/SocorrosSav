@@ -120,12 +120,10 @@ export default function PageEx2() {
           <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
             <div className="row align-items-center">
               <div className="col-md-6">
-                <h4 className="text-warning mb-3">Passo 1 - Segurar</h4>
+              <h4 className="text-warning mb-3">Passo 1 - Avaliação</h4>
                 <ul className="fs-5 lh-lg text-light">
-                  <li className="mb-2 text-break">Passe seu braço direito por trás do ombro direito da vítima e por baixo da axila.</li>
-                  <li className="mb-2 text-break">Com a mão esquerda, segure a cabeça da vítima encostada na sua, para manter o pescoço firme.</li>
-                  <li className="mb-2 text-break">Com sua mão direita, segure o outro braço da vítima.</li>
-                </ul>
+                  <li className="mb-2 text-break">Converse com a vítima para compreender o seu estado e explique o que vai fazer pedindo a sua colaboração.</li>
+                  </ul>
               </div>
               <div className="col-md-6 text-center">
                 <img

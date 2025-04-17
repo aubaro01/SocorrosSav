@@ -50,7 +50,7 @@ export default function LandingPage() {
     <div className="d-flex flex-column min-vh-100">
       <header className="bg-dark text-white py-4 text-center">
         <div className="container">
-          <h1 className="fw-bold">S.A.V</h1>
+          <h1 className="fw-bold">S.A.V.</h1>
           <p className="fs-1">Formação para os primeiros socorros</p>
         </div>
       </header>
@@ -102,7 +102,7 @@ export default function LandingPage() {
 
       <footer className="bg-dark text-white text-center py-3">
         <p>
-          © SAV. <br />
+          © S.A.V. <br />
           Todos os direitos reservados.
         </p>
       </footer>
