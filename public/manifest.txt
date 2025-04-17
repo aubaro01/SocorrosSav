@@ -1,9 +1,9 @@
 {
-  "short_name": "SAV",
+  "short_name": "S.A.V.",
   "name": "Uma web App para uma formação de primeiros socorros",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/sav.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
