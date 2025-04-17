@@ -91,110 +91,110 @@ export default function PageEx2() {
   };
 
 
-    const steps = [
-      {
-        id: 0,
-        title: "Vídeo introdutório",
-        content: (
-          <>
-            <div className="ratio ratio-16x9 mb-4">
-              <iframe
-                src="https://drive.google.com/file/d/1Xu8e10-q4nnZmxmdtWw5-jkiJvk-1V0C/preview"
-                title="Vídeo demonstrativo do exercício"
-                allowFullScreen
-                allow="autoplay"
-                sandbox="allow-scripts allow-same-origin allow-forms"
-              ></iframe>
-            </div>
-            <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-              Assista ao vídeo.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: 1,
-        title: "Vítima Consciente",
-        content: (
-          <>
+  const steps = [
+    {
+      id: 0,
+      title: "Vídeo introdutório",
+      content: (
+        <>
+          <div className="ratio ratio-16x9 mb-4">
+            <iframe
+              src="https://drive.google.com/file/d/1Xu8e10-q4nnZmxmdtWw5-jkiJvk-1V0C/preview"
+              title="Vídeo demonstrativo do exercício"
+              allowFullScreen
+              allow="autoplay"
+              sandbox="allow-scripts allow-same-origin allow-forms"
+            ></iframe>
+          </div>
+          <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+            Assista ao vídeo.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 1,
+      title: "Vítima Consciente",
+      content: (
+        <>
           <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h4 className="text-warning mb-3">Passo 1 - Segurar</h4>
-              <ul className="fs-5 lh-lg text-light">
-                <li className="mb-2 text-break">Passe seu braço direito por trás do ombro direito da vítima e por baixo da axila.</li>
-                <li className="mb-2 text-break">Com a mão esquerda, segure a cabeça da vítima encostada na sua, para manter o pescoço firme.</li>
-                <li className="mb-2 text-break">Com sua mão direita, segure o outro braço da vítima.</li>
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <h4 className="text-warning mb-3">Passo 1 - Segurar</h4>
+                <ul className="fs-5 lh-lg text-light">
+                  <li className="mb-2 text-break">Passe seu braço direito por trás do ombro direito da vítima e por baixo da axila.</li>
+                  <li className="mb-2 text-break">Com a mão esquerda, segure a cabeça da vítima encostada na sua, para manter o pescoço firme.</li>
+                  <li className="mb-2 text-break">Com sua mão direita, segure o outro braço da vítima.</li>
+                </ul>
+              </div>
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva.png"
+                  alt="Passo 1: Avaliar"
+                  className="img-fluid rounded shadow"
+                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row mb-4 align-items-center">
+            <div className="col-md-6 order-md-1">
+              <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Levantar</h4>
+              <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                <li className="mb-2">Levante a vítima com segurança.</li>
               </ul>
             </div>
             <div className="col-md-6 text-center">
               <img
-                src="/assets/rva.png"
-                alt="Passo 1: Avaliar"
-                className="img-fluid rounded shadow"
+                src="/assets/rva11.png"
+                alt="Passo 3: Transportar a vítima"
+                className="img-fluid rounded"
                 style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
               />
+            </div>
           </div>
-          </div>
-        </div>
-        <div className="row mb-4 align-items-center">
-                <div className="col-md-6 order-md-1">
-                  <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 2 - Levantar</h4>
-                  <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                    <li className="mb-2">Levante a vítima com segurança.</li>
-                  </ul>
-                </div>
-                <div className="col-md-6 text-center">
-                  <img
-                    src="/assets/rva11.png"
-                    alt="Passo 3: Transportar a vítima"
-                    className="img-fluid rounded"
-                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                  />
-                </div>
+          <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <h4 className="text-warning mb-3">Passo 3 - Cadeira de Rodas</h4>
+                <ul className="fs-5 lh-lg text-light">
+                  <li className="mb-2 text-break">Coloque-a na cadeira de rodas de forma adequada.</li>
+                </ul>
               </div>
-              <div className="step-card mb-4 p-3 rounded" style={{ backgroundColor: "rgba(209, 144, 39, 0.1)", borderLeft: "4px solid #f39c12" }}>
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h4 className="text-warning mb-3">Passo 3 - Cadeira de Rodas</h4>
-              <ul className="fs-5 lh-lg text-light">
-                <li className="mb-2 text-break">Coloque-a na cadeira de rodas de forma adequada.</li>
+              <div className="col-md-6 text-center">
+                <img
+                  src="/assets/rva8.png"
+                  alt="Passo 1: Avaliar"
+                  className="img-fluid rounded shadow"
+                  style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row mb-4 align-items-center">
+            <div className="col-md-6 order-md-1">
+              <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 4 - Verificação e Remoção</h4>
+              <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
+                <li className="mb-2">Verifique se a vítima está segura na cadeira antes de iniciar o transporte.
+                </li>
+                <li className="mb-2">Remova a vitima do auditório.</li>
               </ul>
             </div>
             <div className="col-md-6 text-center">
               <img
-                src="/assets/rva8.png"
-                alt="Passo 1: Avaliar"
-                className="img-fluid rounded shadow"
+                src="/assets/rva9.png"
+                alt="Passo 3: Transportar a vítima"
+                className="img-fluid rounded"
                 style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
               />
+              <img
+                src="/assets/rva10.png"
+                alt="Passo 3: Transportar a vítima"
+                className="img-fluid rounded"
+                style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
+              />
+            </div>
           </div>
-          </div>
-        </div>
-        <div className="row mb-4 align-items-center">
-                <div className="col-md-6 order-md-1">
-                  <h4 style={{ color: "#f39c12", marginBottom: "1rem" }}>Passo 4 - Verificação e Remoção</h4>
-                  <ul style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#e9ecef" }}>
-                    <li className="mb-2">Verifique se a vítima está segura na cadeira antes de iniciar o transporte. 
-                    </li>
-                    <li className="mb-2">Remova a vitima do auditório.</li>
-                  </ul>
-                </div>
-                <div className="col-md-6 text-center">
-                  <img
-                    src="/assets/rva9.png"
-                    alt="Passo 3: Transportar a vítima"
-                    className="img-fluid rounded"
-                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                  />
-                  <img
-                    src="/assets/rva10.png"
-                    alt="Passo 3: Transportar a vítima"
-                    className="img-fluid rounded"
-                    style={{ maxHeight: "250px", border: "3px solid #f39c12" }}
-                  />
-                </div>
-              </div>
         </>
       ),
     },
@@ -328,7 +328,7 @@ export default function PageEx2() {
                       1
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                      Assistir ao vídeo demonstrativo
+                      Avaliar
                     </p>
                   </div>
                   <div className="d-flex align-items-center mb-3">
@@ -350,7 +350,7 @@ export default function PageEx2() {
                       2
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                      Posicionar-se corretamente
+                      Usar equipamentos para apoio ao transporte da vítima
                     </p>
                   </div>
                 </div>
@@ -374,31 +374,10 @@ export default function PageEx2() {
                       3
                     </div>
                     <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                      Realizar o agachamento
+                      Chave de Rautek
                     </p>
                   </div>
-                  <div className="d-flex align-items-center mb-3">
-                    <div
-                      style={{
-                        minWidth: "30px",
-                        height: "30px",
-                        borderRadius: "50%",
-                        backgroundColor: "#f39c12",
-                        color: "#2c3e50",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginRight: "10px",
-                        fontSize: "0.9rem",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      4
-                    </div>
-                    <p className="m-0" style={{ fontSize: "0.9rem", fontWeight: "400", color: "#ecf0f1" }}>
-                      Executar o salto explosivo
-                    </p>
-                  </div>
+
                 </div>
               </div>
               <p
