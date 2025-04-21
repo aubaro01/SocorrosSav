@@ -67,7 +67,7 @@ https://socorrosav.vercel.app/sav.ico)
 #### Retorna todos os exercícios que foram realizados 
 
 ```http
-  GET /api/UsExers
+  GET /api/ExerUser
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
@@ -78,7 +78,7 @@ https://socorrosav.vercel.app/sav.ico)
 
 
 ```http
-  GET /api/UsExers/${id}
+  GET /api/ExerUser${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
