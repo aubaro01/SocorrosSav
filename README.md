@@ -87,18 +87,4 @@ https://socorrosav.vercel.app/sav.ico)
 
 
 
-# Estrutura inicial da base de dados
-
-![image](https://github.com/user-attachments/assets/52476596-92ef-413f-858c-76036e478b38)
-
-
-## Deploy
-
-Para fazer o deploy desse projeto rode
-
-```bash
-  npm start 
-```
-
-
 
