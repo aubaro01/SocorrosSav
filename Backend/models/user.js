@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema(
     mensagem: {
       type: String,
       required: true,
+    }
   },
   {
     timestamps: true, 
@@ -22,3 +23,4 @@ const userSchema = new mongoose.Schema(
 const User = mongoose.model('user', userSchema);
 
 module.exports = User;
+
