@@ -9,7 +9,10 @@ const userSchema = new mongoose.Schema(
     circuito: {
       type: String,
       required: true, 
-    }
+    },
+    mensagem: {
+      type: String,
+      required: true,
   },
   {
     timestamps: true, 
