@@ -1,22 +1,15 @@
 
+
 # SocorroSav
 
 Uma web app para uma atividade de primeiros socorros
 
 
-
-
-![Logo](
-https://socorrosav.vercel.app/sav.ico)
-
-
-
-
 ## Stack utilizada
 
-**Front-end:** React, Bootstrap
+**Front-end:** React.js, Bootstrap
 
-**Back-end:** Node, Express, MongoDB
+**Back-end:** Node.js, Express.js, MongoDB
 
 
 ## Documentação da API
@@ -27,9 +20,9 @@ https://socorrosav.vercel.app/sav.ico)
   GET /api/users
 ```
 
-| Parâmetro   | Tipo       | Descrição                           |
+| Parâmetro   | Tipo       |                            |
 | :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
+| `api_key` | `string` |
 
 #### Retorna um utilizador
 
@@ -39,7 +32,7 @@ https://socorrosav.vercel.app/sav.ico)
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do user que você quer |
+| `id`      | `string` | **Obrigatório**. O nome do user que quer |
 
 
 #### Retorna todos os exercícios
@@ -49,9 +42,9 @@ https://socorrosav.vercel.app/sav.ico)
   GET /api/exers
 ```
 
-| Parâmetro   | Tipo       | Descrição                           |
+| Parâmetro   | Tipo       |                            |
 | :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
+| `api_key` | `string` |
 
 #### Retorna um exercício
 
@@ -61,21 +54,20 @@ https://socorrosav.vercel.app/sav.ico)
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do exercício que você quer |
+| `id`      | `string` | **Obrigatório**. O nome do exercício que quer |
 
 
-#### Retorna todos os exercícios que foram realizados 
+#### Retorna todos os exercícios que foram realizados pelos users 
 
 ```http
   GET /api/ExerUser
 ```
 
-| Parâmetro   | Tipo       | Descrição                           |
+| Parâmetro   | Tipo||
 | :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
+| `api_key` | `string` | 
 
-#### Retorna um user com o um exercício
-
+#### Retorna os exercícios de um user em especícifo
 
 ```http
   GET /api/ExerUser${id}
@@ -83,8 +75,28 @@ https://socorrosav.vercel.app/sav.ico)
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do user que você quer |
+| `id`      | `string` | **Obrigatório**. O nome do user que quer |
 
+
+
+
+
+
+#### Retorna os users e o número de exercícios que eles fizeram 
+
+```http
+  GET /api/CountUsers
+```
+
+| Parâmetro   | Tipo       |                         |
+| :---------- | :--------- | :---------------------------------- |
+| `api_key` | `string` |
+
+## Usado por
+
+Esse projeto é usado pelas seguintes empresas:
+
+- S.A.V.
 
 
 
