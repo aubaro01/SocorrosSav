@@ -1,5 +1,3 @@
-
-
 # SocorroSav
 
 Uma web app para uma atividade de primeiros socorros
@@ -10,6 +8,19 @@ Uma web app para uma atividade de primeiros socorros
 **Front-end:** React.js, Bootstrap
 
 **Back-end:** Node.js, Express.js, MongoDB
+
+
+## Funcionalidades
+
+- Registro de Capitões de Equipa
+- Registro de Conclusão de Exercícios
+- Multiplataforma
+
+## Por melhorar
+
+- Registro de utilizadores para o exercícios. 
+- Associar utilizadores à um capitão por meio do circuito
+ - Melhorias de usabilidade. 
 
 
 ## Documentação da API
@@ -23,16 +34,6 @@ Uma web app para uma atividade de primeiros socorros
 | Parâmetro   | Tipo       |                            |
 | :---------- | :--------- | :---------------------------------- |
 | `api_key` | `string` |
-
-#### Retorna um utilizador
-
-```http
-  GET /api/users/${id}
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O nome do user que quer |
 
 
 #### Retorna todos os exercícios
@@ -49,7 +50,7 @@ Uma web app para uma atividade de primeiros socorros
 #### Retorna um exercício
 
 ```http
-  GET /api/exerc/${id}
+  GET /api/exerc/${nome}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -70,16 +71,12 @@ Uma web app para uma atividade de primeiros socorros
 #### Retorna os exercícios de um user em especícifo
 
 ```http
-  GET /api/ExerUser${id}
+  GET /api/ExerUser${circuito}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O nome do user que quer |
-
-
-
-
+| `id`      | `string` | **Obrigatório**. O circuito do user que quer |
 
 
 #### Retorna os users e o número de exercícios que eles fizeram 
@@ -97,6 +94,3 @@ Uma web app para uma atividade de primeiros socorros
 Esse projeto é usado pelas seguintes empresas:
 
 - S.A.V.
-
-
-
